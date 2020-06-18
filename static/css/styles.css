@@ -1,0 +1,78 @@
+.navbar-light .navbar-brand {
+    color: ghostwhite;
+}
+
+.navbar-brand {
+    /* background-color: teal; */
+    box-sizing: content-box;
+    padding: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin: -8px 0px -7px 100px;
+}
+
+.dropdown-menu, .dropdown-menu .nav-link{
+    border: none;
+    margin-left: 10px;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: purple;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: purple;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.span-header {
+    font-family: 'Times New Roman', Times, serif;
+    color: purple;
+    font-weight: bold;
+    font-size: 30px;
+    display: block;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2;
+    font-size: large;
+    color: black;
+}
+
+body {
+    margin:auto;
+    background-color: rgb(238, 237, 237);
+}
+
+body .container-fluid, .container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+body .container-fluid .row {
+    justify-content: center;
+}
+
+.col {
+    background-color: white;
+    padding-bottom: 50px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-brand {
+        margin: -8px 0px -7px 10%;
+    }
+  }

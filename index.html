@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Market-20 - The Not So Live Stock Market Analysis</title>
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <script>
+        $(function(){
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+
+    <div id='nav-placeholder'></div>
+
+    <!--Summary-->
+    <div class="container-fluid container-xl">
+        <div class="row">
+            <div class="col col-lg-10">
+                <h1>
+                    Stock Market Analysis
+                </h1>
+                <hr>
+                <p>
+                    The purpose is to analyze how the 30 components within the Dow Jones Industrial Average (DJI) has been affected during COVID-19.
+                    To accomplish this analysis, we will compare each component to the DJI.
+                </p>
+                <p>
+                    The Dow Jones Industrial Average (DJIA) is the second-oldest and best-known stock market index. 
+                    Owned by Dow Jones & Company, it measures the daily price movements of 30 large American companies on the Nasdaq and the New York Stock Exchange. 
+                    It is widely viewed as a proxy for general market conditions and even the U.S. economy itself. 
+                    Started in 1896, the DJIA is comprised of blue-chip stocks, approximately two-thirds of which are represented by companies producing industrial and consumer goods. 
+                    The rest are chosen from all the major sectors of the economy including information technology, entertainment, and financial services.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-10">
+                <h2>The Dow Jones Industrial Average</h2>
+                <hr>
+                <div class="control-row">
+                    Chart Type: <select id="dropdownSelector" onchange="stockOptionChange('plot','_DJI')">
+                        <option selected>Candlestick</option>
+                        <option>Line</option>
+                    </select>
+                </div>
+                <div id="plot"></div>
+                <script src="static\js\chart.js"></script>
+                <script>stockOptionChange('plot','_DJI');</script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

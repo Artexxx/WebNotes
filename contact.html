@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <title>Market-20 - Contact Us</title>
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+
+    <div id='nav-placeholder'></div>
+
+    <div class="container">
+        <div class="col">
+            <h1>
+                Contact Us
+            </h1>
+            <hr>
+            <h2>
+                Share Us Your Information
+            </h2>
+            <p>
+                We'll get back to you as soon as we can!
+            </p>
+            <hr>
+            <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputSin">SIN #</label>
+                    <input type="password" class="form-control" id="inputSin" placeholder="000 000 000">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress">Address</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Wall Street">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity" placeholder="New York">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">Province</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>AB</option>
+                      <option>BC</option>
+                      <option>MB</option>
+                      <option>NB</option>
+                      <option>NL</option>
+                      <option>NT</option>
+                      <option>NS</option>
+                      <option>NU</option>
+                      <option>ON</option>
+                      <option>PE</option>
+                      <option>QC</option>
+                      <option>SK</option>
+                      <option>YT</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputZip">Postal Code</label>
+                    <input type="text" class="form-control" id="inputZip" placeholder="M5V 1Z4">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputCCName">Name</label>
+                    <input type="text" class="form-control" id="inputCCName" placeholder="John Bollinger">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputCC">Credit Card Number</label>
+                    <input type="text" class="form-control" id="inputCC" placeholder="0000 0000 0000 0000">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputCCExpirationDate">Expiration Date</label>
+                    <input type="text" class="form-control" id="inputCCExpirationDate" placeholder="MM/YY">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputCCSecurityCode">Security Code</label>
+                    <input type="text" class="form-control" id="inputCCSecurityCode" placeholder="000">
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="formControlTextarea">Your Message</label>
+                    <textarea class="form-control" id="formControlTextarea" rows="3" placeholder="I give consent to use my personal information for your own personal gain"></textarea>
+                  </div>
+                <button type="submit" onclick="return formSubmit();" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+      
+    <script>
+      function formSubmit() {
+        alert("The form was NOT submitted.");
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <title>Market-20 - Contact Us</title>
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <script>
+        $(function(){
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+
+    <div id='nav-placeholder'></div>
+
+    <!--Summary-->
+    <div class="container-fluid container-xl">
+        <div class="row">
+            <div class="col col-lg-10">
+                <h1>Comparing Components</h1>
+                <hr>
+                <div class="control-row">
+                    Stock: <select id="stockSelectorTop" onchange="stockOptionChange('plotTop', this.value)"></select>
+                    Chart Type: <select id="chartSelectorTop" onchange="chartOptionChange('plotTop', this.value)">
+                        <option selected>Candlestick</option>
+                        <option>Line</option>
+                    </select>
+                </div>
+                <div id="plotTop"></div>
+                <div class="control-row">
+                    Stock: <select id="stockSelectorBottom" onchange="stockOptionChange('plotBottom', this.value)"></select>
+                    Chart Type: <select id="chartSelectorBottom" onchange="chartOptionChange('plotBottom', this.value)">
+                        <option selected>Candlestick</option>
+                        <option>Line</option>
+                    </select>
+                </div>
+                <div id="plotBottom"></div>
+                <script src="static\js\chart.js"></script>
+                <script src="static\js\comparison.js"></script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
