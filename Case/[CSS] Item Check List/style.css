@@ -1,0 +1,115 @@
+:root {
+  --yellow: #eafc40;
+  --blue: #03a9f4;
+  --background: #001925;
+ }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HELP materials
+1. https://tproger.ru/translations/how-css-flexbox-works/
+
+2. http://shublog.ru/html-and-css/zapomnim-navsegda-chem-otlichayutsya-margin-i-padding/
+*/
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.list {
+  position: relative; /*отсчет ведется от края родительского элемента*/
+  padding: 30px 75px 10px 30px;
+  background: #042b3e;
+  border-top: 50px solid  var(--blue);
+}
+
+.list h2 {
+  padding: 10px 0;
+  margin-left: 10px;
+  font-size: 30px;
+  color: #fff;
+  border-bottom: 4px solid  var(--yellow);
+}
+
+.list label {
+  position: relative;
+  display: block;
+  margin: 40px 0;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.list input[type="checkbox"] {
+  -webkit-appearance: none;
+}
+
+.list i {
+  position: absolute;
+  top: 2px;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #fff;
+}
+
+.list input[type="checkbox"]:checked ~ i {
+  top: 1px;
+  border: 2px solid  var(--yellow);/* изменил цвет галочки*/
+  border-top: none;
+  border-right: none;
+  height: 15px;
+  width: 25px;
+  transform: rotate(-45deg);
+}
+
+.list span {
+  position: relative;
+  left: 40px;
+  transition: 0.5s;
+}
+
+.list span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  opacity: .2;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.5s;
+}
+
+.list input[type="checkbox"]:checked ~ span:before {
+    transform: scaleX(1);
+    transform-origin: center;
+    transition: transform 0.5s;
+}
+
+/* Активируется при нажатии на чекбокс
+   - прыгает и затемняет цвет*/
+.list input[type="checkbox"]:checked ~ span {
+  animation: jump-in-right 0.5s ease 0.1s forwards;
+}
+
+@keyframes jump-in-right {
+  50% {
+    padding-left: 8px;
+    padding-right: 0px;
+    color: #fff;
+  }
+  100% {
+    padding-right: 4px;
+    color:  var(--blue);
+  }
+}

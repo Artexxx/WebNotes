@@ -5,7 +5,7 @@
 ### [CSS+js]Black-White-Theme
 ```text
 ├── images
-│   └── 14.jpg
+│   └── anime.jpg
 ├── js
 │   └── script.js
 └── stylesheets
