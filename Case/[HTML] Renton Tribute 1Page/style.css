@@ -1,0 +1,38 @@
+/* press start 2p font */
+@import url('https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|');
+
+body{
+background-color: #292724;
+color: white;
+}
+h1{
+  font-family: 'Bungee Shade';
+  font-size: 100px;
+  color: #f8941b ;
+}
+h3{
+  font-family:'Bungee';
+  font-size: 45px;
+}
+
+.imageStyle{
+  background-color: #f8941b;
+  padding-top: 200px;
+}
+.textStyle{
+  font-family: 'Open Sans';
+  text-align: justify;
+  font-size: 18px;
+  font-color: white;
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.citingText{
+  font-family: 'Open Sans';
+  font-weight: bold;
+  color: #f8941b;
+  font-size: 14px;
+}
