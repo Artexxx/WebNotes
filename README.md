@@ -26,7 +26,7 @@
 └── style.css
 ```
 
-### Personal Website York
+### Personal Website
 ```text
 ├── css
 │   └── style.css
