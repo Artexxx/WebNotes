@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:900|Open+Sans|Fira+Mono');
+
+::-webkit-scrollbar {width: 9px;height: 12px;}
+::-webkit-scrollbar-track-piece {background: none;}
+::-webkit-scrollbar-thumb:vertical {height:12px;background:#fceb90;}
+::-webkit-scrollbar-thumb:vertical:hover {background:#e1ca51;}
+::-webkit-scrollbar-thumb:horizontal {width:9px;background:#171717; border-radius: 6px;}
+::-webkit-scrollbar-thumb:horizontal:hover {background:#fceb90;}
+
+:root {
+  --font-heading: 'Lato', sans-serif;
+  --font-paragraph: 'Open Sans', sans-serif;
+  --font-code: 'Fira Mono', monospace;
+  --color-text: #1d1d1d;
+  --color-background: #000000;
+  --color-grid: #f9f9f9;
+  --color-accent: #f1c15d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: var(--font-paragraph);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  padding: 1rem;
+  /* скрывает вертикальное переполнение*/
+  overflow: hidden;
+}
+
+
+/*
+разделим основной экран на две колонки:
+  в первой (небольшой) колонки показаны кнопки,
+  во второй отображается контент (в оставшемся пространстве)
+*/
+.App {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: calc(60px + 1vw) 1fr;
+  height: 95vh;
+  background: var(--color-grid);
+  padding: 1rem;
+}
+
+
+/* отображение кнопок в одной колонки */
+.GridButtons {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr;
+  /* grid-auto-rows: auto; */
+  /*
+  автоматическое переполнение для сетки, ответственной за кнопки
+  */
+  overflow-y: auto;
+}
+.GridButtons svg {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+
+/* разделение компонента с heading/brief/snippet на две колонки, которые свернутся в одну, чтобы гарантировать ширину не менее 300 пикселей
+*/
+.GridVisual {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* центрирование текстовых элементов */
+.GridVisual .VisualText {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+/* выровнивание параграфа по верхней части ячейки, чтобы он был ближе к связанному заголовку  */
+.GridVisual .VisualText p {
+  align-self: start;
+}
+/* центрирование элементов, ответственных за фрагменты кода*/
+.GridVisual .VisualCode {
+  align-self: center;
+  justify-self: center;
+}
