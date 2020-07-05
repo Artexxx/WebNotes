@@ -1,8 +1,9 @@
-#### [CSS] Drop Capital  ::first-letter
+#### [[CSS] Drop Capital  ::first-letter](https://github.com/Artexxx/Artexxx.github.io/tree/master/Case/%5BCSS%5D%20Drop%20Capital%20%20::first-letter)
 ```text
 └── index.html
 ```
-### [CSS+js]Black-White-Theme
+
+### [[CSS+js] Black-White-Theme](https://artexxx.github.io/Case/%5BCSS+js%5D%20Black-White-Theme/)
 ```text
 ├── images
 │   └── anime.jpg
@@ -13,20 +14,38 @@
 ├── index.html
 
 ```
-### Drag & Drop - File Upload
+### [Drag & Drop - File Upload](https://artexxx.github.io/Case/Drag%20&%20Drop%20-%20File%20Upload/)
 ```text
 ├── index.html
 ├── script.js
 └── style.css
 ```
 
-### [HTML] Renton Tribute 1Page
+### [[HTML] Renton Tribute 1Page](https://artexxx.github.io/Case/%5BHTML%5D%20Renton%20Tribute%201Page/)
 ```text
 ├── index.html
 └── style.css
 ```
 
-### Personal Website
+### [[CSS] Easy Button - 1](https://artexxx.github.io/Case/%5BCSS%5D%20Easy%20Button%20-%201/)
+```text
+├── index.html
+└── style.css
+```
+
+### [[CSS] Item Check List](https://artexxx.github.io/Case/%5BCSS%5D%20Item%20Check%20List/)
+```text
+├── index.html
+└── style.css
+```
+
+### [[CSS] Simple Table](https://artexxx.github.io/Case/%5BCSS%5D%20Simple%20Table/)
+```text
+├── index.html
+└── style.css
+```
+
+### [Personal Website](https://artexxx.github.io/Personal%20Website/)
 ```text
 ├── css
 │   └── style.css
@@ -121,7 +140,7 @@
 └── solutions.html
 ```
 
-### DownGit
+### [DownGit](https://github.com/Artexxx/Artexxx.github.io/tree/master/DownGit)
 ```text
 ├── app
 │   ├── app.js
@@ -144,7 +163,7 @@
 
 ```
 
-### Stock Market Analysis
+### [Stock Market Analysis](https://artexxx.github.io/Stock%20Market%20Analysis/)
 ```text
 ├── comparison.html
 ├── Components
@@ -197,7 +216,7 @@
 ```
 
 
-### Twitter-Trending
+### [Twitter-Trending](https://artexxx.github.io/Twitter-Trending/)
 ```text
 ├── all-trends.html
 ├── assets
@@ -228,4 +247,11 @@
 ├── graphic-trends.html
 ├── index.html
 └── twitter.json
+```
+
+### [[REACT] JavaScript Array & Object Methods](https://artexxx.github.io/%5BREACT%5D%20JavaScript%20Array%20&%20Object%20Methods/)
+```text
+├── index.html
+├── script.js
+└── style.css
 ```
