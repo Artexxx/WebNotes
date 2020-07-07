@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rule34 Browser</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124355256-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-124355256-1');
+    </script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.2/awesomplete.min.css" />
+
+    <!-- Custom Styles-->
+    <link rel="stylesheet" href="css/bootstrap-switch.min.css">
+    <link rel="stylesheet" href="css/override.css">
+</head>
+
+<body class="dark" ng-app="r34App" ng-controller="r34Ctrl as ctrl" ng-init="ctrl.init()">
+    <header class="page-header pt-4">
+        <h1>Browse <a href="https://en.wikipedia.org/wiki/Rule_34_(Internet_meme)">Rule34</a></h1>
+    </header>
+
+    <main>
+        <!-- Search -->
+        <section class="container dark">
+            <h2>Search</h2>
+
+            <!-- Search parameters -->
+            <form>
+
+                <!-- Tags -->
+                <div class="">
+                    <label for="input_tag">Add tags:</label>
+                    <div class="input-group d-flex">
+                        <input id="input_tag" type="text" class="form-control">
+                        <div class="input-group-append">
+                            <button class="btn btn-red" ng-click="ctrl.addTag()" id="btn-add-tag">Add</button>
+                        </div>
+                    </div>
+                    <div class="tags d-flex flex-wrap pl-0 pr-0">
+                        <span class="badge badge-tag" ng-click="ctrl.removeTag(tag)" ng-repeat="tag in ctrl.activeTags track by $index">{{tag}}</span>
+                    </div>
+                </div>
+
+                <!-- Filter -->
+                <div class="form-check mb-1 pl-0">
+                    <input type="checkbox" name="approved" id="approved" class="switch">
+                    <label for="approved" class="ml-2 mt-2">Only show rated</label>
+                </div>
+
+                <!-- Misc -->
+                <div class="form-check mb-2 pl-0">
+                    <input type="checkbox" name="infiniteScroll" id="infiniteScroll" class="switch">
+                    <label for="approved" class="ml-2 mt-2">Infinite scroll</label>
+                </div>
+
+                <!-- Page size
+                <div class="form-group mb-3">
+                    <label for="input_pageSize">Images per page:</label>
+                    <input id="input_pageSize" type="number" min="1" max="50" class="form-control" aria-describedby="help_pageSize" ng-model="ctrl.pageSize">
+                    <small id="help_pageSize">How many per load? (capped at 50)</small>
+                </div> -->
+            </form>
+
+            <!-- Get Results-->
+            <button class="btn btn-block btn-red" ng-click="ctrl.getPosts('search')">Search</button>
+        </section>
+
+        <!-- Results -->
+        <section class="container dark" ng-if="ctrl.posts.length > 0">
+            <h2>Results</h2>
+
+            <!-- Posts -->
+            <ul class="list-group list-inline" infinite-scroll="ctrl.infiniteScroll()" infinite-scroll-distance="3" infinite-scroll-disabled="ctrl.infiniteScrollDisabled()">
+                <li class="list-group-item light-dark" ng-repeat="post in ctrl.posts" ng-attr-id="{{post.id}}">
+
+                    <!-- Media -->
+                    <img ng-if="post.type==='image'" ng-src="{{post.file_url}}" alt="Image" class="img-fluid" ng-click="ctrl.details(post.id)">
+                    <video controls loop ng-if="post.type==='video'" ng-src="{{post.file_url}}" alt="Video" class="img-fluid" ng-click="ctrl.details(post.id)"></video>
+
+                    <!-- Details -->
+                    <div class="collapse details">
+                        <div class="info d-flex justify-content-between">
+                            <span>Score: {{post.score}}</span>
+                            <span>Rating: {{post.rating.toUpperCase()}}</span>
+                        </div>
+                        <div class="tags d-flex flex-wrap">
+                            <span class="badge badge-tag" ng-class="{{ctrl.activeTags.includes(tag) ? 'active' : 'inactive'}}" ng-click="ctrl.toggleTag(tag)"
+                                ng-repeat="tag in post.tags track by $index">{{tag}}</span>
+                        </div>
+                    </div>
+                </li>
+
+                <li ng-if="ctrl.noImagesLeft" class="pt-3">
+                    <h4>Sadly, there are no more posts...</h4>
+                </li>
+            </ul>
+
+            <!-- Load more posts -->
+            <button class="btn btn-block btn-red" ng-if="!ctrl.noImagesLeft" ng-click="ctrl.getPosts('append')">Load More</button>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="d-flex justify-content-center">
+            <p>
+                <a href="https://github.com/Artexxx">Github Repository</a>
+            </p>
+        </div>
+        <div class="d-flex justify-content-center">
+            <p>Please, if you notice
+                <a href="https://github.com/Artexxx">something isn't right</a>, or you
+                <a href="https://github.com/Artexxx">want a feature</a> to be implemented take the time to let me know.</p>
+        </div>
+        <div class="d-flex justify-content-center">
+            <p>Hosted with Github Pages.</p>
+        </div>
+    </footer>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap-switch.min.js"></script>
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/ng-infinite-scroll.min.js"></script>
+
+    <!-- Awesomplete -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.2/awesomplete.min.js"></script>
+
+    <!-- Custom AngularJS Controller -->
+    <script src="js/r34-adapter.js"></script>
+</body>
+
+</html>
