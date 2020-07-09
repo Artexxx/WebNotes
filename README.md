@@ -1,23 +1,20 @@
-#### [[CSS] Drop Capital  ::first-letter](https://github.com/Artexxx/Artexxx.github.io/tree/master/Case/%5BCSS%5D%20Drop%20Capital%20%20::first-letter)
-```text
-└── index.html
-```
-
-### [[CSS+js] Black-White-Theme](https://artexxx.github.io/Case/%5BCSS+js%5D%20Black-White-Theme/)
-```text
-├── images
-│   └── anime.jpg
-├── js
-│   └── script.js
-└── stylesheets
-    ├── style.css
-├── index.html
-
-```
 ### [Drag & Drop - File Upload](https://artexxx.github.io/Case/Drag%20&%20Drop%20-%20File%20Upload/)
 ```text
 ├── index.html
 ├── script.js
+└── style.css
+```
+
+### [[JS] Bottomless Lorem Ipsum Generator](https://artexxx.github.io/Case/Drag%20&%20Drop%20-%20File%20Upload/)
+```text
+├── index.html
+├── script.js
+└── style.css
+```
+
+### [[CSS] Horror Project](https://artexxx.github.io/Case/%5BCSS%5D%20Horror%20Project/)
+```text
+├── index.html
 └── style.css
 ```
 
@@ -33,6 +30,11 @@
 └── style.css
 ```
 
+### [[CSS] Drop Capital ::first-letter](https://github.com/Artexxx/Artexxx.github.io/tree/master/Case/%5BCSS%5D%20Drop%20Capital%20%20::first-letter)
+```text
+└── index.html
+```
+
 ### [[CSS] Item Check List](https://artexxx.github.io/Case/%5BCSS%5D%20Item%20Check%20List/)
 ```text
 ├── index.html
@@ -43,6 +45,17 @@
 ```text
 ├── index.html
 └── style.css
+```
+
+### [[CSS+js] Black-White-Theme](https://artexxx.github.io/Case/%5BCSS+js%5D%20Black-White-Theme/)
+```text
+├── images
+│   └── anime.jpg
+├── js
+│   └── script.js
+└── stylesheets
+    ├── style.css
+├── index.html
 ```
 
 ### [Personal Website](https://artexxx.github.io/Personal%20Website/)
