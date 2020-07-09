@@ -1,0 +1,135 @@
+/***************************************************
+    CSS DESIGN AND CONCEPT: Artexxx
+        WhatsApp style chat story design
+***************************************************/
+.nav {
+    display: inline-block;
+    margin: 0;
+    border-bottom: 5px solid #075e54;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    background-color: #075e54;
+}
+
+.nav h4 {
+    padding: 7px;
+    text-align: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav a:hover {
+    color: #777;
+}
+
+.goback {
+    float: left;
+}
+
+.chat {
+    margin-top: 70px;
+}
+
+body {
+ background-position:center;
+ background-attachment: fixed;
+ background-image:url(./bg.png);
+}
+
+.p1 {
+    margin-left: 7px;
+    border-radius: 10px 10px 10px 0;
+    text-align: justify;
+    padding: 7px 20px;
+    margin-bottom: 5px;
+    margin-right: 20%;
+    float: left;
+    clear: both;
+    background-color: cornsilk;
+}
+
+.p {
+    width: 100%;
+    padding: 5px 7px;
+    text-align: center;
+    float: left;
+    clear: both;
+    color: #075e54;
+    background-color: #ece5dd;
+}
+
+.p2 {
+    margin-right: 7px;
+    border-radius: 10px 10px 0 10px;
+    text-align: justify;
+    padding: 7px 20px;
+    margin-bottom: 5px;
+    margin-left: 20%;
+    float: right;
+    clear: both;
+    background-color: #dcf8c6;
+}
+
+.p3 {
+    margin-right: 7px;
+    border-radius: 10px 10px 0 10px;
+    text-align: justify;
+    padding: 7px 20px;
+    margin-bottom: 5px;
+    margin-left: 20%;
+    float: right;
+    clear: both;
+    background-color: #dcf8c6;
+}
+
+.goback {
+    -moz-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -ms-filter: scale(-1, 1);
+    transform: scale(-1, 1);
+    filter: FlipH;
+}
+
+
+/*******************************************
+            Responsive CSS
+*******************************************/
+
+@media screen and (min-width: 640px) {
+    body {
+        margin: 0 20%;
+        box-shadow: 0 1px 0 0 rgba(0,0,0,.05);
+        background-size: contain;
+    }
+    .nav {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        margin: 0 25%;
+        box-shadow: 0 1px 0 0 rgba(0,0,0,.05);
+        background-size: contain;
+    }
+    .nav {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    body {
+        margin: 0 30%;
+        box-shadow: 0 1px 0 0 rgba(0,0,0,.05);
+        background-size: contain;
+    }
+    .nav {
+        width: 40%;
+    }
+}

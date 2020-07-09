@@ -5,7 +5,7 @@
 └── style.css
 ```
 
-### [[JS] Bottomless Lorem Ipsum Generator](https://artexxx.github.io/Case/Drag%20&%20Drop%20-%20File%20Upload/)
+### [[JS] Bottomless Lorem Ipsum Generator](https://artexxx.github.io/Case/%5BJS%5D%20Bottomless%20Lorem%20Ipsum%20Generator/)
 ```text
 ├── index.html
 ├── script.js
@@ -56,6 +56,44 @@
 └── stylesheets
     ├── style.css
 ├── index.html
+```
+
+### [WatsApp style ScareApp]()
+```text
+├── about.html
+├── favicon.ico
+├── icon.ico
+├── index.html
+├── main.css
+├── more.html
+├── img
+│   ├── annie96.jpg
+│   ├── ...
+│   └── the_thing.jpg
+└── stories
+    ├── annie96
+    │   └── index.html
+    ├── bg.png
+    ├── identical
+    │   ├── index.html
+    │   ├── selfie1.png
+    │   └── selfie2.png
+    ├── joralemon
+    │   ├── corridor1.jpg
+    │   ├── index.html
+    │   └── vault.jpg
+    ├── lost
+    │   └── index.html
+    ├── mystery_letter
+    │   └── index.html
+    ├── style.css
+    ├── the_picture
+    │   └── index.html
+    ├── the_sickness
+    │   └── index.html
+    └── the_thing
+        └── index.html
+
 ```
 
 ### [Personal Website](https://artexxx.github.io/Personal%20Website/)

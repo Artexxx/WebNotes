@@ -1,0 +1,130 @@
+/***************************************************
+    CSS DESIGN AND CONCEPT: Artexxx
+        WhatsApp style chat story design
+***************************************************/
+
+.header {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: #075e54;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title {
+    float: left;
+}
+
+.menu {
+    color: #fff;
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: -55px;
+    position: fixed;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #075e54;
+    box-shadow:0 2px 0 0 rgba(0,0,0,.1);
+}
+
+nav li {
+    display: inline-block;
+    padding: 10px 30px;
+}
+
+.selected {
+    border-bottom: 5px solid #fff;
+}
+
+.list {
+    margin-top: 110px;
+}
+
+.item {
+    display: inline-block;
+    padding: 5px 0;
+    width: 100%;
+    overflow-x: auto;
+    box-shadow:0 2px 0 0 rgba(0,0,0,.1);
+}
+
+.logo {
+    margin-left: 8px;
+    border-radius: 50%;
+    float: left;
+}
+
+.dp {
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #dddddd;
+}
+
+.name {
+    margin-left: 10px;
+    float: left;
+}
+
+.p {
+    width: 100%;
+    padding: 5px 7px;
+    text-align: justify;
+    float: left;
+    clear: both;
+    color: #075e54;
+    background-color: #ece5dd;
+}
+
+
+/*******************************************
+            Responsive CSS
+*******************************************/
+
+@media screen and (min-width: 640px) {
+    body {
+        margin: 0 20%;
+        box-shadow: 0 1px 0 0 rgba(0,0,0,.05);
+        background-size: contain;
+    }
+    .header, nav ul {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        margin: 0 25%;
+        box-shadow: 0 1px 0 0 rgba(0,0,0,.05);
+        background-size: contain;
+    }
+    .header, nav ul {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    body {
+        margin: 0 30%;
+        box-shadow: 0 1px 0 0 rgba(0,0,0,.05);
+        background-size: contain;
+    }
+    .header, nav ul {
+        width: 40%;
+    }
+}
