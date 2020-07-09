@@ -97,7 +97,7 @@ app.controller('r34Ctrl', function ($http) {
 
         tag = tag.toLowerCase();
 
-        if (tag && tag != "" && !controller.activeTags.includes(tag)) {
+        if (tag && tag.tag.trim() != "" && !controller.activeTags.includes(tag)) {
             controller.activeTags.push(tag);
         }
     };
