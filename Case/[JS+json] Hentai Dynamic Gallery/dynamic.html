@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>masonary-grid test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+.main-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 10px;
+}
+.photo {
+  width: 100%;
+}
+.btn-div-container {
+  margin: 20px;
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+
+<div id="main-grid-id" class="main-grid">
+  <div class="item">
+    <div class="content">
+    </div>
+  </div>
+</div>
+
+<div class="btn-div-container">
+  <button onclick="loadmore()">load more +</button>
+</div>
+</body>
+
+<script>
+var counter = 30;
+var imgLinks;
+var fetched = false;
+
+function resizeGridItem(item) {
+  grid = document.getElementsByClassName("main-grid")[0];
+  rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+  rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+  rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+  item.style.gridRowEnd = "span " + rowSpan;
+}
+
+function resizeAllGridItems() {
+  allItems = document.getElementsByClassName("item");
+  for (x = 0; x < allItems.length; x++) {
+    resizeGridItem(allItems[x]);
+  }
+}
+
+async function loadImageLinks(start, end) {
+  if(fetched === false){
+    var imgDataURL = await fetch("https://rauls963.github.io/Lewds/links.json");
+    imgLinks = await imgDataURL.json();
+    fetched = true;
+  }
+  //console.log(imgLinks);
+  if(start >= imgLinks.length){
+    alert("No more images left!");
+    return;
+  }
+  for (let i = start + 1; i <= end; i++) {
+    imageView(imgLinks[i]);
+  }
+  setTimeout(resizeAllGridItems, 1020);
+}
+
+function imageView(img_src) {
+  var parent = document.getElementById("main-grid-id");
+  var box = document.createElement('div');
+  box.className = "item";
+  var content_box = document.createElement('div');
+  content_box.className = "content";
+  var img = document.createElement('img');
+  img.src = img_src;
+  img.className = "photo";
+  content_box.appendChild(img);
+  box.appendChild(content_box);
+  parent.appendChild(box);
+}
+
+function loadmore() {
+  var startVal = counter;
+  counter += 30;
+  loadImageLinks(startVal, counter);
+  console.log(`${startVal} ${counter}`);
+}
+
+window.addEventListener("load", loadImageLinks(-1,30));
+window.addEventListener("resize", resizeAllGridItems);
+window.addEventListener("scroll", resizeAllGridItems);
+
+</script>
+</html>

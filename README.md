@@ -11,6 +11,10 @@
 ├── script.js
 └── style.css
 ```
+### [[JS+json] Hentai Dynamic Gallery](https://artexxx.github.io/Case/%5BJS%5D%20Bottomless%20Lorem%20Ipsum%20Generator/)
+```text
+└── dynamic.html with css/js 
+```
 
 ### [[CSS] Horror Project](https://artexxx.github.io/Case/%5BCSS%5D%20Horror%20Project/)
 ```text
@@ -30,7 +34,7 @@
 └── style.css
 ```
 
-### [[CSS] Drop Capital ::first-letter](https://github.com/Artexxx/Artexxx.github.io/tree/master/Case/%5BCSS%5D%20Drop%20Capital%20%20::first-letter)
+### [[CSS] Drop Capital ::first-letter](https://htmlpreview.github.io/?https://github.com/Artexxx/Artexxx.github.io/blob/master/Case/%5BCSS%5D%20Drop%20Capital%20%20::first-letter/index.html)
 ```text
 └── index.html
 ```
@@ -58,7 +62,7 @@
 ├── index.html
 ```
 
-### [WatsApp style ScareApp]()
+### [WatsApp style ScareApp](https://artexxx.github.io/WatsApp%20style%20ScareApp/)
 ```text
 ├── about.html
 ├── favicon.ico
