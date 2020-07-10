@@ -11,12 +11,12 @@
 ├── script.js
 └── style.css
 ```
-### [[JS+json] Hentai Dynamic Gallery](https://artexxx.github.io/Case/%5BJS%5D%20Bottomless%20Lorem%20Ipsum%20Generator/)
+### [[JS+json] Hentai Dynamic Gallery](https://artexxx.github.io/Case/%5BJS+json%5D%20Hentai%20Dynamic%20Gallery/dynamic.html)
 ```text
 └── dynamic.html with css/js 
 ```
 
-### [[CSS] Horror Project](https://artexxx.github.io/Case/%5BCSS%5D%20Horror%20Project/)
+### [[CSS] Horror Project 1Page](https://artexxx.github.io/Case/%5BCSS%5D%20Horror%20Project/)
 ```text
 ├── index.html
 └── style.css
