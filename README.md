@@ -52,7 +52,14 @@
 └── style.css
 ```
 
-### [[Skeleton+JS] Meal Recipe Generator]() TODO
+### [[Skeleton+JS] Meal Recipe Generator](https://artexxx.github.io/%5BSkeleton+JS%5D%20Meal%20Recipe%20Generator/)
+```text
+├── index.html
+├── script.js
+└── style.css
+```
+
+### [[JS] Mood Calendar]() TODO
 ```text
 ├── index.html
 ├── script.js

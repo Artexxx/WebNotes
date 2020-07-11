@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--mood-color-1: green;
+	--mood-color-2: yellowGreen;
+	--mood-color-3: gold;
+	--mood-color-4: orange;
+	--mood-color-5: red;
+}
+
+body {
+	font-family: 'Muli';
+	margin: 40px 0;
+}
+
+h2 {
+	margin-bottom: 0;
+}
+
+h4 {
+	font-weight: 100;
+	margin: 5px 0 20px;
+}
+
+p {
+	margin: 5px 0;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 30px;
+	text-align: center;
+}
+
+.moods_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mood {
+	background-color: white;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  border: none;
+	border-radius: 50%;
+	font-size: 30px; /*Растягивает смайл*/
+	padding: 0;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.mood_1 {
+	color: var(--mood-color-1);
+}
+
+.mood_2 {
+	color: var(--mood-color-2);
+}
+
+.mood_3 {
+	color: var(--mood-color-3);
+}
+
+.mood_4 {
+	color: var(--mood-color-4);
+}
+
+.mood_5 {
+	color: var(--mood-color-5);
+}
+
+.mood.selected {
+	background-color: currentColor;
+}
+
+.mood.selected i {
+	color: white;
+}
+
+.mood:active {
+	transform: scale(0.9);
+}
+
+.mood:focus {
+	outline: 0;
+}
+
+.mood i {
+	cursor: pointer;
+}
+
+.calendar {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.months {
+	padding: 10px;
+	width: 33%;
+}
+
+@media screen and (max-width: 756px) {
+	.months {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.months {
+		width: 100%;
+	}
+}
+
+.months h3 {
+	margin: 5px 0;
+	text-align: center;
+}
+
+.days_container,
+.week_days_container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.days,
+.week_days {
+	font-size: 14px;
+	margin-bottom: 5px;
+	height: calc(100% / 7);
+	width: calc(100% / 7);
+	text-align: center;
+}
+
+.days .circle {
+  cursor: pointer;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #888;
+	border-radius: 50%;
+	color: white;
+	font-size: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+.days .circle:hover {
+	transform: scale(1.1);
+}
+
+.action_btn {
+  position: fixed;
+	cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 10px 0 0 10px;
+	font-size: 14px;
+	padding: 8px 12px;
+	margin: 0;
+	right: 0;
+	top: 40px;
+}
+
+.action_btn:active {
+	transform: scale(0.9);
+}
+
+.action_btn:focus {
+	outline: 0;
+}
+
+.randomize {
+	background-color: var(--mood-color-2);
+}
+
+.clear {
+	background-color: #888;
+	top: 80px;
+}
