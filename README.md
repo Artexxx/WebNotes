@@ -13,6 +13,7 @@
 ```
 ### [[JS+json] Hentai Dynamic Gallery](https://artexxx.github.io/Case/%5BJS+json%5D%20Hentai%20Dynamic%20Gallery/dynamic.html)
 ```text
+├── static.html with css/js
 └── dynamic.html with css/js 
 ```
 
@@ -48,6 +49,13 @@
 ### [[CSS] Simple Table](https://artexxx.github.io/Case/%5BCSS%5D%20Simple%20Table/)
 ```text
 ├── index.html
+└── style.css
+```
+
+### [[Skeleton+JS] Meal Recipe Generator]() TODO
+```text
+├── index.html
+├── script.js
 └── style.css
 ```
 
