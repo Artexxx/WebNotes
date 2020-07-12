@@ -31,23 +31,23 @@ body{
 h1{
   font-family: 'Bungee Shade';
   font-size: 70px;
-  color: #ff9218 ;
+  color: pink ;
 }
 p {
   font-family: 'Open Sans';
   font-size: 16px;
   margin-left: auto;
   margin-right: auto;
-  width: 80em;
 }
 a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-weight: bold;
   opacity: .8;
 }
 a:hover{
   opacity: 1;
+  color: pink;
 }
 
 /* HISTORY

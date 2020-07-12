@@ -35,6 +35,12 @@
 └── style.css
 ```
 
+### [[CSS] Easy Icons - 1](https://artexxx.github.io/Case/%5BCSS%5D%20Easy%20Icons%20-%201/)
+```text
+├── index.html
+└── style.css
+```
+
 ### [[CSS] Drop Capital ::first-letter](https://htmlpreview.github.io/?https://github.com/Artexxx/Artexxx.github.io/blob/master/Case/%5BCSS%5D%20Drop%20Capital%20%20::first-letter/index.html)
 ```text
 └── index.html
@@ -59,7 +65,7 @@
 └── style.css
 ```
 
-### [[JS] Mood Calendar]() TODO
+### [[JS] Mood Calendar](https://artexxx.github.io/%5BJS%5D%20Mood%20Calendar/)
 ```text
 ├── index.html
 ├── script.js
