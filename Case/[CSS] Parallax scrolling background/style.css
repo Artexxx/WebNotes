@@ -1,0 +1,38 @@
+/* ==== Contents Cards ====*/
+.wrapper{
+  padding-top: 100px;
+  margin: 0 auto;
+  max-width: 600px;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  color: #555; /*section text color*/
+}
+section{
+  padding: 30px;
+  margin-bottom: 40px;
+	background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 2px 4px 0 rgba(0,0,0,.2);
+}
+section h2{
+  margin: 15px auto;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #FF7600;
+  padding-bottom: 20px; /* line*/
+  border-bottom: solid 1px #e0e0e0;
+}
+
+/* ==== Parallax Background ====*/
+.background-parallax {
+  background:
+    url("./back-img.webp")
+    repeat;
+  background-size: 100% auto;
+  position: fixed;
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  z-index: -1
+}
