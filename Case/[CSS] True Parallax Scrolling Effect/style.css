@@ -1,0 +1,91 @@
+:root{
+  --light-purple: #7F5A83;
+  --light-blue: #0D324D;
+}
+html{
+  height: 1500px;
+  font-size: 0;
+  background-color: var(--light-purple) ;
+  background-image: linear-gradient(315deg, var(--light-purple) 0%,  var(--light-blue) 80%);
+  font-family: sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  color: white;
+}
+body{
+  font-size: 16px;
+}
+.parallax{
+  position: fixed;
+}
+h1 {
+  top: 75px;
+  margin-top: -3rem;
+  z-index: 5;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 20px rgba(0,0,0,0.5)
+}
+/* ==== Text Card ====*/
+p{
+  margin: 0 0 1.5rem;
+}
+p:last-child{
+  margin-bottom: 0;
+}
+.box {
+  top: -1400px;
+  margin-top: 33rem;
+  left: 50%;
+  margin-left:-27%;
+  padding: 2%;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* ==== Baton ====*/
+a{
+  text-decoration:none;
+  border-bottom: 1px dotter;
+}
+.btn{
+  top: 5em;
+  right: -800px;
+  margin-right: 30rem;
+  display: inline-block;
+  padding: 13px 30px;
+  background-color: deepskyblue;
+  border-radius: 50px;
+}
+
+/* ==== Foto Style ====*/
+img{
+  width:20%;
+  box-shadow: -10px 0 10px 5px rgba(0,0,0,0.4);
+}
+.skyline{
+  top: 240px;
+  margin-top: -28rem;
+  left: 8%;
+}
+.blimp{
+  top: 320px;
+  margin-top: -55rem;
+  left: 24%;
+}
+.gherkin{
+  top: 200px;
+  margin-top: -20rem;
+  left: 40%;
+  z-index: 10;
+}
+.dino{
+  top: 360px;
+  margin-top: -50rem;
+  left:56%;
+}
+.bull{
+  top: 260px;
+  margin-top: -33rem;
+  left: 72%;
+}

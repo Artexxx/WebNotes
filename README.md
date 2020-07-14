@@ -11,6 +11,7 @@
 ├── script.js
 └── style.css
 ```
+
 ### [[JS+json] Hentai Dynamic Gallery](https://artexxx.github.io/Case/%5BJS+json%5D%20Hentai%20Dynamic%20Gallery/dynamic.html)
 ```text
 ├── static.html with css/js
@@ -31,9 +32,23 @@
 
 ### [[CSS] Dynamic Header - 1](https://artexxx.github.io/Case/%5BCSS%5D%20Dynamic%20Header%20-%201/) 
 ```text
-├── index.html
-├── style.css
-└── script.js
+├── index.html with js
+└── style.css
+```
+
+### [[CSS] True Parallax Scrolling Effect]() TODOS
+```text
+├── image
+│   ├── pexels-photo-1.webp ...
+│   └── ... pexels-photo-5.webp
+├── index.html with js
+└── style.css
+```
+
+### [[CSS] Parallax scrolling background](https://artexxx.github.io/Case/%5BCSS%5D%20Parallax%20scrolling%20background/)
+```text
+├── index.html with js
+└── style.css
 ```
 
 ### [[CSS] Easy Button - 1](https://artexxx.github.io/Case/%5BCSS%5D%20Easy%20Button%20-%201/)
