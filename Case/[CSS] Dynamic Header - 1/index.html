@@ -21,7 +21,18 @@
   <section> <h2> Floppy disk Ford Explorer.</h2> Gangsta’s paradise dotcom bubble. Aliquip khaki Garth Brooks Kurt Cobain enim, DJ Jazzy Jeff qui hi-top fade Backstreet Boys Natalie Imbruglia Blur. Dolore Topanga Apollo 13 polo shirts with popped collars Dennis Rodman crop tops. Tommy Hilfiger Wayne’s World the Phantom Menace you’ve got mail instant messaging Chronic. Ipsum Super Mario World accent braids tying your sweater around your waist. Qui got milk Doc Martens anim Blur, Tommy Hilfiger pop punk sup Windows 95. Dawg rollerblades bike caps overalls with one strap undone Speed videocassette, dolore butterfly clips New Kids on the Block Apollo 13 home skillet. Boy Meets World Super Nintendo this is your brain on drugs crib ut SkiFree. Veniam consequat West Wing turquoise esse.</section>
 </div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script  src="./script.js"></script>
+  <script>
+$(function(){
+  $(window).scroll(function(){
+    var winTop = $(window).scrollTop();
+    if(winTop >= 30){
+      $("body").addClass("sticky-header");
+    }else{
+      $("body").removeClass("sticky-header");
+    }//if-else
+  });//win func.
+});//ready func.
+  </script>
 </body>
 </html>
 </body>
