@@ -1,0 +1,15 @@
+/*
+ --translateY нужен для изменения положения каждого слоя.
+  Свойство will-change подсказывает браузеру, какие изменения следует ожидать от элемента. Таким образом, браузер может заранее настроить соответствующие оптимизации.
+*/
+body {
+  height: 2000px;
+  background: black;
+}
+.scene {
+  position: absolute;
+  width: 100%;
+  -webkit-transform: translateY(var(--translateY));
+          transform: translateY(var(--translateY));
+  will-change: transform;
+}

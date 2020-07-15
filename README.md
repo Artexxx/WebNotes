@@ -36,12 +36,19 @@
 └── style.css
 ```
 
-### [[CSS] root element Parallax technique]() TODO
+### [[CSS] root element Parallax technique](https://artexxx.github.io/Case/%5BCSS%5D%20True%20Parallax%20Scrolling%20Effect/index.html)
 ```text
 ├── image
 │   ├── pexels-photo-1.webp ...
 │   └── ... pexels-photo-5.webp
 ├── index.html 
+├── script.js 
+└── style.css
+```
+
+### [[CSS] Parallax scene with CSS variables]() TODO
+```text
+├── index.html  with img
 ├── script.js 
 └── style.css
 ```
