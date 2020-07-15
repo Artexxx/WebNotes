@@ -46,7 +46,14 @@
 └── style.css
 ```
 
-### [[CSS] Parallax scene with CSS variables]() TODO
+### [[CSS] Parallax scene with CSS variables](https://artexxx.github.io/Case/%5BCSS%5D%20Parallax%20scene%20with%20CSS%20variables/)
+```text
+├── index.html  with img
+├── script.js 
+└── style.css
+```
+
+### [[CSS] Parallax Background Images + scroll button]() TODO
 ```text
 ├── index.html  with img
 ├── script.js 
