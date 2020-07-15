@@ -36,12 +36,13 @@
 └── style.css
 ```
 
-### [[CSS] True Parallax Scrolling Effect]() TODOS
+### [[CSS] root element Parallax technique]() TODO
 ```text
 ├── image
 │   ├── pexels-photo-1.webp ...
 │   └── ... pexels-photo-5.webp
-├── index.html with js
+├── index.html 
+├── script.js 
 └── style.css
 ```
 

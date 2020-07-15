@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>True parallax</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<h1 class="parallax"> The &lsquo;Root element&rsquo; parallax technique </h1>
+
+<img src="image/pexels-photo-1.webp" alt="" class="parallax skyline">
+<img src="image/pexels-photo-2.webp" alt="" class="parallax blimp">
+<img src="image/pexels-photo-3.webp" alt="" class="parallax gherkin">
+<img src="image/pexels-photo-4.webp" alt="" class="parallax dino">
+<img src="image/pexels-photo-5.webp" alt="" class="parallax bull">
+
+
+<div class="parallax  box">
+  <p>By combining the power of <code>`rem`</code> and a small JavaScript function to manipulate the <code>`font-size`</code> of the <code>`html`</code> element, we can achieve simple but effective parallaxing.</p>
+  <p>Setting all our positions and parallax movements in CSS, this technique minimises DOM manipulations to just one &ndash; on the <code>`html`</code> element &ndash; boosting overall performance, although certainly not better than using 3D transforms.</p>
+  <p>The speed and direction of each element is set using margins (for this demo I've used <code>`margin-top`</code>). Play around with the numbers yourself to get a better understanding.</p>
+  <p>This is just a proof of concept and hasn't been fully tested, though it should work everywhere that supports <code>`rem`</code> (<a href="http://caniuse.com/#feat=rem">see here</a>). Using <code>`rem`</code> in this way does have its pitfalls &ndash; most notably the loss of its traditional usage &ndash; but it's a nice trick.</p>
+</div>
+
+<a href="https://codepen.io/artexxx/full/LYGJrZa" target="_blank" class="parallax  btn">View full screen</a>
+
+<div class="parallax footer">THE ‘ROOT ELEMENT’ PARALLAX TECHNIQUE.</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>

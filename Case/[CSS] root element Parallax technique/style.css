@@ -1,0 +1,151 @@
+/**
+* All aesthetic styles are at the bottom for the benefit of better understanding the demo.
+*/
+html {
+  /* Give our document a fake height for demo purposes. */
+  height: 1500px;
+  /* We must set out root `font-size` to 0 to prevent our parallax margins being calculated */
+  font-size: 0;
+}
+body {
+  /* Reset the `font-size` to 16px/1em/100% */
+  font-size: 16px;
+}
+
+/* Fix our parallax elements in position */
+.parallax {
+  position: fixed;
+}
+
+/**
+* Position our elements
+*
+* Firstly we set our element position using `top`, `right`, `bottom`, `left`, then set your parallax movement using `margin` and `rem`.
+*
+* In this demo our 'base factor' is 50 (see JavaScript). Our 'factor' calculation never exceeds this number (when the viewport is fully scrolled), which means our `rem` calculations are based on this number.
+*
+* Example:
+*   If I set my `top` to `200px` and want this element to shift up by `400px`, our `rem` value is 400/10, or `-40em` (using negative margins to shift upwards).
+*/
+h1 {
+  top: 75px;
+  margin-top: -3rem;
+  z-index: 5;
+}
+
+.box {
+  top: -1400px;
+  /* Positive margin, so it appears from above */
+  margin-top: 29rem;
+  /* Center and pad */
+  left: 50%;
+  margin-left: -27%;
+  padding: 2%;
+  width: 50%;
+}
+
+.btn {
+  top: 5em;
+  right: -800px;
+  margin-right: 18.5rem;
+}
+
+.skyline{
+  top: 240px;
+  margin-top: -28rem;
+  left: 8%;
+}
+.blimp{
+  top: 320px;
+  margin-top: -55rem;
+  left: 24%;
+}
+.gherkin{
+  top: 200px;
+  margin-top: -20rem;
+  left: 40%;
+  z-index: 10;
+}
+.dino{
+  top: 360px;
+  margin-top: -50rem;
+  left:56%;
+}
+.bull{
+  top: 260px;
+  margin-top: -33rem;
+  left: 72%;
+}
+
+.footer {
+  left: 24%;
+  margin-bottom: 16.2rem;
+  bottom: -800px;
+  padding: 10px;
+  width: 50%;
+}
+/**
+* Demo aesthetics
+*/
+
+html {
+  background-image: linear-gradient(315deg, #7F5A83 0%, #0D324D 80%);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+a:hover {
+  color: magenta;
+}
+
+h1 {
+  width: 100%;
+  font: 3em/1 'Oswald', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  margin: 0 0 1.5em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+img{
+  width: 20%;
+  box-shadow: -10px 0 10px 5px rgba(0,0,0,0.4);
+}
+
+code {
+  background-color: #222;
+  color: magenta;
+}
+
+.box {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 0;
+}
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
