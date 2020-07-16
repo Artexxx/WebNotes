@@ -1,11 +1,10 @@
 body {
-  overflow-x: hidden;
   /* Скрывает горизонтальное переполнение */
+  overflow-x: hidden;
 }
 /*==== Resize in Mobile ====*/
 @media (min-width: 0) and (max-width: 767px) {
-  p,
-  .body-text {
+  p, .body-text {
     font-size: 10px !important;
   }
   .down-arrow {
@@ -14,8 +13,7 @@ body {
 }
 /*==== Resize in Tablet =====*/
 @media (min-width: 768px) and (max-width: 991px) {
-  p,
-  .body-text {
+  p, .body-text {
     font-size: 15px !important;
   }
   .down-arrow {
