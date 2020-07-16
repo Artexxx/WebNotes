@@ -66,6 +66,12 @@
 └── style.css
 ```
 
+### [[CSS] Simple Fade Effect on Scroll]() TODO
+```text
+├── index.html with js
+└── style.css
+```
+
 ### [[CSS] Easy Button - 1](https://artexxx.github.io/Case/%5BCSS%5D%20Easy%20Button%20-%201/)
 ```text
 ├── index.html

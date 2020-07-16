@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Simple Fade Effect on Scroll</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<section>
+  <h1>A Simple Fade Effect on Scroll</h1>
+  <div class="img-wrapper">
+    <div style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/cinque-terre-back.jpg);"></div>
+    <div class="front" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/cinque-terre-front.jpg);"></div>
+  </div>
+</section>
+
+<section>
+  <p>
+    The Cinque Terre is a coastal area within Liguria, in the northwest of Italy. It lies in the west of La Spezia Province, and comprises five villages: Monterosso al Mare, Vernazza, Corniglia, Manarola, and Riomaggiore. The coastline, the five villages, and the surrounding hillsides are all part of the Cinque Terre National Park a UNESCO World Heritage Site.
+  </p>
+  <p>
+    The Cinque Terre area is a popular tourist destination. Over the centuries, people have built terraces on the rugged, steep landscape right up to the cliffs that overlook the sea. Paths, trains and boats connect the villages as cars can reach them from the outside only via narrow and precarious mountain roads with great difficulty.
+  </p>
+</section>
+
+<script>
+const checkpoint = 300;
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= checkpoint) {
+    opacity = 1 - currentScroll / checkpoint;
+  } else {
+    opacity = 0;
+  }
+  document.querySelector(".front").style.opacity = opacity;
+});
+
+</script>
+</body>
+</html>

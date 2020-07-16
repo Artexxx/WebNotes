@@ -8,3 +8,8 @@
 ├── index.html
 └── script.js with Vue
 ```
+### [Parallax Background Images](https://htmlpreview.github.io/?https://artexxx.github.io/%5BTailwind%5D%20Case/Parallax%20Background%20Images/index.html)
+```text
+├── index.html
+└── style.css
+```
