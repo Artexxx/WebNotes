@@ -66,7 +66,7 @@
 └── style.css
 ```
 
-### [[CSS] Simple Fade Effect on Scroll]() TODO
+### [[CSS] Simple Fade Effect on Scroll](https://artexxx.github.io/Case/%5BCSS%5D%20Simple%20Fade%20Effect%20on%20Scroll/index.html)
 ```text
 ├── index.html with js
 └── style.css

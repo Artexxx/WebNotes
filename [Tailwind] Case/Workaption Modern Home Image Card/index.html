@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Modern home image card.</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.2/tailwind.min.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app" class="antialiased text-gray-900">
+  <div class="bg-gray-200 min-h-screen">
+    
+<div class="max-w-sm mx-auto p-6">
+  <div class="relative pb-5/6">
+    <img class="h-full w-full object-cover rounded-lg shadow-md" :src="property.imageUrl" :alt="property.imageAlt">
+  </div>
+  <div class="relative px-4 -mt-16">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+      <div class="flex items-baseline">
+        <span class="inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">New</span>
+        <div class="ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide">
+          {{ property.beds }} beds &bull; {{ property.baths }} baths
+        </div>
+      </div>
+      <h4 class="mt-1 font-semibold text-lg leading-tight truncate">{{ property.title }}</h4>
+      <div class="mt-1">
+        {{ property.formattedPrice }}
+        <span class="text-gray-600 text-sm"> / wk</span>
+      </div>
+      <div class="mt-2 flex items-center">
+        <svg v-for="i in 5" :key="i" viewBox="0 0 24 24" 
+             :class="i <= property.rating ? 'text-teal-500' : 'text-gray-400'" 
+             class="h-4 w-4 fill-current">
+          <path :d="svg_star_data" />
+        </svg>
+        <span class="ml-2 text-gray-600 text-sm">{{ property.reviewCount }} reviews</span>
+      </div>
+    </div>
+  </div>
+</div><!--/ card --->      
+    
+</div>
+</div><!--/ app -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
+  <script  src="./script.js"></script>
+
+</body>
+</html>
