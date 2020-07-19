@@ -7,7 +7,6 @@
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
 <div id="app" class="antialiased text-gray-900">
   <div class="bg-gray-200 min-h-screen">
     
@@ -32,7 +31,7 @@
         <svg v-for="i in 5" :key="i" viewBox="0 0 24 24" 
              :class="i <= property.rating ? 'text-teal-500' : 'text-gray-400'" 
              class="h-4 w-4 fill-current">
-          <path :d="svg_star_data" />
+          <path :d="property.svg_star_data" />
         </svg>
         <span class="ml-2 text-gray-600 text-sm">{{ property.reviewCount }} reviews</span>
       </div>
@@ -40,7 +39,7 @@
   </div>
 </div><!--/ card --->      
     
-</div>
+</div><!-- screen -->
 </div><!--/ app -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
   <script  src="./script.js"></script>

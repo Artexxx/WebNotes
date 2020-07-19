@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title> Adaptive dropdown menu | Image card</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.2/tailwind.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css'>
+</head>
+
+<body>
+<div id="app" class="antialiased text-gray-900">
+<div class="bg-gray-200 min-h-screen">
+
+<header class="bg-gray-900 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
+  <div class="flex items-center justify-between px-4 py-3 sm:p-0">
+    <div>
+      <img class="h-8" :src="imgLogoInverted" alt="Workcation">
+    </div>
+    <div class="sm:hidden">
+      <button @click="isOpen = !isOpen" type="button"
+        class="block text-gray-500 hover:text-white focus:text-white focus:outline-none">
+        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+          <Transition enter-active-class="animated rotateIn faster"
+            leave-active-class="animated rotateOut faster">
+            <path v-if="isOpen" fill-rule="evenodd"
+              d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
+          </Transition>
+          <Transition enter-active-class="animated rotateIn faster"
+            leave-active-class="animated rotateOut faster">
+            <path v-if="!isOpen" fill-rule="evenodd"
+              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+          </Transition>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <nav :class="isOpen ? 'block' : 'hidden'" class="sm:block">
+    <div class="px-2 pt-2 pb-4 sm:flex sm:p-0">
+      <a href="#" class="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800">List your property</a>
+      <a href="#" class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Trips</a>
+      <a href="#" class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Messages</a>
+      <div class="hidden sm:block sm:ml-6">
+        <div class="relative">
+          <button @click="isOpen = !isOpen"
+            class="relative z-10 block h-8 w-8 rounded-full overflow-hidden border-2 border-gray-600 focus:outline-none focus:border-white">
+            <img class="h-full w-full object-cover"
+              src="https://avatars2.githubusercontent.com/u/54672403?s=120&v=4" alt="Your avatar">
+          </button>
+          <button v-if="isOpen" @click="isOpen = false" tabindex="-1"
+            class="fixed inset-0 h-full w-full bg-black opacity-50 cursor-default"></button>
+          <div v-if="isOpen" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Account settings</a>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Support</a>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Signout</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="px-4 py-5 border-t border-gray-800 sm:hidden">
+      <div class="flex items-center">
+        <img class="h-8 w-8 border-2 border-gray-600 rounded-full object-cover"
+          src="https://avatars2.githubusercontent.com/u/54672403?s=120&v=4" alt="Your avatar">
+        <span class="ml-3 font-semibold text-white">Jane Doe</span>
+      </div>
+      <div class="mt-4">
+        <a href="#" class="block text-gray-400 hover:text-white">Account settings</a>
+        <a href="#" class="mt-2 block text-gray-400 hover:text-white">Support</a>
+        <a href="#" class="mt-2 block text-gray-400 hover:text-white">Sign out</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="max-w-sm mx-auto p-6">
+  <div class="relative pb-5/6">
+    <img class="h-full w-full object-cover rounded-lg shadow-md" :src="property.imageUrl"
+      :alt="property.imageAlt">
+  </div>
+  <div class="relative px-4 -mt-16">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+      <div class="flex items-baseline">
+        <span
+          class="inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">New</span>
+        <div class="ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide">
+          {{ property.beds }} beds &bull; {{ property.baths }} baths
+        </div>
+      </div>
+      <h4 class="mt-1 font-semibold text-lg leading-tight truncate">{{ property.title }}</h4>
+      <div class="mt-1">
+        {{ property.formattedPrice }}
+        <span class="text-gray-600 text-sm"> / wk</span>
+      </div>
+      <div class="mt-2 flex items-center">
+        <svg v-for="i in 5" :key="i" viewBox="0 0 24 24"
+          :class="i <= property.rating ? 'text-teal-500' : 'text-gray-400'" class="h-4 w-4 fill-current">
+          <path :d="property.svg_star_data" />
+        </svg>
+        <span class="ml-2 text-gray-600 text-sm">{{ property.reviewCount }} reviews</span>
+      </div>
+    </div>
+  </div>
+</div><!--/ card --->
+
+<div><!--/ screen -->
+</div><!--/ app -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
+  <script src="./script.js"></script>
+  </body>
+</html>
