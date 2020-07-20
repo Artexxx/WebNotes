@@ -8,7 +8,7 @@
 ├── index.html
 └── script.js with Vue
 ```
-### [Workaption Dropdown Menu UI](https://artexxx.github.io/%5BTailwind%5D%20Case/Workaption%20Dropdown%20Menu/)
+### [Workaption Navbar & Dropdown Menu](TODO)
 ```text
 ├── index.html
 └── script.js with Vue
@@ -17,6 +17,12 @@
 ```text
 ├── index.html
 └── script.js with Vue
+```
+### [Navbar & Dropdown Menu - 1](TODO)
+```text
+├── index.html
+├── style.css
+└── script.js
 ```
 ### [Parallax Background Images](https://htmlpreview.github.io/?https://artexxx.github.io/%5BTailwind%5D%20Case/Parallax%20Background%20Images/index.html)
 ```text
