@@ -1,0 +1,47 @@
+.no-js #mobile-menu__toggler {
+  display: none;
+}
+.no-js .aw-header__nav {
+  display: block;
+}
+.no-js .aw-header__logo {
+  margin-left: unset;
+}
+.transition {
+  transition: all 0.2s ease-in-out;
+}
+.order-1 {
+  order: 1;
+}
+.order-2 {
+  order: 2;
+}
+.order-3 {
+  order: 3;
+}
+@media (min-width: 1024px) {
+  .lg\:order-1 {
+    order: 1;
+  }
+  .lg\:order-2 {
+    order: 2;
+  }
+  .lg\:order-3 {
+    order: 3;
+  }
+}
+
+.aw-hero {
+  background: linear-gradient(
+    350deg,
+    rgb(123, 26, 168) 20%,
+    #6b46c1 100%,
+  );
+  background-size: 400% 400%;
+  animation: AnimationGradient 45s ease infinite;
+}
+@keyframes AnimationGradient {
+  0%{background-position:48% 0%}
+  50%{background-position:53% 100%}
+  100%{background-position:48% 0%}
+}
