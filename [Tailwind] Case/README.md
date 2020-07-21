@@ -8,7 +8,7 @@
 ├── index.html
 └── script.js with Vue
 ```
-### [Workaption Navbar & Dropdown Menu](TODO)
+### [Workaption Navbar & Dropdown Menu](https://artexxx.github.io/%5BTailwind%5D%20Case/Workaption%20Navbar%20&%20Dropdown%20Menu/index.html)
 ```text
 ├── index.html
 └── script.js with Vue
@@ -18,7 +18,7 @@
 ├── index.html
 └── script.js with Vue
 ```
-### [Navbar & Dropdown Menu - 1](TODO)
+### [Navbar & Dropdown Menu - 1](https://artexxx.github.io/%5BTailwind%5D%20Case/Navbar%20&%20Dropdown%20Menu%20-%201/)
 ```text
 ├── index.html
 ├── style.css

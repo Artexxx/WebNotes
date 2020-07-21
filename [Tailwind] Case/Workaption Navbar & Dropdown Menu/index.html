@@ -41,21 +41,46 @@
       <a href="#" class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Trips</a>
       <a href="#" class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Messages</a>
       <div class="hidden sm:block sm:ml-6">
-        <div class="relative">
+        <div class="relative z-50">
           <button @click="isOpen = !isOpen"
             class="relative z-10 block h-8 w-8 rounded-full overflow-hidden border-2 border-gray-600 focus:outline-none focus:border-white">
             <img class="h-full w-full object-cover"
               src="https://avatars2.githubusercontent.com/u/54672403?s=120&v=4" alt="Your avatar">
           </button>
           <button v-if="isOpen" @click="isOpen = false" tabindex="-1"
-            class="fixed inset-0 h-full w-full bg-black opacity-50 cursor-default"></button>
-          <div v-if="isOpen" class="absolute right-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
-            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Account settings</a>
-            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Support</a>
-            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Signout</a>
+            class="fixed inset-0 h-full w-full bg-black opacity-50 cursor-default">
+          </button>
+          <!-- menu -->
+          <div v-if="isOpen" class="absolute right-0 mt-4 py-2 w-56 bg-white rounded-lg shadow-xl">
+          <!-- header -->
+          <div class="relative flex justify-center items-center border-b mx-3">
+            <div class="px-12 py-2 text-gray-700 font-bold tracking-wide">Your Name</div>
+            <!-- close button -->
+            <button @click="isOpen = !isOpen" 
+              class="-mr-1 p-1 absolute right-0 text-gray-700 rounded-full hover:text-gray-900 focus:outline-none focus:bg-gray-200">
+              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
           </div>
-        </div>
-
+          <ul class="my-2">
+          <li><a class="block px-4 py-2 hover:bg-indigo-500 hover:text-white focus:outline-none focus:bg-gray-200" href="#">
+            Profile & Visibility</a></li>
+          <li><a class="block px-4 py-2 hover:bg-indigo-500 hover:text-white focus:outline-none focus:bg-gray-200" href="#">
+            Activity</a></li>
+          <li><a class="block px-4 py-2 hover:bg-indigo-500 hover:text-white focus:outline-none focus:bg-gray-200" href="#">
+            Settings</a></li>
+          <li class="m-2 border-b"></li>
+          <li><a class="block px-4 py-2 hover:bg-indigo-500 hover:text-white focus:outline-none focus:bg-gray-200" href="#">
+            Help</a></li>
+          <li><a class="block px-4 py-2 hover:bg-indigo-500 hover:text-white focus:outline-none focus:bg-gray-200" href="#">
+            Shortcuts</a></li>
+          <li><a class="block px-4 py-2 hover:bg-indigo-500 hover:text-white focus:outline-none focus:bg-gray-200" href="#">
+            Change language</a></li>
+          <li class="m-2 border-b"></li>
+          <li><a class="block px-4 py-2 hover:bg-indigo-500 hover:text-white focus:outline-none focus:bg-gray-200" href="#">
+            Logout</a></li>
+          </ul>
+        </div><!---/menu -->
+        </div><!--/ img + menu -->
       </div>
     </div>
     <div class="px-4 py-5 border-t border-gray-800 sm:hidden">
@@ -73,7 +98,7 @@
   </nav>
 </header>
 
-<div class="max-w-sm mx-auto p-6">
+<div class="max-w-sm mx-auto p-6 z-10">
   <div class="relative pb-5/6">
     <img class="h-full w-full object-cover rounded-lg shadow-md" :src="property.imageUrl"
       :alt="property.imageAlt">
