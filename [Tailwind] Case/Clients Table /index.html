@@ -42,8 +42,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="client in clients">
-            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+          <tr v-for="client in clients" class="bg-white hover:bg-gray-100 ">
+            <td class="px-5 py-5 border-b border-gray-200 text-sm">
             <div class="flex">
                 <div class="flex-shrink-0 w-10 h-10">
                   <img
@@ -62,28 +62,28 @@
                 </div>
               </div>
             </td>
-            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm font-semibold">
+            <td class="px-5 py-5 border-b border-gray-200 text-sm font-semibold">
               <p class="text-gray-700 whitespace-no-wrap"> {{ client.role }}</p>
             </td>
-            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+            <td class="px-5 py-5 border-b border-gray-200 text-sm">
               <p class="text-gray-900 whitespace-no-wrap"> {{ client.formattedAmount }}</p>
               <p class="text-gray-600 whitespace-no-wrap">USD</p>
             </td>
-            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+            <td class="px-5 py-5 border-b border-gray-200 text-sm">
               <p class="text-gray-900 whitespace-no-wrap"> {{ client.formattedDate }}</p>
               <p class="text-gray-600 whitespace-no-wrap"> {{ client.formattedLastDue }}</p>
             </td>
-            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+            <td class="px-5 py-5 border-b border-gray-200 text-sm">
               <span class="relative inline-block px-3 py-1 font-semibold leading-tight"
                 :class="client.status=='Active' ? 'text-green-900':
                 client.status=='Inactive' ? 'text-red-900' : 'text-orange-900'">
                 <span aria-hidden class="absolute inset-0 opacity-50 rounded-full"
                 :class="client.status=='Active' ? 'bg-green-200' :
-                client.status=='Inactive' ? 'bg-red-200' : 'bg-orange-200'"></span> <!-- FIXME -->
+                client.status=='Inactive' ? 'bg-red-200' : 'bg-orange-200'"></span> 
                 <span class="relative"> {{ client.status }}</span>
               </span>
             </td>
-            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right">
+            <td class="px-5 py-5 border-b border-gray-200 text-sm text-right">
               <button
                 type="button"
                 class="inline-block text-gray-500 hover:text-gray-700 focus:text-gray-600 focus:outline-none">
