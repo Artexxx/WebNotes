@@ -1,0 +1,26 @@
+@tailwind base;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+ font-weight:700;
+}
+
+.accent-a {
+  color:#2bd2de;
+}
+
+.text-green-500 {
+  color:#77bd43
+}
+
+.bg-green-500 {
+  background:#77bd43
+}
+
+.bg-gray-100 {
+  background:#fafbfc;
+}
+
