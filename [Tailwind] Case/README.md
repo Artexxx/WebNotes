@@ -29,8 +29,13 @@
 ├── index.html
 └── style.css
 ```
-### [Clients Table]https://artexxx.github.io/%5BTailwind%5D%20Case/Clients%20Table%20/
+### [Clients Table](https://artexxx.github.io/%5BTailwind%5D%20Case/Clients%20Table%20/)
 ```text
 ├── index.html
 └── script.js with Vue
+```
+### [Image Gallery Grid]()TODO
+```text
+├── index.html
+└── anime-images.jpeg
 ```
