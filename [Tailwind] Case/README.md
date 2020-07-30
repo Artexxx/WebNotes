@@ -13,6 +13,19 @@
 ├── index.html
 └── script.js with Vue
 ```
+
+### [ChostsSoft Full Page](https://artexxx.github.io/%5BTailwind%5D%20Case/ChostsSoft%20Full%20Page/)
+```text
+├── index.html
+└── style.css
+```
+### [ChostsSoft Made - Title Card](https://artexxx.github.io/%5BTailwind%5D%20Case/ChostsSoft%20Made%20-%20Title%20Card/)
+```text
+├── image-sm.png
+├── image-lg.png
+├── index.html
+└── style.css
+```
 ### [Testimonial Style List Cards](https://artexxx.github.io/%5BTailwind%5D%20Case/Testimonial%20Style%20List%20Cards/index.html)
 ```text
 ├── index.html
@@ -34,8 +47,14 @@
 ├── index.html
 └── script.js with Vue
 ```
-### [Image Gallery Grid]()TODO
+### [Image Gallery Grid](https://artexxx.github.io/%5BTailwind%5D%20Case/Image%20Gallery%20Grid/)
 ```text
 ├── index.html
 └── anime-images.jpeg
+```
+
+### [X‑Wing-templates Full Page]()TODO
+```text
+├── src with img 
+└── index.html with css
 ```
