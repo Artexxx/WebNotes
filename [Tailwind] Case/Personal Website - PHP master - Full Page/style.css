@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+	@apply bg-white py-10 px-5 mb-8 shadow-md rounded-lg;
+}
+
+.card-header {
+	@apply text-2xl tracking-wide leading-loose text-green-700 mb-5 font-bold font-sans;
+}
+
+.card-body {
+	@apply tracking-wide text-lg;
+}
+
+.widget {
+	@apply bg-white py-5 px-5 mb-8 shadow-md rounded-lg;
+}
+
+@screen lg {
+	.card {
+		@apply mx-3;
+	}
+	.widget {
+		@apply ml-3 mt-0;
+	}
+}

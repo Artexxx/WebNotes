@@ -53,8 +53,8 @@
 └── anime-images.jpeg
 ```
 
-### [X‑Wing-templates Full Page]()TODO
+### [X‑Wing-templates Full Page](https://artexxx.github.io/%5BTailwind%5D%20Case/X‑Wing-templates%20Full%20Page/)
 ```text
-├── src with img 
+├──|src with 5 images 
 └── index.html with css
 ```
