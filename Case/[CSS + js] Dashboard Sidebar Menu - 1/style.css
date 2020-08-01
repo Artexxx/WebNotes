@@ -1,0 +1,114 @@
+@import  url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --menu-background: #8b00ff;
+  --menu-color: #fff;
+  --menu-hover-background: #ea1d63;
+  --toogle-active-background: #ea1d63; 
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background:  #FFEBCD;
+}
+
+.navigation {
+  position: fixed;
+  width: 60px;
+  height: 100%;
+  background: var(--menu-background);
+  transition: 0.5s;
+  overflow: hidden;
+}
+ /*lets nav bar to be showed on mouseover*/
+.navigation:hover,
+.navigation.active{
+  width: 300px;
+}
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+}
+.navigation ul li:hover {
+  background: var(--menu-hover-background);
+}
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--menu-color);
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: var(--menu-color);
+}
+.navigation ul li a .icon .fa {
+  font-size: 24px;
+}
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  white-space: nowrap;
+}
+.toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: #8b00ff;
+  cursor: pointer;
+}
+.toggle.active {
+  background: var(--toogle-active-background);
+}
+.toggle:before {
+  content: '\f0c9';
+  font-family: fontAwesome;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+}
+.toggle.active:before {
+  content: '\f00d';
+}
+@media (max-width: 767px) {
+  .navigation {
+    left: -60px;
+  }
+  .navigation.active {
+    left: 0px;
+    width: 100%;
+    height: 65%;
+  }
+}
