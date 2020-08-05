@@ -68,7 +68,16 @@ Social Icons - Zoom (.icon-circle + .icon-zoom)
 Social Icons - Rotate (.icon-circle + .icon-rotate)
 ~ 11 items ~
 
+Social Icons - Swipe (.icon-swipe !CUSTOM!)
+~ 11 items ~
+
+Social Icons - Jump (.icon-circle + .icon-jump)
+~ 11 items ~
+
 Social Icons - Rounded (.icon-rounded)
+~ 11 items ~
+
+Social Icons - Shadow (.icon-rounded + .icon-shadow)
 ~ 11 items ~
 
 Social Icons - Flat  (.icon-flat)
@@ -145,6 +154,69 @@ Social Icons - Flat  (.icon-flat)
 	transform: scale(1.1) rotate(360deg);
 }
 
+/*===== Hover Swipe=====*/
+.icon-swipe{
+  margin-top:20px;
+}
+.icon-swipe a{
+  display: inline-block;
+  margin: 1px 5px 7px 5px;
+  overflow: hidden;
+  transition: none; /*overload .fa (transition)*/
+	transition: background 0.2s;
+
+}
+.icon-swipe a{
+  width: 50px;
+  height: 50px;
+	font-size: 1.8em;
+  cursor: pointer;
+  line-height: 48px;
+  border-radius: 50%;
+  color: #fff;
+}
+.icon-swipe a:hover{
+  background: #fff;
+}
+.icon-swipe a:hover .fa{
+  animation: 0.4s icon-move linear 0s;
+}
+/*----- Model-Swipe Animation -----*/
+@keyframes icon-move {
+  49% {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(40px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(0);
+  }
+}
+/*===== Hover Jump =====*/
+.social-icons.icon-jump .fa:hover, .social-icons.icon-jump .fa:active {
+	-moz-transform: translateY(-10px);
+	-ms-transform: translateY(-10px);
+	-webkit-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+/*===== Hover Shadow =====*/
+.social-icons.icon-shadow .fa{
+  transition: none; /*overload .fa (transition)*/
+  overflow: hidden; /*text shadow (-z-index)*/
+  -moz-transition: background 0.4s;
+	-o-transition: background 0.4s;
+	-webkit-transition: background 0.4s;
+	transition: background 0.4s;
+}
+.social-icons.icon-shadow .fa:hover, .social-icons.icon-shadow .fa:active {
+  background-color: #fff;
+	text-shadow: 0px 0px #d5d5d5, 1px 1px #d5d5d5, 2px 2px #d5d5d5, 3px 3px #d5d5d5, 4px 4px #d5d5d5, 5px 5px #d5d5d5, 6px 6px #d5d5d5, 7px 7px #d5d5d5, 8px 8px #d5d5d5, 9px 9px #d5d5d5, 10px 10px #d5d5d5, 11px 11px #d5d5d5, 12px 12px #d5d5d5, 13px 13px #d5d5d5, 14px 14px #d5d5d5, 15px 15px #d5d5d5, 16px 16px #d5d5d5, 17px 17px #d5d5d5, 18px 18px #d5d5d5, 19px 19px #d5d5d5, 20px 20px #d5d5d5, 21px 21px #d5d5d5, 22px 22px #d5d5d5, 23px 23px #d5d5d5, 24px 24px #d5d5d5, 25px 25px #d5d5d5, 26px 26px #d5d5d5, 27px 27px #d5d5d5, 28px 28px #d5d5d5, 29px 29px #d5d5d5, 30px 30px #d5d5d5;
+}	
+
 .social-icons .fa-adn{background-color:#504e54;}
 .social-icons .fa-apple{background-color:#aeb5c5;}
 .social-icons .fa-android{background-color:#A5C63B;}
@@ -178,3 +250,105 @@ Social Icons - Flat  (.icon-flat)
 .social-icons .fa-windows{background-color:#12B6F3;}
 .social-icons .fa-xing,.social-icons .fa-xing-square{background-color:#00555C;}
 .social-icons .fa-youtube,.social-icons .fa-youtube-play,.social-icons .fa-youtube-square{background-color:#C52F30;}
+
+
+.social-icons .fa-sh-adn {text-shadow: 0px 0px #37363a, 1px 1px #37363a, 2px 2px #37363a, 3px 3px #37363a, 4px 4px #37363a, 5px 5px #37363a, 6px 6px #37363a, 7px 7px #37363a, 8px 8px #37363a, 9px 9px #37363a, 10px 10px #37363a, 11px 11px #37363a, 12px 12px #37363a, 13px 13px #37363a, 14px 14px #37363a, 15px 15px #37363a, 16px 16px #37363a, 17px 17px #37363a, 18px 18px #37363a, 19px 19px #37363a, 20px 20px #37363a, 21px 21px #37363a, 22px 22px #37363a, 23px 23px #37363a, 24px 24px #37363a, 25px 25px #37363a, 26px 26px #37363a, 27px 27px #37363a, 28px 28px #37363a, 29px 29px #37363a, 30px 30px #37363a;}
+.social-icons .fa-sh-adn:hover{color:#504e54!important;}
+
+.social-icons .fa-sh-android {  text-shadow: 0px 0px #7e9630, 1px 1px #7e9630, 2px 2px #7e9630, 3px 3px #7e9630, 4px 4px #7e9630, 5px 5px #7e9630, 6px 6px #7e9630, 7px 7px #7e9630, 8px 8px #7e9630, 9px 9px #7e9630, 10px 10px #7e9630, 11px 11px #7e9630, 12px 12px #7e9630, 13px 13px #7e9630, 14px 14px #7e9630, 15px 15px #7e9630, 16px 16px #7e9630, 17px 17px #7e9630, 18px 18px #7e9630, 19px 19px #7e9630, 20px 20px #7e9630, 21px 21px #7e9630, 22px 22px #7e9630, 23px 23px #7e9630, 24px 24px #7e9630, 25px 25px #7e9630, 26px 26px #7e9630, 27px 27px #7e9630, 28px 28px #7e9630, 29px 29px #7e9630, 30px 30px #7e9630;}
+.social-icons .fa-sh-android:hover{color:#A5C63B!important;}
+
+.social-icons .fa-sh-apple {text-shadow: 0px 0px #818692, 1px 1px #818692, 2px 2px #818692, 3px 3px #818692, 4px 4px #818692, 5px 5px #818692, 6px 6px #818692, 7px 7px #818692, 8px 8px #818692, 9px 9px #818692, 10px 10px #818692, 11px 11px #818692, 12px 12px #818692, 13px 13px #818692, 14px 14px #818692, 15px 15px #818692, 16px 16px #818692, 17px 17px #818692, 18px 18px #818692, 19px 19px #818692, 20px 20px #818692, 21px 21px #818692, 22px 22px #818692, 23px 23px #818692, 24px 24px #818692, 25px 25px #818692, 26px 26px #818692, 27px 27px #818692, 28px 28px #818692, 29px 29px #818692, 30px 30px #818692;}
+.social-icons .fa-sh-apple:hover{color:#818692!important;}
+
+.social-icons .fa-sh-bitbucket {text-shadow: 0px 0px #00172e, 1px 1px #00172e, 2px 2px #00172e, 3px 3px #00172e, 4px 4px #00172e, 5px 5px #00172e, 6px 6px #00172e, 7px 7px #00172e, 8px 8px #00172e, 9px 9px #00172e, 10px 10px #00172e, 11px 11px #00172e, 12px 12px #00172e, 13px 13px #00172e, 14px 14px #00172e, 15px 15px #00172e, 16px 16px #00172e, 17px 17px #00172e, 18px 18px #00172e, 19px 19px #00172e, 20px 20px #00172e, 21px 21px #00172e, 22px 22px #00172e, 23px 23px #00172e, 24px 24px #00172e, 25px 25px #00172e, 26px 26px #00172e, 27px 27px #00172e, 28px 28px #00172e, 29px 29px #00172e, 30px 30px #00172e;}
+.social-icons .fa-sh-bitbucket:hover{color: #003366!important;}
+
+.social-icons .fa-sh-bitcoin {text-shadow: 0px 0px #cf7c17, 1px 1px #cf7c17, 2px 2px #cf7c17, 3px 3px #cf7c17, 4px 4px #cf7c17, 5px 5px #cf7c17, 6px 6px #cf7c17, 7px 7px #cf7c17, 8px 8px #cf7c17, 9px 9px #cf7c17, 10px 10px #cf7c17, 11px 11px #cf7c17, 12px 12px #cf7c17, 13px 13px #cf7c17, 14px 14px #cf7c17, 15px 15px #cf7c17, 16px 16px #cf7c17, 17px 17px #cf7c17, 18px 18px #cf7c17, 19px 19px #cf7c17, 20px 20px #cf7c17, 21px 21px #cf7c17, 22px 22px #cf7c17, 23px 23px #cf7c17, 24px 24px #cf7c17, 25px 25px #cf7c17, 26px 26px #cf7c17, 27px 27px #cf7c17, 28px 28px #cf7c17, 29px 29px #cf7c17, 30px 30px #cf7c17;}
+.social-icons .fa-sh-bitcoin:hover{color: #F7931A!important;}
+
+.social-icons .fa-sh-css3 {text-shadow: 0px 0px #0f4d7c, 1px 1px #0f4d7c, 2px 2px #0f4d7c, 3px 3px #0f4d7c, 4px 4px #0f4d7c, 5px 5px #0f4d7c, 6px 6px #0f4d7c, 7px 7px #0f4d7c, 8px 8px #0f4d7c, 9px 9px #0f4d7c, 10px 10px #0f4d7c, 11px 11px #0f4d7c, 12px 12px #0f4d7c, 13px 13px #0f4d7c, 14px 14px #0f4d7c, 15px 15px #0f4d7c, 16px 16px #0f4d7c, 17px 17px #0f4d7c, 18px 18px #0f4d7c, 19px 19px #0f4d7c, 20px 20px #0f4d7c, 21px 21px #0f4d7c, 22px 22px #0f4d7c, 23px 23px #0f4d7c, 24px 24px #0f4d7c, 25px 25px #0f4d7c, 26px 26px #0f4d7c, 27px 27px #0f4d7c, 28px 28px #0f4d7c, 29px 29px #0f4d7c, 30px 30px #0f4d7c;}
+.social-icons .fa-sh-css3:hover{color: #1572B7!important;}
+
+.social-icons .fa-sh-dribbble {text-shadow: 0px 0px #c05279, 1px 1px #c05279, 2px 2px #c05279, 3px 3px #c05279, 4px 4px #c05279, 5px 5px #c05279, 6px 6px #c05279, 7px 7px #c05279, 8px 8px #c05279, 9px 9px #c05279, 10px 10px #c05279, 11px 11px #c05279, 12px 12px #c05279, 13px 13px #c05279, 14px 14px #c05279, 15px 15px #c05279, 16px 16px #c05279, 17px 17px #c05279, 18px 18px #c05279, 19px 19px #c05279, 20px 20px #c05279, 21px 21px #c05279, 22px 22px #c05279, 23px 23px #c05279, 24px 24px #c05279, 25px 25px #c05279, 26px 26px #c05279, 27px 27px #c05279, 28px 28px #c05279, 29px 29px #c05279, 30px 30px #c05279;}
+.social-icons .fa-sh-dribbble:hover{color: #F46899!important;}
+
+.social-icons .fa-sh-dropbox {text-shadow: 0px 0px #01669c, 1px 1px #01669c, 2px 2px #01669c, 3px 3px #01669c, 4px 4px #01669c, 5px 5px #01669c, 6px 6px #01669c, 7px 7px #01669c, 8px 8px #01669c, 9px 9px #01669c, 10px 10px #01669c, 11px 11px #01669c, 12px 12px #01669c, 13px 13px #01669c, 14px 14px #01669c, 15px 15px #01669c, 16px 16px #01669c, 17px 17px #01669c, 18px 18px #01669c, 19px 19px #01669c, 20px 20px #01669c, 21px 21px #01669c, 22px 22px #01669c, 23px 23px #01669c, 24px 24px #01669c, 25px 25px #01669c, 26px 26px #01669c, 27px 27px #01669c, 28px 28px #01669c, 29px 29px #01669c, 30px 30px #01669c;}
+.social-icons .fa-sh-dropbox:hover{color: #018BD3!important;}
+
+.social-icons .fa-sh-facebook {text-shadow: 0px 0px #2a3e6e, 1px 1px #2a3e6e, 2px 2px #2a3e6e, 3px 3px #2a3e6e, 4px 4px #2a3e6e, 5px 5px #2a3e6e, 6px 6px #2a3e6e, 7px 7px #2a3e6e, 8px 8px #2a3e6e, 9px 9px #2a3e6e, 10px 10px #2a3e6e, 11px 11px #2a3e6e, 12px 12px #2a3e6e, 13px 13px #2a3e6e, 14px 14px #2a3e6e, 15px 15px #2a3e6e, 16px 16px #2a3e6e, 17px 17px #2a3e6e, 18px 18px #2a3e6e, 19px 19px #2a3e6e, 20px 20px #2a3e6e, 21px 21px #2a3e6e, 22px 22px #2a3e6e, 23px 23px #2a3e6e, 24px 24px #2a3e6e, 25px 25px #2a3e6e, 26px 26px #2a3e6e, 27px 27px #2a3e6e, 28px 28px #2a3e6e, 29px 29px #2a3e6e, 30px 30px #2a3e6e;}
+.social-icons .fa-sh-facebook:hover{color: #3C599F!important;}
+
+.social-icons .fa-sh-flickr {text-shadow: 0px 0px #c70268, 1px 1px #c70268, 2px 2px #c70268, 3px 3px #c70268, 4px 4px #c70268, 5px 5px #c70268, 6px 6px #c70268, 7px 7px #c70268, 8px 8px #c70268, 9px 9px #c70268, 10px 10px #c70268, 11px 11px #c70268, 12px 12px #c70268, 13px 13px #c70268, 14px 14px #c70268, 15px 15px #c70268, 16px 16px #c70268, 17px 17px #c70268, 18px 18px #c70268, 19px 19px #c70268, 20px 20px #c70268, 21px 21px #c70268, 22px 22px #c70268, 23px 23px #c70268, 24px 24px #c70268, 25px 25px #c70268, 26px 26px #c70268, 27px 27px #c70268, 28px 28px #c70268, 29px 29px #c70268, 30px 30px #c70268;}
+.social-icons .fa-sh-flickr:hover{color: #FF0084!important;}
+
+.social-icons .fa-sh-foursquare {text-shadow: 0px 0px #02638d, 1px 1px #02638d, 2px 2px #02638d, 3px 3px #02638d, 4px 4px #02638d, 5px 5px #02638d, 6px 6px #02638d, 7px 7px #02638d, 8px 8px #02638d, 9px 9px #02638d, 10px 10px #02638d, 11px 11px #02638d, 12px 12px #02638d, 13px 13px #02638d, 14px 14px #02638d, 15px 15px #02638d, 16px 16px #02638d, 17px 17px #02638d, 18px 18px #02638d, 19px 19px #02638d, 20px 20px #02638d, 21px 21px #02638d, 22px 22px #02638d, 23px 23px #02638d, 24px 24px #02638d, 25px 25px #02638d, 26px 26px #02638d, 27px 27px #02638d, 28px 28px #02638d, 29px 29px #02638d, 30px 30px #02638d;}
+.social-icons .fa-sh-foursquare:hover{color: #0086BE!important;}
+
+
+.icon-swipe .adn{background-color:#504e54;}
+.icon-swipe .apple{background-color:#aeb5c5;}
+.icon-swipe .android{background-color:#A5C63B;}
+.icon-swipe .bitbucket{background-color:#003366;}
+.icon-swipe .bitcoin,.icon-swipe .btc{background-color:#F7931A;}
+.icon-swipe .css3{background-color:#1572B7;}
+.icon-swipe .dribbble{background-color:#F46899;}
+.icon-swipe .dropbox{background-color:#018BD3;}
+.icon-swipe .facebook{background-color:#3C599F; color:#fff;}
+.icon-swipe .flickr{background-color:#FF0084;}
+.icon-swipe .foursquare{background-color:#0086BE;}
+.icon-swipe .github,.icon-swipe .github-alt,.icon-swipe .github-square{background-color:#070709;}
+.icon-swipe .google-plus,.icon-swipe .google-plus-square{background-color:#CF3D2E;}
+.icon-swipe .html5{background-color:#E54D26;}
+.icon-swipe .instagram{background-color:#A1755C;}
+.icon-swipe .linkedin,.icon-swipe .linkedin-square{background-color:#0085AE;}
+.icon-swipe .linux{background-color:#FBC002;color:#333;}
+.icon-swipe .maxcdn{background-color:#F6AE1C;}
+.icon-swipe .pagelines{background-color:#241E20;color:#3984EA;}
+.icon-swipe .pinterest,.icon-swipe .pinterest-square{background-color:#CC2127;}
+.icon-swipe .renren{background-color:#025DAC;}
+.icon-swipe .skype{background-color:#01AEF2;}
+.icon-swipe .stack-exchange{background-color:#245590;}
+.icon-swipe .stack-overflow{background-color:#FF7300;}
+.icon-swipe .trello{background-color:#265A7F;}
+.icon-swipe .tumblr,.icon-swipe .tumblr-square{background-color:#314E6C;}
+.icon-swipe .twitter,.icon-swipe .twitter-square{background-color:#32CCFE;}
+.icon-swipe .vimeo-square{background-color:#229ACC;}
+.icon-swipe .vk{background-color:#375474;}
+.icon-swipe .weibo{background-color:#D72B2B;}
+.icon-swipe .windows{background-color:#12B6F3;}
+.icon-swipe .xing{background-color:#00555C;}
+.icon-swipe .youtube{background-color:#C52F30;}
+.icon-swipe .adn:hover{color:#504e54;}
+.icon-swipe .apple:hover{color:#aeb5c5;}
+.icon-swipe .android:hover{color:#A5C63B;}
+.icon-swipe .bitbucket:hover{color:#003366;}
+.icon-swipe .bitcoin:hover,.icon-swipe:hover .btc:hover{color:#F7931A;}
+.icon-swipe .css3:hover{color:#1572B7;}
+.icon-swipe .dribbble:hover{color:#F46899;}
+.icon-swipe .dropbox:hover{color:#018BD3;}
+.icon-swipe .facebook:hover{color:#3C599F;}
+.icon-swipe .flickr:hover{color:#FF0084;}
+.icon-swipe .foursquare:hover{color:#0086BE;}
+.icon-swipe .github:hover{color:#070709;}
+.icon-swipe .google-plus:hover{color:#CF3D2E;}
+.icon-swipe .html5:hover{color:#E54D26;}
+.icon-swipe .instagram:hover{color:#A1755C;}
+.icon-swipe .linkedin:hover{color:#0085AE;}
+.icon-swipe .linux:hover{color:#FBC002;color:#333;}
+.icon-swipe .maxcdn:hover{color:#F6AE1C;}
+.icon-swipe .pagelines:hover{color:#241E20;color:#3984EA;}
+.icon-swipe .pinterest:hover,.icon-swipe:hover .pinterest-square:hover{color:#CC2127;}
+.icon-swipe .renren:hover{color:#025DAC;}
+.icon-swipe .skype:hover{color:#01AEF2;}
+.icon-swipe .stack-exchange:hover{color:#245590;}
+.icon-swipe .stack-overflow:hover{color:#FF7300;}
+.icon-swipe .trello:hover{color:#265A7F;}
+.icon-swipe .tumblr:hover,.icon-swipe:hover .tumblr-square:hover{color:#314E6C;}
+.icon-swipe .twitter:hover,.icon-swipe:hover .twitter-square:hover{color:#32CCFE;}
+.icon-swipe .vimeo-square:hover{color:#229ACC;}
+.icon-swipe .vk:hover{color:#375474;}
+.icon-swipe .weibo:hover{color:#D72B2B;}
+.icon-swipe .windows:hover{color:#12B6F3;}
+.icon-swipe .xing:hover{color:#00555C;}
+.icon-swipe .youtube:hover{color:#C52F30;}
