@@ -31,12 +31,12 @@
 ├── index.html
 └── script.js with Vue
 ```
-### [Navbar & Dropdown Menu - 1](https://artexxx.github.io/%5BTailwind%5D%20Case/Navbar%20&%20Dropdown%20Menu%20-%201/)
+### [Navbar & Dropdown Menu - 1](https://artexxx.github.io/%5BTailwind%5D%20Case/Navbar%20&%20Dropdown%20Menu%20-%201/) 
 ```text
-├── index.html
-├── style.css
-└── script.js
+├── index.html with js
+└── style.css
 ```
+
 ### [Parallax Background Images](https://htmlpreview.github.io/?https://artexxx.github.io/%5BTailwind%5D%20Case/Parallax%20Background%20Images/index.html)
 ```text
 ├── index.html

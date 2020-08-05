@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
+:root {
+  --menu-background: #8b00ff;
+  --menu-color: #fff;
+  --burger-background: #fff;
+  --burger-li-hover: #fafafc;
+}
+html body {
+  padding: 0;
+  margin: 0;
+  background: #fafafc;
+  font-family: "varela Round", sans-serif;
+}
+header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  background-color: var(--menu-color);
+  z-index: 10;
+}
+header h1 {
+  margin-right: auto;
+  text-align: center;
+  font-size: 30px;
+  color: #1e90ff;
+  font-weight: bold;
+  margin-left: 20px;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin-right: 20px;
+}
+header a {
+  padding: 10px 25px;
+  text-decoration: none;
+  color: #333;
+}
+header a:hover {
+  color: #1e90ff;
+  transition: all 0.5s ease;
+}
+header a.cta {
+  border: 1px solid #1e90ff;
+  border-radius: 30px;
+  color: #1e90ff;
+}
+/*-------------the style of humburger lines ------------*/
+[class*="line-"] {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 5px 0;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+header .burger {
+  display: none;
+}
+
+/*----------------For mobile screen / small screen----------------*/
+@media only screen and (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+  header .burger { 
+    display: block;
+    margin-right: 30px;
+  }
+  .nav {
+    margin: 0;
+    padding: 0;
+    background: var(--burger-background);
+    position: absolute;
+    transform: translateX(100%);
+    top: 60px;
+    width: 70%;
+    height: calc(100% - 70px);
+    flex-direction: column;
+    justify-content: flex-start;
+    border-top: 1px solid #e5e5e5;
+    overflow: hidden;
+  }
+
+  header li {
+    padding: 25px 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  header li:hover {
+    background: var(--burger-li-hover);
+  }
+  /*-----------Js Adds this class to dispaly and slide the nav from right sidebar--------*/
+  .nav-active {
+    transform: translateX(0);
+    transition: all 0.5s ease;
+  }
+  /*-------The style of humburger lines rototes when humburger div is click-----------*/
+  .horizontal-line {
+    display: none;
+  }
+  .diagonal-line-1 {
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+  }
+  .diagonal-line-2 {
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+  }
+}

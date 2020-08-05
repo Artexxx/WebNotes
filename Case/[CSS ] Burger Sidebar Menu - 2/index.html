@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Responisve-Sidevar-Menu</title>
+</head>
+<body>
+<header>
+  <h1>Logo</h1>
+  <ul class="nav">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#" class="cta">Request A Qoute</a></li>
+  </ul>
+  <div class="burger">
+    <div class="line-1"></div>
+    <div class="line-2"></div>
+    <div class="line-3"></div>
+  </div>
+</header>
+</body>
+<script>
+// Selection of HTML objects
+const burger = document.querySelector(".burger");
+const nav = document.querySelector(".nav");
+const horzontanlLine =document.querySelector(".line-2")
+const daigonalOne =document.querySelector(".line-1")
+const daigonalTwo =document.querySelector(".line-3")
+
+
+// Defining a function
+function toggleNav() {
+  nav.classList.toggle("nav-active");
+  horzontanlLine.classList.toggle("horizontal-line")
+  daigonalOne.classList.toggle("diagonal-line-1");
+  daigonalTwo.classList.toggle("diagonal-line-2")
+  
+}
+
+// Calling the function after click event occurs
+burger.addEventListener("click", function() {
+  toggleNav();
+});
+</script>
+</html>
