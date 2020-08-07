@@ -1,0 +1,166 @@
+<!doctype html><html lang=en>
+<head>
+  <meta charset=utf-8>
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <meta name=description content="Теория множеств">
+  <meta property="og:title" content="Теория множеств">
+  <meta property="og:description"
+  content="Теория множеств Основные понятия Множество - совокупность элементов, объединенных по какому-либо признаку.
+    Множества: конечные бесконечные
+    Обозначения: $$ x \in X - x \text{ является элементом множества } Х \\ x \forall - \text{ для всех } x \\ x \exists - \text{ существует } x \\ \alpha \implies \beta - \text{ следовательно(импликация) } \\ \alpha \iff \beta - \text{ эквивалентно } \\ U - \text{ универсум } \\ $$ Универсум (универсальное множество) - разумное множество элементов, за пределы которого не выходят при рассмотрении больших множеств.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://github.com/Artexxx/Artem-python">
+  <title>Теория множеств | Artexxx</title>
+  <link rel=icon href=svg/favicon.png type=image/x-icon>
+  <link rel=stylesheet href=normalize.css>
+</head>
+
+<body>
+<input type=checkbox class=hidden id=menu-control>
+<main class="flex container">
+<aside class="book-menu fixed">
+<nav>
+<h2 class=book-brand><a href=https://github.com/Artexxx/Artem-python  class=book-icon'alt=Artexx><span>Artexxx</span><span><img src="svg/icons-github-50.png" alt="" style='margin-left:10px;'></span></a></h2>
+<div class=book-search>
+  <input type=text id=book-search-input placeholder=Поиск aria-label=Search maxlength=64>
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id=book-search-results></ul>
+</div>
+<ul>
+  <li><a href=#>Линейная Алгебра</a></li>
+  <li><a href=#>Статистика</a></li>
+  <li><a href=#>Комбинаторика</a>
+    <ul><li><a href=sets.html class=active>Теория множеств</a></li>
+      <li><a href=#>Числа</a></li>
+      <li><a href=#>Комплексные числа</a></li>
+      <li><a href=#>Матрицы</a></li>
+    </ul>
+  </li>
+</ul>
+</nav>
+<script>
+(function () { 
+  var menu = document.querySelector("aside.book-menu nav"); 
+  addEventListener("beforeunload", function (event) { localStorage.setItem("menu.scrollTop", menu.scrollTop); });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop"); 
+})();
+</script>
+</aside>
+<div class=book-page>
+<header class="flex align-center justify-between book-header">
+<label for=menu-control><img src=svg/menu.svg class=book-icon alt=Menu></label>
+<strong>Теория множеств</strong></header>
+<article class=markdown>
+<h1 id=->Теория множеств</h1>
+<h2 id=-1>Основные понятия</h2>
+<p><em><strong>Множество</strong></em> - совокупность <em>элементов</em>, объединенных по какому-либо признаку.</p>
+<p>Множества:</p>
+<ul><li>конечные</li><li>бесконечные</li></ul>
+<p>Обозначения:</p>
+<link rel=stylesheet href=katex.min.css integrity=sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq crossorigin=anonymous>
+<script defer src=katex.min.js integrity=sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz crossorigin=anonymous></script>
+<script defer src=auto-render.min.js integrity=sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI crossorigin=anonymous onload=renderMathInElement(document.body);></script>
+<p class=katex>$$
+x \in X - x \text{ является элементом множества } Х \\
+x \forall - \text{ для всех } x \\
+x \exists - \text{ существует } x \\
+\alpha \implies \beta - \text{ следовательно(импликация) } \\
+\alpha \iff \beta - \text{ эквивалентно } \\
+U - \text{ универсум } \\
+$$</p><p><em><strong>Универсум</strong></em> (универсальное множество) - разумное множество элементов, за пределы которого не выходят при рассмотрении больших множеств.</p>
+<h3 id=heading>Подмножества</h3>
+<p>Обозначается:<p class=katex>$$
+A \subset B - \text{ (теоретико-множественное) включение }
+$$</p></p><p>Определение:<p class=katex>$$
+x \in A \implies x \in B
+$$</p>Т.е. A есть часть B.</p><p><p class=katex>$$
+A = B \text{ if } A \subset B \text{ and } B \subset A
+$$</p>Т.e. множества A и B состоят из одних и тех же элементов.</p><h3 id=-->Операции над множествами</h3><ul><li>Объединение(&ldquo;ИЛИ&rdquo;)<p class=katex>$$
+A \cup B
+$$</p></li><li>Пересечение(&ldquo;И&rdquo;)<p class=katex>$$
+A \cap B
+$$</p></li><li>Дополнение (&ldquo;НЕ&rdquo;; множество всех элементов U, не входящих в А)<p class=katex>$$
+\overline{A}
+$$</p></li></ul><h3 id=-2>Пустое множество</h3><p class=katex>$$
+\varnothing
+$$</p><p>Не имеет ни одного элемента. Таким образом, пересечение непересекающихся множеств даёт:</p><p class=katex>$$
+A \cap B = \varnothing
+$$</p><p>Основные свойства:<p class=katex>$$
+A \cup \varnothing = A \\
+A \cap \varnothing = \varnothing \\
+A \cap \overline{A} = \varnothing\\
+\overline{\varnothing} = U \\
+\varnothing = \overline{U} \\
+$$</p></p><h3 id=--1>Производные свойства множеств</h3><p class=katex>$$
+A \cup B = B \cup A \\
+A \cup A = A \\
+A \cap B = B \cap A \\
+A \cap A = A \\
+A \cup \overline{A} = U \\
+\overline{\overline{A}} = A \\
+A \cup ( B \cup C ) = ( A \cup B ) \cup C \\
+A \cap ( B \cap C ) = ( A \cap B ) \cap C \\
+A \cap ( B \cup C ) = ( A \cap B ) \cup ( A \cap C ) \\
+A \cup ( B \cap C ) = ( A \cup B ) \cap ( A \cup C ) \\
+$$</p><p>Объединение и пересечение произвольного числа множеств<p class=katex>$$
+A_1, A_2, ..., A_m
+$$</p>обозначается:</p><p class=katex>$$
+\bigcup_{i=m}^m A_i \Big( \bigcap_{i=m}^m A_i\Big)
+$$</p><h3 id=--2>Формулы Де Моргана</h3><p class=katex>$$
+\overline{A \cup B} = \overline{A} \cap \overline{B} \\
+\overline{A \cap B} = \overline{A} \cup \overline{B}
+$$</p><h2 id=--3>Теория бесконечных множеств</h2><p>Пусть<p class=katex>$$
+f : X \to Y
+$$</p>т.е. f - отображение (&ldquo;функция&rdquo;), у которой множеством задания является Х, на множество значений лежит в Y. Тогда каждому:</p><p class=katex>$$
+x \in X
+$$</p><p>сопоставляется элемент<p class=katex>$$
+y = f(x) \in Y
+$$</p></p><p>Отображение такого вида называется <em><strong>взаимно однозначным соответствием</strong></em>, если для каждого<p class=katex>$$
+y \in Y
+$$</p>существует единственный элемент<p class=katex>$$
+x \in X
+$$</p>такой, что<p class=katex>$$
+f(x) = y
+$$</p></p><p>Если для множеств X и Y существует взаимно однозначное соответствие, то эти множества называются <em><strong>эквивалентными</strong></em> или <em><strong>равномощными</strong></em>. Обозначается<p class=katex>$$
+X \sim Y
+$$</p></p><p>Свойства эквивалентности:<p class=katex>$$
+X \sim X \\
+X \sim Y \implies Y \sim X \\
+X \sim Y, Y \sim Z \implies X \sim Z
+$$</p></p><p><em><strong>Мощность множества А</strong></em> - класс всех эквивалентных ему множеств. Соответственно, мощности множеств равны тогда и только тогда, когда они эквивалентны.</p><p>Изначально мощность множества выражалась через количество его элементов.</p><p>Множество, эквивалентное натуральному ряду называется <em><strong>счетным</strong></em>, не эквивалентное - <em><strong>несчетным</strong></em>.</p><p>Мощности четных(и нечетных), натуральных, целых и рациональных чисел равны.
+Кроме того, они равны и мощностям плоскости и трёхмерного пространства.</p><p>Мощность числовой прямой также носит название <em><strong>континуум</strong></em>.</p><h2 id=--4>Теория конечных множеств</h2><p>Является частью дискретной математики.</p><p><em><strong>Комбинаторика</strong></em> - раздел математики, посвященный решению задач выбора и расположения элементов некоторого, обычно конечного множества в соответствии с заданными правилами.</p><p>Если мы имеем дело с непустым конечным множеством M, состоящим из m элементов, это обозначается как:</p><p class=katex>$$
+|M| = m
+$$</p><p>Отличие от обозначения модуля числа определяется только по контексту.</p><p><em><strong>Размещение</strong></em> из m элементов по n - упорядоченный набор, составленный из n различных элементов множества M.<p class=katex>$$
+1 \le n \le m
+$$</p>Обозначается:<p class=katex>$$
+A^n_m = \frac{m!}{(m-n)!}
+$$</p></p><p><em><strong>Перестановкой</strong></em> называют размещение из m элементов по m.</p><p class=katex>$$
+P_m = m!
+$$</p><p><em><strong>Сочетанием</strong></em> из m элементов по n называется набор, состоящий из n различных элементов множества M.</p><p class=katex>$$
+C^n_m = \frac{A^n_m}{P_m} = \frac{m!}{(m-n)n!}
+$$</p><p>Сочетание может быть использовано, например, для определения коэффициентов многочлена<p class=katex>$$
+(1 + x)^m
+$$</p>при некотором фиксированном m:</p><p><p class=katex>$$
+(1+x)^m = C_m^0 + C_m^1x + C_m^2x^2+...+C_m^mx^m = \sum_{n=0}^m C_m^nx^n
+$$</p>Эта формула называется <em><strong>биномом Ньютона</strong></em>, а сочетания в ней - <em><strong>биноминальными коэффициентами</strong></em>. Их сумма:<p class=katex>$$
+\sum_{n=0}^m C^n_m = 2^m
+$$</p>
+</p></article><div class="book-footer justify-between"></div></div>
+<aside class="book-toc levels-6 fixed">
+<nav id=TableOfContents>
+  <ul><li><a href=#-1>Основные понятия</a>
+    <ul><li><a href=#heading>Подмножества</a></li>
+      <li><a href=#-->Операции над множествами</a></li>
+      <li><a href=#-2>Пустое множество</a></li>
+      <li><a href=#--1>Производные свойства множеств</a></li>
+      <li><a href=#--2>Формулы Де Моргана</a></li>
+    </ul>
+    </li>
+    <li><a href=#--3>Теория бесконечных множеств</a></li>
+    <li><a href=#--4>Теория конечных множеств</a></li>
+  </ul>
+</nav>
+</aside>
+</main>
+</body>
+</html>
