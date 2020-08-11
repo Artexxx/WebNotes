@@ -45,6 +45,12 @@
 ├── script.js 
 └── style.css
 ```
+### [[CSS] Cloud Banner Parallax Effects](https://artexxx.github.io/Case/%5BCSS%5D%20Cloud%20Banner%20Parallax%20Effects/index.html)
+```text
+├── \image with 5 images
+├── index.html with js
+└── style.css
+```
 
 ### [[CSS] Parallax scene with CSS variables](https://artexxx.github.io/Case/%5BCSS%5D%20Parallax%20scene%20with%20CSS%20variables/)
 ```text

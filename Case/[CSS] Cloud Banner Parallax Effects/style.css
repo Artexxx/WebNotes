@@ -13,20 +13,25 @@
   height:100vh;
   background: url('image/original.jpg');
   background-size: cover;
-  background-position: bottom;
+  background-position: top;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media(max-width: 920px) {
+  .banner {
+    background-position: bottom;
+  }
 }
 .banner #banner-text {
  position: relative;
  font-size: 12em;
  color: white;
-} 
+}
 @media(max-width: 920px) {
   .banner #banner-text {
     font-size: 7em;
-   } 
+   }
 }
 .banner .clouds {
   position: absolute;
