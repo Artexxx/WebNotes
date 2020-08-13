@@ -20,6 +20,7 @@ body{
   background-color: #222222;
   color: #fff;
   margin: 0 auto;
+  margin-bottom: 70px;
   text-align: center;
   width: 60%;
 }
@@ -82,6 +83,7 @@ Social Icons - Shadow (.icon-rounded + .icon-shadow)
 
 Social Icons - Flat  (.icon-flat)
 ~ 11 items ~
+
 ----------------------------*/
 
 .list-unstyled {
@@ -217,6 +219,7 @@ Social Icons - Flat  (.icon-flat)
 	text-shadow: 0px 0px #d5d5d5, 1px 1px #d5d5d5, 2px 2px #d5d5d5, 3px 3px #d5d5d5, 4px 4px #d5d5d5, 5px 5px #d5d5d5, 6px 6px #d5d5d5, 7px 7px #d5d5d5, 8px 8px #d5d5d5, 9px 9px #d5d5d5, 10px 10px #d5d5d5, 11px 11px #d5d5d5, 12px 12px #d5d5d5, 13px 13px #d5d5d5, 14px 14px #d5d5d5, 15px 15px #d5d5d5, 16px 16px #d5d5d5, 17px 17px #d5d5d5, 18px 18px #d5d5d5, 19px 19px #d5d5d5, 20px 20px #d5d5d5, 21px 21px #d5d5d5, 22px 22px #d5d5d5, 23px 23px #d5d5d5, 24px 24px #d5d5d5, 25px 25px #d5d5d5, 26px 26px #d5d5d5, 27px 27px #d5d5d5, 28px 28px #d5d5d5, 29px 29px #d5d5d5, 30px 30px #d5d5d5;
 }	
 
+
 .social-icons .fa-adn{background-color:#504e54;}
 .social-icons .fa-apple{background-color:#aeb5c5;}
 .social-icons .fa-android{background-color:#A5C63B;}
@@ -252,7 +255,7 @@ Social Icons - Flat  (.icon-flat)
 .social-icons .fa-youtube,.social-icons .fa-youtube-play,.social-icons .fa-youtube-square{background-color:#C52F30;}
 
 
-.social-icons .fa-sh-adn {text-shadow: 0px 0px #37363a, 1px 1px #37363a, 2px 2px #37363a, 3px 3px #37363a, 4px 4px #37363a, 5px 5px #37363a, 6px 6px #37363a, 7px 7px #37363a, 8px 8px #37363a, 9px 9px #37363a, 10px 10px #37363a, 11px 11px #37363a, 12px 12px #37363a, 13px 13px #37363a, 14px 14px #37363a, 15px 15px #37363a, 16px 16px #37363a, 17px 17px #37363a, 18px 18px #37363a, 19px 19px #37363a, 20px 20px #37363a, 21px 21px #37363a, 22px 22px #37363a, 23px 23px #37363a, 24px 24px #37363a, 25px 25px #37363a, 26px 26px #37363a, 27px 27px #37363a, 28px 28px #37363a, 29px 29px #37363a, 30px 30px #37363a;}
+.social-icons .fa-sh-adn  {text-shadow: 0px 0px #37363a, 1px 1px #37363a, 2px 2px #37363a, 3px 3px #37363a, 4px 4px #37363a, 5px 5px #37363a, 6px 6px #37363a, 7px 7px #37363a, 8px 8px #37363a, 9px 9px #37363a, 10px 10px #37363a, 11px 11px #37363a, 12px 12px #37363a, 13px 13px #37363a, 14px 14px #37363a, 15px 15px #37363a, 16px 16px #37363a, 17px 17px #37363a, 18px 18px #37363a, 19px 19px #37363a, 20px 20px #37363a, 21px 21px #37363a, 22px 22px #37363a, 23px 23px #37363a, 24px 24px #37363a, 25px 25px #37363a, 26px 26px #37363a, 27px 27px #37363a, 28px 28px #37363a, 29px 29px #37363a, 30px 30px #37363a;}
 .social-icons .fa-sh-adn:hover{color:#504e54!important;}
 
 .social-icons .fa-sh-android {  text-shadow: 0px 0px #7e9630, 1px 1px #7e9630, 2px 2px #7e9630, 3px 3px #7e9630, 4px 4px #7e9630, 5px 5px #7e9630, 6px 6px #7e9630, 7px 7px #7e9630, 8px 8px #7e9630, 9px 9px #7e9630, 10px 10px #7e9630, 11px 11px #7e9630, 12px 12px #7e9630, 13px 13px #7e9630, 14px 14px #7e9630, 15px 15px #7e9630, 16px 16px #7e9630, 17px 17px #7e9630, 18px 18px #7e9630, 19px 19px #7e9630, 20px 20px #7e9630, 21px 21px #7e9630, 22px 22px #7e9630, 23px 23px #7e9630, 24px 24px #7e9630, 25px 25px #7e9630, 26px 26px #7e9630, 27px 27px #7e9630, 28px 28px #7e9630, 29px 29px #7e9630, 30px 30px #7e9630;}
