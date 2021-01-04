@@ -420,46 +420,49 @@ body {
   margin: 0 10px;
 }
 .model-9 .icon {
-  color: #fff;
-  overflow: hidden;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 100%;
+  border: 5px solid;
+  transition: all 0.5s;
 }
 .model-9 .icon:hover {
   background: #fff;
+  transform: rotate(360deg) scale(1.3);
 }
-.model-9 .icon:hover .fa {
-  -moz-animation: 0.4s icon-move linear 0s;
-  -webkit-animation: 0.4s icon-move linear 0s;
-  animation: 0.4s icon-move linear 0s;
-}
-.model-9 .twitter {
-  background: #00ACED;
+
+.model-9 .twitter{
+  background-color: #00ACED;
+  border-color:  #00ACED;
 }
 .model-9 .twitter:hover {
   color: #00ACED;
 }
 .model-9 .facebook {
-  background: #3B579D;
+  background:#3B579D;
+  border-color:#3B579D;
 }
 .model-9 .facebook:hover {
   color: #3B579D;
 }
 .model-9 .google-plus {
   background: #DD4A3A;
+  border-color: #DD4A3A;
 }
 .model-9 .google-plus:hover {
   color: #DD4A3A;
 }
 .model-9 .linkedin {
   background: #007BB6;
+  border-color: #007BB6;
 }
 .model-9 .linkedin:hover {
   color: #007BB6;
 }
 .model-9 .pinterest {
   background: #CB2026;
+  border-color: #CB2026;
 }
 .model-9 .pinterest:hover {
   color: #CB2026;
@@ -588,62 +591,6 @@ body {
 }
 .model-3d-1 .pinterest .back {
   background: #CB2026;
-}
-
-/*====== Model-9 Animation ========*/
-@-moz-keyframes icon-move {
-  49% {
-    -moz-transform: translateX(-40px);
-    transform: translateX(-40px);
-    opacity: 0;
-  }
-  50% {
-    -moz-transform: translateX(40px);
-    transform: translateX(40px);
-    opacity: 1;
-  }
-  80% {
-    -moz-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-@-webkit-keyframes icon-move {
-  49% {
-    -webkit-transform: translateX(-40px);
-    transform: translateX(-40px);
-    opacity: 0;
-  }
-  50% {
-    -webkit-transform: translateX(40px);
-    transform: translateX(40px);
-    opacity: 1;
-  }
-  80% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-@keyframes icon-move {
-  49% {
-    -moz-transform: translateX(-40px);
-    -ms-transform: translateX(-40px);
-    -webkit-transform: translateX(-40px);
-    transform: translateX(-40px);
-    opacity: 0;
-  }
-  50% {
-    -moz-transform: translateX(40px);
-    -ms-transform: translateX(40px);
-    -webkit-transform: translateX(40px);
-    transform: translateX(40px);
-    opacity: 1;
-  }
-  80% {
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
 }
 
 .model-10 .icon{
