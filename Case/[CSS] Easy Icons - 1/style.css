@@ -47,13 +47,13 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
-a {
+a.contact {
   color: white;
   text-decoration: none;
   font-weight: bold;
   opacity: .88;
 }
-a:hover{
+a.contact:hover {
   opacity: 1;
   color: pink;
 }
@@ -97,7 +97,7 @@ Social Icons - Flat  (.icon-flat)
 	margin-bottom: 10px;
 }
 
-/*Change icons size here*/
+/*Change font-awesome icon size here*/
 .social-icons .fa {
 	font-size: 1.8em;
 }

@@ -24,7 +24,7 @@ body {
 .social-nav li {
   display: inline-block;
 }
-.social-nav a {
+.social-nav .icon  {
   display: inline-block;
   float: left;
   width: 48px;
@@ -56,7 +56,7 @@ body {
   float: none;
   display: block;
 }
-.model-0 a:hover {
+.model-0 .icon:hover {
   padding-left: 20px;
   width: 65px;
 }
@@ -79,7 +79,7 @@ body {
 .model-1 li {
   margin: 0 2px;
 }
-.model-1 a {
+.model-1 .icon {
   background: #fff;
   -moz-transition: -moz-transform 1s, background 0.4s;
   -o-transition: -o-transform 1s, background 0.4s;
@@ -89,7 +89,7 @@ body {
   -webkit-border-radius: 100%;
   border-radius: 100%;
 }
-.model-1 a:hover {
+.model-1 .icon:hover {
   -moz-transform: translateY(-10px);
   -ms-transform: translateY(-10px);
   -webkit-transform: translateY(-10px);
@@ -111,7 +111,7 @@ body {
   color: #CB2026;
 }
 
-.model-2 a {
+.model-2 .icon {
   overflow: hidden;
   font-size: 26px;
   -moz-border-radius: 4px;
@@ -119,7 +119,7 @@ body {
   border-radius: 4px;
   margin: 0 5px;
 }
-.model-2 a:hover {
+.model-2 .icon:hover {
   background: #fff;
   text-shadow: 0px 0px #d5d5d5, 1px 1px #d5d5d5, 2px 2px #d5d5d5, 3px 3px #d5d5d5, 4px 4px #d5d5d5, 5px 5px #d5d5d5, 6px 6px #d5d5d5, 7px 7px #d5d5d5, 8px 8px #d5d5d5, 9px 9px #d5d5d5, 10px 10px #d5d5d5, 11px 11px #d5d5d5, 12px 12px #d5d5d5, 13px 13px #d5d5d5, 14px 14px #d5d5d5, 15px 15px #d5d5d5, 16px 16px #d5d5d5, 17px 17px #d5d5d5, 18px 18px #d5d5d5, 19px 19px #d5d5d5, 20px 20px #d5d5d5, 21px 21px #d5d5d5, 22px 22px #d5d5d5, 23px 23px #d5d5d5, 24px 24px #d5d5d5, 25px 25px #d5d5d5, 26px 26px #d5d5d5, 27px 27px #d5d5d5, 28px 28px #d5d5d5, 29px 29px #d5d5d5, 30px 30px #d5d5d5;
 }
@@ -162,7 +162,7 @@ body {
 .model-3 {
   margin-bottom: 50px;
 }
-.model-3 a {
+.model-3 .icon {
   background: #fff;
   -moz-transition: padding 0.4s;
   -o-transition: padding 0.4s;
@@ -170,7 +170,7 @@ body {
   transition: padding 0.4s;
   margin: 0 5px;
 }
-.model-3 a:after {
+.model-3 .icon:after {
   content: '';
   position: absolute;
   border: 24px solid #fff;
@@ -183,11 +183,11 @@ body {
   -webkit-transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
 }
-.model-3 a:hover {
+.model-3 .icon:hover {
   color: #fff;
   padding-top: 10px;
 }
-.model-3 a:hover:after {
+.model-3 .icon:hover:after {
   -moz-transform: translateY(10px);
   -ms-transform: translateY(10px);
   -webkit-transform: translateY(10px);
@@ -242,13 +242,13 @@ body {
 .model-4 li {
   margin: 0 2px;
 }
-.model-4 a {
+.model-4 .icon {
   background: none;
   line-height: 1.5;
   font-size: 32px;
   text-shadow: 0px 0px 1px;
 }
-.model-4 a:hover {
+.model-4 .icon:hover {
   text-shadow: 0px 0px 25px;
 }
 .model-4 .twitter {
@@ -270,7 +270,7 @@ body {
 .model-5 li {
   float: left;
 }
-.model-5 a {
+.model-5 .icon {
   background: #222;
 }
 .model-5 .twitter:hover {
@@ -292,7 +292,7 @@ body {
 .model-6 li {
   float: left;
 }
-.model-6 a:hover {
+.model-6 .icon:hover {
   background: #fff;
 }
 .model-6 .twitter {
@@ -329,7 +329,7 @@ body {
 .model-7 li {
   margin: 0 10px;
 }
-.model-7 a {
+.model-7 .icon {
   background: none;
   -moz-box-shadow: 0 0 4px 3px;
   -webkit-box-shadow: 0 0 4px 3px;
@@ -343,16 +343,16 @@ body {
   -webkit-border-radius: 100%;
   border-radius: 100%;
 }
-.model-7 a .fa {
+.model-7 .icon .fa {
   -moz-transition: -moz-transform 1s;
   -o-transition: -o-transform 1s;
   -webkit-transition: -webkit-transform 1s;
   transition: transform 1s;
 }
-.model-7 a:hover {
+.model-7 .icon:hover {
   background: #fff;
 }
-.model-7 a:hover .fa {
+.model-7 .icon:hover .fa {
   -moz-transform: rotate(-10deg) scale(3);
   -ms-transform: rotate(-10deg) scale(3);
   -webkit-transform: rotate(-10deg) scale(3);
@@ -374,15 +374,15 @@ body {
   color: #CB2026;
 }
 
-.model-8 a {
+.model-8 .icon  {
   background: #FFF;
 }
-.model-8 a:hover {
+.model-8 .icon:hover {
   -moz-box-shadow: 0 48px 0 inset;
   -webkit-box-shadow: 0 48px 0 inset;
   box-shadow: 0 48px 0 inset;
 }
-.model-8 a:hover > .fa {
+.model-8 .icon:hover > .fa {
   color: #fff;
 }
 .model-8 .twitter {
@@ -419,17 +419,17 @@ body {
 .model-9 li {
   margin: 0 10px;
 }
-.model-9 a {
+.model-9 .icon {
   color: #fff;
   overflow: hidden;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   border-radius: 100%;
 }
-.model-9 a:hover {
+.model-9 .icon:hover {
   background: #fff;
 }
-.model-9 a:hover .fa {
+.model-9 .icon:hover .fa {
   -moz-animation: 0.4s icon-move linear 0s;
   -webkit-animation: 0.4s icon-move linear 0s;
   animation: 0.4s icon-move linear 0s;
@@ -465,7 +465,7 @@ body {
   color: #CB2026;
 }
 
-.model-3d-0 a {
+.model-3d-0 .icon{
   background: #333;
   float: left;
   margin: 0 10px;
@@ -473,17 +473,17 @@ body {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-.model-3d-0 a:hover {
+.model-3d-0 .icon:hover {
   -moz-transform: rotateX(-90deg);
   -webkit-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
 }
-.model-3d-0 a:hover .fornt {
+.model-3d-0 .icon:hover .fornt {
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.model-3d-0 a:hover .back {
+.model-3d-0 .icon:hover .back {
   -moz-backface-visibility: visible;
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
@@ -528,7 +528,7 @@ body {
   background: #CB2026;
 }
 
-.model-3d-1 a {
+.model-3d-1 .icon {
   background: #fff;
   color: #666;
   float: left;
@@ -537,18 +537,18 @@ body {
   -webkit-border-radius: 100%;
   border-radius: 100%;
 }
-.model-3d-1 a:hover {
+.model-3d-1 .icon:hover {
   color: #fff;
   -moz-transform: rotateY(-180deg);
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
-.model-3d-1 a:hover .fornt {
+.model-3d-1 .icon:hover .fornt {
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.model-3d-1 a:hover .back {
+.model-3d-1 .icon:hover .back {
   -moz-backface-visibility: visible;
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
@@ -646,3 +646,115 @@ body {
   }
 }
 
+.model-10 .icon{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*  */
+  background-color: rgb(36, 34, 34);
+  float: left;
+  margin: 0 10px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  transition: all 0.15s ease;
+}
+.model-10 .icon:hover {
+  color: #fff;
+}
+.model-10 .icon:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -150%);
+}
+.model-10 .icon:active {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
+}
+
+/* Tooltips */
+.tooltip {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 0.7rem 0.9rem;
+  border-radius: 20px;
+  line-height:100%;
+  font-size: 0.5rem;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  text-transform: uppercase;
+  transform: translate(-50%, -100%);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.tooltip:after {
+  display: block;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  content: "";
+  border: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: transparent;
+  transform: translate(-50%, 100%);
+}
+.model-10 .twitter {
+  background: #00ACED;
+  color: #fff;
+}
+.model-10 .twitter .tooltip {
+  background: #00ACED;
+  color: currentColor;
+}
+.model-10 .twitter .tooltip:after {
+  border-top-color: #00ACED;
+}
+.model-10 .facebook {
+  background: #3B579D;
+  color: #fff;
+}
+.model-10 .facebook .tooltip{
+  background: #3B579D;
+  color: currentColor;
+}
+.model-10 .facebook .tooltip:after {
+  border-top-color: #3B579D;
+}
+.model-10 .google-plus {
+  background: #DD4A3A;
+  color: #fff;
+}
+.model-10 .google-plus .tooltip{
+  background: #DD4A3A;
+  color: currentColor;
+}
+.model-10 .google-plus .tooltip:after {
+  border-top-color: #DD4A3A;
+}
+.model-10 .linkedin {
+  background: #007BB6;
+  color: #fff;
+}
+.model-10 .linkedin .tooltip{
+  background: #007BB6;
+  color: currentColor;
+}
+.model-10 .linkedin .tooltip:after {
+  border-top-color: #007BB6;
+}
+.model-10 .pinterest {
+  background: #CB2026;
+  color: #fff;
+}
+.model-10 .pinterest .tooltip{
+  background: #CB2026;
+  color: currentColor;
+}
+.model-10 .pinterest .tooltip:after {
+  border-top-color: #CB2026;
+}
