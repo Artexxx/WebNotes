@@ -5,10 +5,20 @@
   font-family: arial;
 }
 
+/*===== Scrollbar =====*/
+::-webkit-scrollbar {width: 8px;height: 24px;}
+::-webkit-scrollbar-track-piece {background:#1d1e1f;}
+::-webkit-scrollbar-thumb:vertical {height:6  px;background:#171717;}
+::-webkit-scrollbar-thumb:vertical:hover {background: pink;}
+::-webkit-scrollbar-thumb:horizontal {width:10px;background:#171717;}
+::-webkit-scrollbar-thumb:horizontal:hover {background:#71CA55;}
+
+/*===== BODY =====*/
 body {
-  background: #404040;
+  background-image: radial-gradient(circle at center center, rgba(33,33,33,0),rgb(33,33,33)),repeating-linear-gradient(135deg, rgb(33,33,33) 0px, rgb(33,33,33) 1px,transparent 1px, transparent 4px),repeating-linear-gradient(45deg, rgb(56,56,56) 0px, rgb(56,56,56) 5px,transparent 5px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
   padding: 0;
   margin: 0;
+  margin-bottom: 70px;
   text-align: center;
   font-family: arial;
   color: #fff;
@@ -42,7 +52,7 @@ body {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 0 |*/
 .model-0 {
   position: absolute;
   -moz-transition: 0.5s;
@@ -75,7 +85,7 @@ body {
 .model-0 .pinterest {
   background: #CB2026;
 }
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 1 |*/
 .model-1 li {
   margin: 0 2px;
 }
@@ -110,7 +120,7 @@ body {
 .model-1 .pinterest {
   color: #CB2026;
 }
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 2 |*/
 .model-2 .icon {
   overflow: hidden;
   font-size: 26px;
@@ -158,7 +168,7 @@ body {
 .model-2 .pinterest:hover {
   color: #CB2026;
 }
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 3 |*/
 .model-3 {
   margin-bottom: 50px;
 }
@@ -238,7 +248,7 @@ body {
 .model-3 .pinterest:hover:after {
   border-color: #CB2026;
 }
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 4 |*/
 .model-4 li {
   margin: 0 2px;
 }
@@ -266,7 +276,7 @@ body {
 .model-4 .pinterest {
   color: #CB2026;
 }
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 5 |*/
 .model-5 li {
   float: left;
 }
@@ -288,7 +298,7 @@ body {
 .model-5 .pinterest:hover {
   color: #CB2026;
 }
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 6 |*/
 .model-6 li {
   float: left;
 }
@@ -325,7 +335,7 @@ body {
 .model-6 .pinterest:hover {
   color: #CB2026;
 }
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 7 |*/
 .model-7 li {
   margin: 0 10px;
 }
@@ -373,7 +383,7 @@ body {
 .model-7 .pinterest {
   color: #CB2026;
 }
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 8 |*/
 .model-8 .icon  {
   background: #FFF;
 }
@@ -415,7 +425,7 @@ body {
 .model-8 .pinterest:hover {
   color: #CB2026;
 }
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 9 |*/
 .model-9 li {
   margin: 0 10px;
 }
@@ -592,13 +602,12 @@ body {
 .model-3d-1 .pinterest .back {
   background: #CB2026;
 }
-
-.model-10 .icon{
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 10 |*/
+.model-10 .icon {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  /*  */
   background-color: rgb(36, 34, 34);
   float: left;
   margin: 0 10px;
@@ -608,7 +617,7 @@ body {
   transition: all 0.15s ease;
 }
 .model-10 .icon:hover {
-  color: #fff;
+  color: #fff; 
 }
 .model-10 .icon:hover .tooltip {
   visibility: visible;
@@ -705,3 +714,91 @@ body {
 .model-10 .pinterest .tooltip:after {
   border-top-color: #CB2026;
 }
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 11 |*/
+.model-11 .icon{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  background-color:#fff;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  transition: all .4s ease;
+}
+.model-11 .icon:before{
+  position: absolute;
+  content: "";
+  height: calc(100% + 16px);
+  width: calc(100% + 16px);
+  border-radius: 50%;
+  border: 1px solid rgba(132, 132, 164, 0.35);
+  animation: 1.5s linear 0s normal none infinite focuse;
+}
+.model-11 .icon:hover .fa{
+  -webkit-animation: jello-horizontal 0.9s both;
+	        animation: jello-horizontal 0.9s both;
+}
+@keyframes focuse {
+  0% {
+    transform: scale(0.8);
+    opacity: 1; }
+  75% {
+    transform: scale(1.2);
+    opacity: 0; }
+  100% {
+    transform: scale(1.2);
+    opacity: 0; }
+}
+/**
+ * ----------------------------------------
+ * animation jello-horizontal
+ * ----------------------------------------
+ */
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+.model-11 .twitter {
+  color: #00ACED;
+}
+.model-11 .facebook {
+  color: #3B579D;
+}
+.model-11 .google-plus {
+  color: #DD4A3A;
+}
+.model-11 .linkedin {
+  color: #007BB6;
+}
+.model-11 .pinterest {
+  color: #CB2026;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 11 |*/
