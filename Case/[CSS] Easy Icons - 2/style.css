@@ -395,45 +395,31 @@ body {
 .model-8 .icon:hover > .fa {
   color: #fff;
 }
+/* icon style start */
 .model-8 .twitter {
-  color: #00ACED;
-}
-.model-8 .twitter:hover {
   color: #00ACED;
 }
 .model-8 .facebook {
   color: #3B579D;
 }
-.model-8 .facebook:hover {
-  color: #3B579D;
-}
 .model-8 .google-plus {
-  color: #DD4A3A;
-}
-.model-8 .google-plus:hover {
   color: #DD4A3A;
 }
 .model-8 .linkedin {
   color: #007BB6;
 }
-.model-8 .linkedin:hover {
-  color: #007BB6;
-}
 .model-8 .pinterest {
   color: #CB2026;
 }
-.model-8 .pinterest:hover {
-  color: #CB2026;
-}
+/* icon style end */
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 9 |*/
-.model-9 li {
-  margin: 0 10px;
-}
 .model-9 .icon {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
+  margin: 0 5px auto;
   border: 5px solid;
   transition: all 0.5s;
 }
@@ -442,6 +428,7 @@ body {
   transform: rotate(360deg) scale(1.3);
 }
 
+/* icon style start */
 .model-9 .twitter{
   background-color: #00ACED;
   border-color:  #00ACED;
@@ -477,11 +464,12 @@ body {
 .model-9 .pinterest:hover {
   color: #CB2026;
 }
+/* icon style end*/
 
 .model-3d-0 .icon{
   background: #333;
   float: left;
-  margin: 0 10px;
+  margin: 0 5px auto;
   -moz-transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -515,12 +503,13 @@ body {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
+
 .model-3d-0 .back {
   font-size: 32px;
-  -moz-transform: rotateX(90deg) translateZ(18px);
-  -ms-transform: rotateX(90deg) translateZ(18px);
-  -webkit-transform: rotateX(90deg) translateZ(18px);
-  transform: rotateX(90deg) translateZ(18px);
+  -moz-transform: rotateX(90deg) translateZ(24px);
+  -ms-transform: rotateX(90deg) translateZ(24px);
+  -webkit-transform: rotateX(90deg) translateZ(24px);
+  transform: rotateX(90deg) translateZ(24px);
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -545,7 +534,7 @@ body {
   background: #fff;
   color: #666;
   float: left;
-  margin: 0 10px;
+  margin: 0 5px auto;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   border-radius: 100%;
@@ -609,17 +598,14 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgb(36, 34, 34);
-  float: left;
-  margin: 0 10px;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
+  margin: 0 5px auto;
   border-radius: 100%;
   transition: all 0.15s ease;
 }
 .model-10 .icon:hover {
   color: #fff; 
 }
-.model-10 .icon:hover .tooltip {
+.model-10 .icon:hover .tooltip_top {
   visibility: visible;
   opacity: 1;
   transform: translate(-50%, -150%);
@@ -628,16 +614,16 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
 }
 
-/* Tooltips */
-.tooltip {
+/* Tooltips on top*/
+.tooltip_top {
   display: block;
   position: absolute;
   top: 0;
   left: 50%;
-  padding: 0.7rem 0.9rem;
+  padding: 0.6rem 0.53rem;
   border-radius: 20px;
   line-height:100%;
-  font-size: 0.5rem;
+  font-size: 0.55rem;
   font-weight: bold;
   opacity: 0;
   pointer-events: none;
@@ -646,7 +632,7 @@ body {
   transition: all 0.3s ease;
   z-index: 1;
 }
-.tooltip:after {
+.tooltip_top:after {
   display: block;
   position: absolute;
   bottom: 5px;
@@ -659,59 +645,60 @@ body {
   border-color: transparent;
   transform: translate(-50%, 100%);
 }
+
 .model-10 .twitter {
   background: #00ACED;
   color: #fff;
 }
-.model-10 .twitter .tooltip {
+.model-10 .twitter .tooltip_top {
   background: #00ACED;
   color: currentColor;
 }
-.model-10 .twitter .tooltip:after {
+.model-10 .twitter .tooltip_top:after {
   border-top-color: #00ACED;
 }
 .model-10 .facebook {
   background: #3B579D;
   color: #fff;
 }
-.model-10 .facebook .tooltip{
+.model-10 .facebook .tooltip_top{
   background: #3B579D;
   color: currentColor;
 }
-.model-10 .facebook .tooltip:after {
+.model-10 .facebook .tooltip_top:after {
   border-top-color: #3B579D;
 }
 .model-10 .google-plus {
   background: #DD4A3A;
   color: #fff;
 }
-.model-10 .google-plus .tooltip{
+.model-10 .google-plus .tooltip_top{
   background: #DD4A3A;
   color: currentColor;
 }
-.model-10 .google-plus .tooltip:after {
+.model-10 .google-plus .tooltip_top:after {
   border-top-color: #DD4A3A;
 }
 .model-10 .linkedin {
   background: #007BB6;
   color: #fff;
 }
-.model-10 .linkedin .tooltip{
+.model-10 .linkedin .tooltip_top{
   background: #007BB6;
   color: currentColor;
 }
-.model-10 .linkedin .tooltip:after {
+.model-10 .linkedin .tooltip_top:after {
   border-top-color: #007BB6;
 }
 .model-10 .pinterest {
   background: #CB2026;
   color: #fff;
 }
-.model-10 .pinterest .tooltip{
+.model-10 .pinterest .tooltip_top{
   background: #CB2026;
   color: currentColor;
 }
-.model-10 .pinterest .tooltip:after {
+.model-10 .pinterest .tooltip_top:after {
   border-top-color: #CB2026;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 11 |*/
@@ -720,7 +707,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 10px;
+  margin: 0 5px auto;
   background-color:#fff;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
@@ -786,6 +773,8 @@ body {
             transform: scale3d(1, 1, 1);
   }
 }
+
+/* icon style start */
 .model-11 .twitter {
   color: #00ACED;
 }
@@ -801,4 +790,127 @@ body {
 .model-11 .pinterest {
   color: #CB2026;
 }
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 11 |*/
+/* icon style end */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 12 |*/
+
+.model-12 .icon{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin: 0 5px auto;
+  border-radius: 10px;
+  transition: all 0.2s ease-out;
+}
+
+.model-12 .icon:hover{
+  background-color: #222;
+  font-size: 0%;
+  transition: all 0.2s ease-out;
+}
+
+/* Tooltips on Inner */
+.tooltip_in {
+  position: absolute;
+  color: #fff;
+  font-size: 8px;
+  text-align: center;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  filter: blur(25px);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.model-12 .icon:hover .tooltip_in {
+  transition: all 0.3s ease-out;
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* icon style start */
+.model-12 .twitter {
+  background-color: #00ACED;
+}
+.model-12 .facebook {
+  background-color: #3B579D;
+}
+.model-12 .google-plus {
+  background-color: #DD4A3A;
+}
+.model-12 .linkedin {
+  background-color: #007BB6;
+}
+.model-12 .pinterest {
+  background-color: #CB2026;
+}
+/* icon style end */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 13 |*/
+
+.model-13 .icon{
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 5px auto;
+  border-radius: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+.model-13 .icon .fa {
+  position: relative;
+  min-width: 48px;
+  max-width: 48px;
+}
+
+.model-13 .icon:hover {
+  border-radius: 20px;
+  width: 150px;
+}
+
+/* Tooltips on Right */
+.tooltip_right {
+  width: 100%;
+  text-decoration: none;
+  display: block;
+  padding: 20px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: white;
+}
+
+/* icon style start */
+.model-13 .twitter {
+  background-color: #00ACED;
+}
+.model-13 .facebook {
+  background-color: #3B579D;
+}
+.model-13 .google-plus {
+  background-color: #DD4A3A;
+}
+.model-13 .linkedin {
+  background-color: #007BB6;
+}
+.model-13 .pinterest {
+  background-color: #CB2026;
+}
+/* icon style end */
+
+/* text style start */
+.model-13 .twitter .tooltip_right {
+  color: #00ACED;
+}
+.model-13 .facebook .tooltip_right {
+  color: #3B579D;
+}
+.model-13 .google-plus .tooltip_right {
+  color: #DD4A3A;
+}
+.model-13 .linkedin .tooltip_right {
+  color: #007BB6;
+}
+.model-13 .pinterest .tooltip_right {
+  color: #CB2026;
+}
+/* text style end */
