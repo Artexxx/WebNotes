@@ -11,7 +11,7 @@
 ::-webkit-scrollbar-thumb:vertical {height:6  px;background:#171717;}
 ::-webkit-scrollbar-thumb:vertical:hover {background: pink;}
 ::-webkit-scrollbar-thumb:horizontal {width:10px;background:#171717;}
-::-webkit-scrollbar-thumb:horizontal:hover {background:#71CA55;}
+::-webkit-scrollbar-thumb:horizontal:hover {background: pink;}
 
 /*===== BODY =====*/
 body {
@@ -47,17 +47,11 @@ body {
   line-height: 48px;
   background: #000;
   position: relative;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 0 |*/
 .model-0 {
   position: absolute;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   left: 0;
   top: 50px;
@@ -91,12 +85,7 @@ body {
 }
 .model-1 .icon {
   background: #fff;
-  -moz-transition: -moz-transform 1s, background 0.4s;
-  -o-transition: -o-transform 1s, background 0.4s;
-  -webkit-transition: -webkit-transform 1s, background 0.4s;
   transition: transform 1s, background 0.4s;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
   border-radius: 100%;
 }
 .model-1 .icon:hover {
@@ -124,10 +113,8 @@ body {
 .model-2 .icon {
   overflow: hidden;
   font-size: 26px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
   border-radius: 4px;
-  margin: 0 5px;
+  margin-left: 5px;
 }
 .model-2 .icon:hover {
   background: #fff;
@@ -170,13 +157,10 @@ body {
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 3 |*/
 .model-3 {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .model-3 .icon {
   background: #fff;
-  -moz-transition: padding 0.4s;
-  -o-transition: padding 0.4s;
-  -webkit-transition: padding 0.4s;
   transition: padding 0.4s;
   margin: 0 5px;
 }
@@ -188,9 +172,6 @@ body {
   border-bottom-color: transparent !important;
   left: 0;
   top: 60%;
-  -moz-transition: -moz-transform 0.4s;
-  -o-transition: -o-transform 0.4s;
-  -webkit-transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
 }
 .model-3 .icon:hover {
@@ -198,9 +179,6 @@ body {
   padding-top: 10px;
 }
 .model-3 .icon:hover:after {
-  -moz-transform: translateY(10px);
-  -ms-transform: translateY(10px);
-  -webkit-transform: translateY(10px);
   transform: translateY(10px);
 }
 .model-3 .twitter {
@@ -250,7 +228,7 @@ body {
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 4 |*/
 .model-4 li {
-  margin: 0 2px;
+  margin-left: 2px;
 }
 .model-4 .icon {
   background: none;
@@ -336,36 +314,21 @@ body {
   color: #CB2026;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 7 |*/
-.model-7 li {
-  margin: 0 10px;
-}
 .model-7 .icon {
+  margin-left: 8px;
   background: none;
-  -moz-box-shadow: 0 0 4px 3px;
-  -webkit-box-shadow: 0 0 4px 3px;
   box-shadow: 0 0 4px 3px;
   text-shadow: 0 0 1px #333;
-  -moz-transition: -moz-transform 0.4s, background 0.4s;
-  -o-transition: -o-transform 0.4s, background 0.4s;
-  -webkit-transition: -webkit-transform 0.4s, background 0.4s;
   transition: transform 0.4s, background 0.4s;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
   border-radius: 100%;
 }
 .model-7 .icon .fa {
-  -moz-transition: -moz-transform 1s;
-  -o-transition: -o-transform 1s;
-  -webkit-transition: -webkit-transform 1s;
   transition: transform 1s;
 }
 .model-7 .icon:hover {
   background: #fff;
 }
 .model-7 .icon:hover .fa {
-  -moz-transform: rotate(-10deg) scale(3);
-  -ms-transform: rotate(-10deg) scale(3);
-  -webkit-transform: rotate(-10deg) scale(3);
   transform: rotate(-10deg) scale(3);
 }
 .model-7 .twitter {
@@ -388,8 +351,6 @@ body {
   background: #FFF;
 }
 .model-8 .icon:hover {
-  -moz-box-shadow: 0 48px 0 inset;
-  -webkit-box-shadow: 0 48px 0 inset;
   box-shadow: 0 48px 0 inset;
 }
 .model-8 .icon:hover > .fa {
@@ -419,7 +380,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-  margin: 0 5px auto;
+  margin-left: 5px;
   border: 5px solid;
   transition: all 0.5s;
 }
@@ -466,27 +427,20 @@ body {
 }
 /* icon style end*/
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 3d-0 |*/
 .model-3d-0 .icon{
   background: #333;
   float: left;
-  margin: 0 5px auto;
-  -moz-transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
+  margin-left: 5px;
   transform-style: preserve-3d;
 }
 .model-3d-0 .icon:hover {
-  -moz-transform: rotateX(-90deg);
-  -webkit-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
 }
 .model-3d-0 .icon:hover .fornt {
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .model-3d-0 .icon:hover .back {
-  -moz-backface-visibility: visible;
-  -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
 .model-3d-0 .front, .model-3d-0 .back {
@@ -496,22 +450,12 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  -moz-transform: translateZ(18px);
-  -webkit-transform: translateZ(18px);
   transform: translateZ(18px);
-  -moz-backface-visibility: visible;
-  -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
-
 .model-3d-0 .back {
   font-size: 32px;
-  -moz-transform: rotateX(90deg) translateZ(24px);
-  -ms-transform: rotateX(90deg) translateZ(24px);
-  -webkit-transform: rotateX(90deg) translateZ(24px);
   transform: rotateX(90deg) translateZ(24px);
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .model-3d-0 .twitter .back {
@@ -529,30 +473,22 @@ body {
 .model-3d-0 .pinterest .back {
   background: #CB2026;
 }
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 3d-1 |*/
 .model-3d-1 .icon {
   background: #fff;
   color: #666;
   float: left;
-  margin: 0 5px auto;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
+  margin-left: 3px;
   border-radius: 100%;
 }
 .model-3d-1 .icon:hover {
   color: #fff;
-  -moz-transform: rotateY(-180deg);
-  -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
 .model-3d-1 .icon:hover .fornt {
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .model-3d-1 .icon:hover .back {
-  -moz-backface-visibility: visible;
-  -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
 .model-3d-1 .front, .model-3d-1 .back {
@@ -561,19 +497,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
   border-radius: 100%;
-  -moz-backface-visibility: visible;
-  -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
 .model-3d-1 .back {
-  -moz-transform: rotateY(-180deg);
-  -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .model-3d-1 .twitter .back {
@@ -591,14 +519,84 @@ body {
 .model-3d-1 .pinterest .back {
   background: #CB2026;
 }
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 3d-2s |*/
+
+.model-3d-2 .social-nav {
+  display: inline-block ;
+}
+.model-3d-2 .button_wrap {
+  text-align: center;
+  background: #16161a;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  perspective: 200px;
+  transition: background 0.2s ease-out;
+}
+
+.model-3d-2 .box {
+  display: block;
+  perspective-origin: 20px 20px;
+  transform-origin: 30px 20px;
+  transition: transform 0.2s ease-out;
+  transform-style: preserve-3d;
+}
+
+.model-3d-2 .front,
+.model-3d-2 .back {
+  position:absolute;
+  top: 0;
+  left: 10px;
+  margin-top: 10px;
+  background: #16161a;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  transition: background 0.2s ease-out;
+  transform: translate3d(0px, 0px, 19.5px) rotateY(0deg);
+}
+.model-3d-2 .back {
+  background: #464646;
+  transform: translate3d(19.5px, 0px, 0px) rotateY(90deg);
+  transition: background 0.2s ease-out;
+}
+/* .model-3d-2 .button_wrap:hover {
+  background: #118bdc;
+} */
+.model-3d-2 .button_wrap:hover .front {
+  background: #464646;
+}
+.model-3d-2 .button_wrap:hover .back {
+  background: #16161a;
+}
+.model-3d-2 .button_wrap:hover .box {
+  transform: rotateY(-90deg);
+}
+
+/* icon style start */
+.model-3d-2 .twitter:hover {
+  background: #00ACED;
+}
+.model-3d-2 .facebook:hover {
+  background: #3B579D;
+}
+.model-3d-2 .google-plus:hover {
+  background: #DD4A3A;
+}
+.model-3d-2 .linkedin:hover {
+  background: #007BB6;
+}
+.model-3d-2 .pinterest:hover {
+  background: #CB2026;
+}
+/* icon style end */
+button_wrap
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 10 |*/
 .model-10 .icon {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-left: 3px;
   background-color: rgb(36, 34, 34);
-  margin: 0 5px auto;
   border-radius: 100%;
   transition: all 0.15s ease;
 }
@@ -707,10 +705,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 5px auto;
+  margin-left: 2px;
   background-color:#fff;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
   border-radius: 100%;
   transition: all .4s ease;
 }
@@ -724,8 +720,7 @@ body {
   animation: 1.5s linear 0s normal none infinite focuse;
 }
 .model-11 .icon:hover .fa{
-  -webkit-animation: jello-horizontal 0.9s both;
-	        animation: jello-horizontal 0.9s both;
+  animation: jello-horizontal 0.9s both;
 }
 @keyframes focuse {
   0% {
@@ -745,35 +740,27 @@ body {
  */
 @keyframes jello-horizontal {
   0% {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
   30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-            transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
   }
   40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-            transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
   }
   50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-            transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
   }
   65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-            transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
   }
   75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-            transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
   }
   100% {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
-
 /* icon style start */
 .model-11 .twitter {
   color: #00ACED;
@@ -798,8 +785,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 2px;
   font-size: 28px;
-  margin: 0 5px auto;
   border-radius: 10px;
   transition: all 0.2s ease-out;
 }
@@ -822,13 +809,11 @@ body {
   transform: translateZ(0);
   will-change: transform;
 }
-
 .model-12 .icon:hover .tooltip_in {
   transition: all 0.3s ease-out;
   opacity: 1;
   filter: blur(0);
 }
-
 /* icon style start */
 .model-12 .twitter {
   background-color: #00ACED;
@@ -852,7 +837,7 @@ body {
   display: flex;
   align-items: center;
   overflow: hidden;
-  margin: 0 5px auto;
+  margin-left: 2px;
   border-radius: 100%;
   transition: 0.3s ease-in-out;
 }
