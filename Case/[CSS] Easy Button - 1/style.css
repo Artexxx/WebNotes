@@ -7,12 +7,12 @@
   src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
 }
 /*===== Scrollbar =====*/
-::-webkit-scrollbar {width: 12px;height: 12px;}
+::-webkit-scrollbar {width: 8px;height: 5px;}
 ::-webkit-scrollbar-track-piece {background:#1d1e1f;}
-::-webkit-scrollbar-thumb:vertical {height:10px;background:#171717;}
-::-webkit-scrollbar-thumb:vertical:hover {background:#171717;}
-::-webkit-scrollbar-thumb:horizontal {width:10px;background:#171717;}
-::-webkit-scrollbar-thumb:horizontal:hover {background:#71CA55;}
+::-webkit-scrollbar-thumb:vertical {height:6px;background:#171717;}
+::-webkit-scrollbar-thumb:vertical:hover {background: pink;}
+::-webkit-scrollbar-thumb:horizontal {height:8px; width:4px;background:#171717;}
+::-webkit-scrollbar-thumb:horizontal:hover {background: pink;}
 
 /*===== BODY =====*/
 body{
