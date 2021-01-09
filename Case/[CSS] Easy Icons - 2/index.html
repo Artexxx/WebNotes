@@ -7,13 +7,71 @@
   <link rel="icon" href="https://icons.iconarchive.com/icons/aha-soft/archive-toolbar/48/favorites-icon.png">
 </head>
 <body>
-<ul class="social-nav model-0">
+<ul class="social-nav model-0 slideOut">
   <li><a class="icon twitter"><i class="fa fa-twitter"></i></a></li>
   <li><a class="icon facebook"><i class="fa fa-facebook"></i></a></li>
   <li><a class="icon google-plus"><i class="fa fa-google-plus"></i></a></li>
   <li><a class="icon linkedin"><i class="fa fa-linkedin"></i></a></li>
   <li><a class="icon pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+  <div class="share-close-wrap"><i id="share-close-control-btn" class="hide-content fa fa-caret-left" title='Hide'></i></div>
 </ul><br/>
+<div id="share-show-control" class="hide-content" title='Show'><i class="fa fa-caret-right"></i></div>
+<script>
+
+function toogleMenu() {
+  shareBar =  document.getElementsByClassName("model-0")[0].classList
+  shareBar.toggle("slideIn");
+  shareBar.toggle("slideOut");
+
+  if (shareBar.contains("slideIn")) {
+    toogleShowControl();
+  } else {
+    setTimeout(function() {
+      toogleShowControl();
+    }, 350);
+  }
+}
+function toogleShowControl() {
+  document.getElementById("share-show-control").classList.toggle("hide-content");
+}
+function toogleCloseControl() {
+  document.getElementById("share-close-control-btn").classList.toggle("hide-content");
+}
+
+document.getElementById("share-show-control").addEventListener(
+  "click",
+  () => {
+    toogleMenu();
+  },
+  false
+);
+document.getElementById("share-close-control-btn").addEventListener(
+  "click",
+  () => {
+    toogleMenu();
+  },
+  false
+);
+document.getElementsByClassName("model-0")[0].addEventListener(
+  "mouseenter",
+  () => {
+    toogleCloseControl();
+  },
+  false
+);
+document.getElementsByClassName("model-0")[0].addEventListener(
+  "mouseleave",
+  () => {
+    toogleCloseControl();
+  },
+  false
+);
+setTimeout(function() {
+    toogleMenu();
+    toogleShowControl();
+}, 1000);
+</script>
+
 <ul class="social-nav model-1">
   <li><a class="icon twitter"><i class="fa fa-twitter"></i></a></li>
   <li><a class="icon facebook"><i class="fa fa-facebook"></i></a></li>
@@ -176,10 +234,11 @@
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script src="./script.js"></script>
 <script>
-  $(window).scroll(function(){
+$(window).scroll(function(){
  var navTop =  $(window).scrollTop();
  $('.model-0').css("top", navTop + 50);
 });
+
 </script>
 </body>
 </html>
