@@ -15,7 +15,7 @@
   <li><a class="icon pinterest"><i class="fa fa-pinterest-p"></i></a></li>
   <div class="share-close-wrap"><i id="share-close-control-btn" class="hide-content fa fa-caret-left" title='Hide'></i></div>
 </ul><br/>
-<div id="share-show-control" class="hide-content" title='Show'><i class="fa fa-caret-right"></i></div>
+<div id="share-show-control-btn" class="hide-content" title='Show'><i class="fa fa-caret-right"></i></div>
 <script>
 
 function toogleMenu() {
@@ -32,13 +32,13 @@ function toogleMenu() {
   }
 }
 function toogleShowControl() {
-  document.getElementById("share-show-control").classList.toggle("hide-content");
+  document.getElementById("share-show-control-btn").classList.toggle("hide-content");
 }
 function toogleCloseControl() {
   document.getElementById("share-close-control-btn").classList.toggle("hide-content");
 }
 
-document.getElementById("share-show-control").addEventListener(
+document.getElementById("share-show-control-btn").addEventListener(
   "click",
   () => {
     toogleMenu();
@@ -232,7 +232,7 @@ setTimeout(function() {
   <li><a class="icon pinterest"><i class="fa fa-pinterest-p"></i><div class="tooltip_right">Pinterest</div></a></li>
 </ul><br/>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script src="./script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script>
 $(window).scroll(function(){
  var navTop =  $(window).scrollTop();

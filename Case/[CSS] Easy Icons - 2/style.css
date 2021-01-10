@@ -60,7 +60,6 @@ This tool empowers visitors to easily share content as they scroll without getti
   left: 0;
   top: 50px;
   z-index: 10020;
-
   transform: translateX(-200%);
   transition: 0.3s;
 }
@@ -71,7 +70,6 @@ This tool empowers visitors to easily share content as they scroll without getti
   padding-top: 2px;
   padding-left: 35px;
 }
-
 #share-close-control-btn {
   display: block;
   width: 10px;
@@ -80,7 +78,7 @@ This tool empowers visitors to easily share content as they scroll without getti
   color: rgba(133, 130, 130, 0.808);
 }
 
-#share-show-control {
+#share-show-control-btn {
   position: fixed;
   left: 0;
   top: 55px;
@@ -397,7 +395,9 @@ Icons with slide down hover effect */
 .model-7 .pinterest {
   color: #CB2026;
 }
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 8 |*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 8 |
+Square icons with slide down hover effect*/
+
 .model-8 .icon  {
   background: #FFF;
 }
@@ -426,7 +426,8 @@ Icons with slide down hover effect */
 /* icon style end */
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 9 |
-Round icons with zoom and flipp effect on hover*/ TODO
+Round icons with scaled and rotate effect on hover*/
+
 .model-9 .icon {
   display: flex;
   justify-content: center;
@@ -836,6 +837,7 @@ Round icons with rotating on hover  */
   transition: all .4s ease;
 }
 .model-12 .icon:before{
+  pointer-events: none;
   position: absolute;
   content: "";
   height: calc(100% + 16px);
@@ -955,6 +957,7 @@ Round icons with rotating on hover  */
   background-color: #CB2026;
 }
 /* icon style end */
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 14 |*/
 .model-14 .icon{
   display: flex;
