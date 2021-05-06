@@ -18,7 +18,7 @@
 <div id="share-show-control-btn" class="hide-content" title='Show'><i class="fa fa-caret-right"></i></div>
 <script>
 
-function toogleMenu() {
+function toogleBar() {
   shareBar =  document.getElementsByClassName("model-0")[0].classList
   shareBar.toggle("slideIn");
   shareBar.toggle("slideOut");
@@ -41,14 +41,14 @@ function toogleCloseControl() {
 document.getElementById("share-show-control-btn").addEventListener(
   "click",
   () => {
-    toogleMenu();
+    toogleBar();
   },
   false
 );
 document.getElementById("share-close-control-btn").addEventListener(
   "click",
   () => {
-    toogleMenu();
+    toogleBar();
   },
   false
 );
@@ -67,8 +67,8 @@ document.getElementsByClassName("model-0")[0].addEventListener(
   false
 );
 setTimeout(function() {
-    toogleMenu();
-    toogleShowControl();
+  toogleBar();
+  toogleShowControl();
 }, 1000);
 </script>
 

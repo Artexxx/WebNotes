@@ -3,27 +3,22 @@ let darkTheme = false;
 if (localStorage.getItem('Theme') != null) {
   let root = document.documentElement;
   if (localStorage.getItem('Theme') == "true") {
-    console.log('dark mode starting');
+    console.log('Dark mode starting');
     darkTheme = true;
-    root.style.setProperty("--primary-color", '#FDF5E6');
-    root.style.setProperty("--secondary-color", '#313131');
+    document.documentElement.setAttribute('data-theme', 'dark');
   }
 }
 
 var item = document.getElementById("theme");
 item.addEventListener('click', changeTheme);
-//item.addEventListener("mouseover", changeTheme);
-//item.addEventListener("mouseout", changeTheme);
 
 function changeTheme() {
   let root = document.documentElement;
   if (darkTheme) {
-    root.style.setProperty("--primary-color", '#313131');
-    root.style.setProperty("--secondary-color", '#FDF5E6');
-  }
-  if (!darkTheme) {
-    root.style.setProperty("--primary-color", '#ffffff');
-    root.style.setProperty("--secondary-color", '#313131');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } 
+  else {
+    document.documentElement.setAttribute('data-theme', 'light');
   }
   darkTheme = !darkTheme;
   localStorage.setItem(`Theme`, `${darkTheme}`)

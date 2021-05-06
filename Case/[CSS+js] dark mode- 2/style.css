@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
 :root {
-  --primary-color: #313131;
-  --secondary-color: 	#FDF5E6;
-  --kaguya: #6A70C5;
+  --primary-color: #dfd1d1;
+  --bg-color: 	#313131;
+  --heading-color: #df6a87;
+  --kaguya: #c56a88;
 }
 
 html {
@@ -23,7 +24,7 @@ html {
 }
 
 body {
-  background: var(--secondary-color);
+  background: var(--bg-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,20 +34,18 @@ body {
   font-size: 22px !important;
 }
 
-i {
+.darkmode-toggle, .darkmode-layer {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: var(--primary-color);
-}
-
-/* Определяет стиль элемента при наведении на него курсора мыши */
-i:hover {
-  cursor: pointer;
-  font-size: 115%;
+  font-size: 75%;
+  transform: scale(0.6);
+  font-size: 30px;
+  outline: none;
 }
 
 h1 {
+  color: var(--heading-color);
   font-size: 2em;
   grid-column: 1 / -1;
   margin: 0;
@@ -60,7 +59,7 @@ a {
 
 a:focus,
 a:hover {
-  color: #6A70C5;
+  color: var(--kaguya);
 }
 
 nav {
@@ -82,6 +81,7 @@ ul {
 }
 
 li:first-child {
+  color: var(--heading-color);
   font-weight: bold;
   line-height: 2em;
   font-size: 1.2em;
@@ -94,10 +94,7 @@ li:not(first-child) {
 img {
   border: 2px solid var(--primary-color);
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 100%;
-     object-position: 50% 100%;
+  object-fit: cover;
+  object-position: 50% 100%;
   width: 8em;
 }
-/*# sourceMappingURL=style.css.map */

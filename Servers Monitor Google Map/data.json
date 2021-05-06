@@ -1,0 +1,47 @@
+var data = {"servers": [
+    {"title": "Atardecer en Embalse",  "longitude": -64.404945, "latitude": -32.202924, "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,
+    {"title": "Rosina Lamberti,Sunset ,TemplestoweLamberti,Sunset ,TemplestoweLamberti,Sunset ,TemplestoweLamberti,Sunset ,Templestowe",  "longitude": 145.141754, "latitude": -37.766372, "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,
+    {"title": "kin-dza-dza",  "longitude": 30.785408, "latitude": 46.639301, "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,
+    {"title": "Arenal",  "longitude": -84.693432, "latitude": 10.479372, "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,
+    {"title": "Maria Alm",  "longitude": 12.900009, "latitude": 47.409968, "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,
+    {"title": "Wheatfield in afternoon light",  "longitude": 11.272659, "latitude": 59.637472, "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,
+    {"title": "Burg Hohenwerfen",  "longitude": 13.189259, "latitude": 47.483221, "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,
+    {"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,
+    {"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,
+    {"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,{"title": "Thunderstorm in Martinique",  "longitude": -61.013432, "latitude": 14.493688 , "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+    ,
+    {"title": "In Memoriam Antoine de Saint Exupéry",  "longitude": 17.470493, "latitude": 47.867077, "owner_name": "Zusa Péter", "marker_color": "ff0000",  "status_text":"Down", "status_color":"#ff0000", "ipport": "91.122.215.70:27015"}
+    ,
+    {"title": "Al tard",  "longitude": 0.490866, "latitude": 40.903783, "marker_color": "008CFF",  "status_text":"Normal", "status_color":"#39e76d", "ipport": "62.122.215.70:27015"}
+]}
+    
+    

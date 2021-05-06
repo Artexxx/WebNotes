@@ -15,7 +15,7 @@
 ::-webkit-scrollbar-thumb:horizontal:hover {background: pink;}
 
 /*===== BODY =====*/
-body{
+body {
   font-family:  'Open Sans';
   background-color: #222222;
   color: #fff;
@@ -26,9 +26,9 @@ body{
 /*===== HEAD =====*/
 .head {
   font-family: 'Open Sans';
-  font-size: 32px;
+  font-size: 35px;
 }
-h1{
+h1 {
   font-family: 'Bungee Shade';
   font-size: 70px;
   color: pink ;
@@ -45,9 +45,8 @@ a {
   font-weight: bold;
   opacity: .8;
 }
-a:hover{
+a:hover {
   opacity: 1;
-  color: pink;
 }
 
 /* HISTORY
@@ -98,10 +97,23 @@ a:hover{
 - BUBBLE-BROWN BUTTON
 ----------------------------*/
 
+
+:root {
+  --red: #f01e45;
+  --blue: #4d98dc;
+  --green: #6fd43f;
+  --yellow: #ffc700;
+  --lightblue: #12cde3;
+  --baige: #19bc9b;
+  --po: #854a5c;
+  --brown: #86653d;
+}
+
+
 /*===== RED BUTTON =====*/
-.red, .red-border, .red-big, .red-small, .red-border-big, .red-border-small{
+.red, .red-border, .red-big, .red-small, .red-border-big, .red-border-small {
   font-family: 'Open Sans';
-  background-color: #f01e45;
+  background-color: var(--red);
   color: #ffffff;
   display: inline-block;
   font-size:16px;
@@ -110,26 +122,24 @@ a:hover{
   cursor: pointer;
   opacity: .8;
 }
-.red-big, .red-border-big{
-  font-size: 32px;
+.red-big, .red-border-big {
+  font-size: 35px;
 }
-.red-small, .red-border-small{
+.red-small, .red-border-small {
   font-size: 12px;
   padding: 10px 10px;
 }
-.red-border, .red-border-big, .red-border-small{
+.red-border, .red-border-big, .red-border-small {
   border: 2px solid #fff;
 }
-
-.red:hover, .red-border:hover, .red-big:hover, .red-small:hover, .red-border-big:hover, .red-border-small:hover{
-  background-color #d7193d;
+.red:hover, .red-border:hover, .red-big:hover, .red-small:hover, .red-border-big:hover, .red-border-small:hover {
   opacity: 1;
 }
 
 /*===== BLUE BUTTON =====*/
 .blue, .blue-border, .blue-big, .blue-small, .blue-border-big, .blue-border-small {
   font-family:  'Open Sans';
-  background-color: #4d98dc;
+  background-color: var(--blue);
   color: #ffffff;
   display: inline-block;
   font-size:16px;
@@ -138,25 +148,24 @@ a:hover{
   cursor: pointer;
   opacity: .8;
 }
-.blue-big, .blue-border-big{
-  font-size: 32px;
+.blue-big, .blue-border-big {
+  font-size: 35px;
 }
-.blue-small, .blue-border-small{
+.blue-small, .blue-border-small {
   font-size: 12px;
   padding: 10px 10px;
 }
-.blue-border, .blue-border-big, .blue-border-small{
+.blue-border, .blue-border-big, .blue-border-small {
   border: 2px solid #fff;
 }
 .blue:hover, .blue-border:hover, .blue-big:hover, .blue-small:hover, .blue-border-big:hover, .blue-border-small:hover {
-  background-color #3f7bb2;
   opacity: 1;
 }
 
 /*===== GREEN BUTTON =====*/
 .green, .green-border, .green-big, .green-small, .green-border-big, .green-border-small {
   font-family: 'Open Sans';
-  background-color: #6fd43f;
+  background-color: var(--green);
   color: #ffffff;
   display: inline-block;
   font-size:16px;
@@ -165,25 +174,24 @@ a:hover{
   cursor: pointer;
   opacity: .8;
 }
-.green-big, .green-border-big{
-  font-size: 32px;
+.green-big, .green-border-big {
+  font-size: 35px;
 }
-.green-small, .green-border-small{
+.green-small, .green-border-small {
   font-size: 12px;
   padding: 10px 10px;
 }
-.green-border, .green-border-big, .green-border-small{
+.green-border, .green-border-big, .green-border-small {
   border: 2px solid #fff;
 }
 .green:hover, .green-border:hover, .green-big:hover, .green-small:hover, .green-border-big:hover, .green-border-small:hover {
-  background-color #59a934;
   opacity: 1;
 }
 
 /*===== YELLOW BUTTON =====*/
 .yellow, .yellow-border, .yellow-big, .yellow-small, .yellow-border-big, .yellow-border-small {
   font-family: 'Open Sans';
-  background-color: #ffc700;
+  background-color: var(--yellow);
   color: #ffffff;
   display: inline-block;
   font-size:16px;
@@ -192,25 +200,24 @@ a:hover{
   cursor: pointer;
   opacity: .8;
 }
-.yellow-big, .yellow-border-big{
-  font-size: 32px;
+.yellow-big, .yellow-border-big {
+  font-size: 35px;
 }
-.yellow-small, .yellow-border-small{
+.yellow-small, .yellow-border-small {
   font-size: 12px;
   padding: 10px 10px;
 }
-.yellow-border, .yellow-border-big, .yellow-border-small{
+.yellow-border, .yellow-border-big, .yellow-border-small {
   border: 2px solid #fff;
 }
 .yellow:hover, .yellow-border:hover, .yellow-big:hover, .yellow-small:hover, .yellow-border-big:hover, .yellow-border-small:hover {
-  background-color #d6a700;
   opacity: 1;
 }
 
 /*===== LIGHTBLUE BUTTON =====*/
 .lightblue, .lightblue-border, .lightblue-big, .lightblue-small, .lightblue-border-big, .lightblue-border-small {
   font-family: 'Open Sans';
-  background-color: #12cde3;
+  background-color: var(--lightblue);
   color: #ffffff;
   display: inline-block;
   font-size:16px;
@@ -219,25 +226,24 @@ a:hover{
   cursor: pointer;
   opacity: .8;
 }
-.lightblue-big, .lightblue-border-big{
-  font-size: 32px;
+.lightblue-big, .lightblue-border-big {
+  font-size: 35px;
 }
-.lightblue-small, .lightblue-border-small{
+.lightblue-small, .lightblue-border-small {
   font-size: 12px;
   padding: 10px 10px;
 }
-.lightblue-border, .lightblue-border-big, .lightblue-border-small{
+.lightblue-border, .lightblue-border-big, .lightblue-border-small {
   border: 2px solid #fff;
 }
 .lightblue:hover, .lightblue-border:hover, .lightblue-big:hover, .lightblue-small:hover, .lightblue-border-big:hover, .lightblue-border-small:hover {
-  background-color #10b3c6;
   opacity: 1;
 }
 
 /*===== BAIGE BUTTON =====*/
 .baige, .baige-border, .baige-big, .baige-small, .baige-border-big, .baige-border-small {
   font-family: 'Open Sans';
-  background-color: #19bc9b;
+  background-color: var(--baige);
   color: #ffffff;
   display: inline-block;
   font-size:16px;
@@ -246,25 +252,24 @@ a:hover{
   cursor: pointer;
   opacity: .8;
 }
-.baige-big, .baige-border-big{
-  font-size: 32px;
+.baige-big, .baige-border-big {
+  font-size: 35px;
 }
-.baige-small, .baige-border-small{
+.baige-small, .baige-border-small {
   font-size: 12px;
   padding: 10px 10px;
 }
-.baige-border, .baige-border-big, .baige-border-small{
+.baige-border, .baige-border-big, .baige-border-small {
   border: 2px solid #fff;
 }
 .baige:hover, .baige-border:hover, .baige-big:hover, .baige-small:hover, .baige-border-big:hover, .baige-border-small:hover {
-  background-color #16a387;
   opacity: 1;
 }
 
 /*===== PO BUTTON =====*/
 .po, .po-border, .po-big, .po-small, .po-border-big, .po-border-small {
   font-family: 'Open Sans';
-  background-color: #854a5c;
+  background-color: var(--po);
   color: #ffffff;
   display: inline-block;
   font-size:16px;
@@ -273,25 +278,24 @@ a:hover{
   cursor: pointer;
   opacity: .8;
 }
-.po-big, .po-border-big{
-  font-size: 32px;
+.po-big, .po-border-big {
+  font-size: 35px;
 }
-.po-small, .po-border-small{
+.po-small, .po-border-small {
   font-size: 12px;
   padding: 10px 10px;
 }
-.po-border, .po-border-big, .po-border-small{
+.po-border, .po-border-big, .po-border-small {
   border: 2px solid #fff;
 }
 .po:hover, .po-border:hover, .po-big:hover, .po-small:hover, .po-border-big:hover, .po-border-small:hover {
-  background-color #663947;
   opacity: 1;
 }
 
 /*===== BROWN BUTTON =====*/
 .brown, .brown-border, .brown-big, .brown-small, .brown-border-big, .brown-border-small {
   font-family: 'Open Sans';
-  background-color: #86653d;
+  background-color: var(--brown);
   color: #ffffff;
   display: inline-block;
   font-size:16px;
@@ -300,25 +304,24 @@ a:hover{
   cursor: pointer;
   opacity: .8;
 }
-.brown-big, .brown-border-big{
-  font-size: 32px;
+.brown-big, .brown-border-big {
+  font-size: 35px;
 }
-.brown-small, .brown-border-small{
+.brown-small, .brown-border-small {
   font-size: 12px;
   padding: 10px 10px;
 }
-.brown-border, .brown-border-big, .brown-border-small{
+.brown-border, .brown-border-big, .brown-border-small {
   border: 2px solid #fff;
 }
 .brown:hover, .brown-border:hover, .brown-big:hover, .brown-small:hover, .brown-border-big:hover, .brown-border-small:hover {
-  background-color #6c5232;
   opacity: 1;
 }
 
 /*===== CUBE-RED BUTTON =====*/
 .cube-red, .cube-red-big, .cube-red-small, .cube-red-border, .cube-red-border-big, .cube-red-border-small {
   font-family: 'Open Sans';
-  background-color: #f01e45;
+  background-color: var(--red);
   color: #ffffff;
   display: inline-block;
   font-size:16px;
@@ -326,25 +329,24 @@ a:hover{
   cursor: pointer;
   opacity: .8;
 }
-.cube-red-big, .cube-red-border-big{
-  font-size: 32px;
+.cube-red-big, .cube-red-border-big {
+  font-size: 35px;
 }
-.cube-red-small, .cube-red-border-small{
+.cube-red-small, .cube-red-border-small {
   font-size: 12px;
   padding: 10px 10px;
 }
-.cube-red-border, .cube-red-border-big, .cube-red-border-small{
+.cube-red-border, .cube-red-border-big, .cube-red-border-small {
   border: 2px solid #fff;
 }
 .cube-red:hover, .cube-red-big:hover, .cube-red-small:hover, .cube-red-border:hover, .cube-red-border-big:hover, .cube-red-border-small:hover {
-  background-color #d7193d;
   opacity: 1;
 }
 
 /*===== CUBE-BLUE BUTTON =====*/
 .cube-blue, .cube-blue-big, .cube-blue-small, .cube-blue-border, .cube-blue-border-big, .cube-blue-border-small {
   font-family: 'Open Sans';
-  background-color: #4d98dc;
+  background-color: var(--blue);
   color: #ffffff;
   display: inline-block;
   font-size:16px;
@@ -352,25 +354,24 @@ a:hover{
   cursor: pointer;
   opacity: .8;
 }
-.cube-blue-big, .cube-blue-border-big{
-  font-size: 32px;
+.cube-blue-big, .cube-blue-border-big {
+  font-size: 35px;
 }
-.cube-blue-small, .cube-blue-border-small{
+.cube-blue-small, .cube-blue-border-small {
   font-size: 12px;
   padding: 10px 10px;
 }
-.cube-blue-border, .cube-blue-border-big, .cube-blue-border-small{
+.cube-blue-border, .cube-blue-border-big, .cube-blue-border-small {
   border: 2px solid #fff;
 }
 .cube-blue:hover, .cube-blue-big:hover, .cube-blue-small:hover, .cube-blue-border:hover, .cube-blue-border-big:hover, .cube-blue-border-small:hover {
-  background-color #3f7bb2;
   opacity: 1;
 }
 
 /*===== CUBE-GREEN BUTTON =====*/
 .cube-green, .cube-green-big, .cube-green-small, .cube-green-border, .cube-green-border-big, .cube-green-border-small {
   font-family: 'Open Sans';
-  background-color: #6fd43f;
+  background-color: var(--green);
   color: #ffffff;
   display: inline-block;
   font-size:16px;
@@ -378,25 +379,25 @@ a:hover{
   cursor: pointer;
   opacity: .8;
 }
-.cube-green-big, .cube-green-border-big{
-  font-size: 32px;
+.cube-green-big, .cube-green-border-big {
+  font-size: 35px;
 }
-.cube-green-small, .cube-green-border-small{
+.cube-green-small, .cube-green-border-small {
   font-size: 12px;
   padding: 10px 10px;
 }
-.cube-green-border, .cube-green-border-big, .cube-green-border-small{
+.cube-green-border, .cube-green-border-big, .cube-green-border-small {
   border: 2px solid #fff;
 }
 .cube-green:hover, .cube-green-big:hover, .cube-green-small:hover, .cube-green-border:hover, .cube-green-border-big:hover, .cube-green-border-small:hover {
-  background-color #59a934;
+  background-color:  var(--green_hover);
   opacity: 1;
 }
 
 /*===== CUBE-YELLOW BUTTON =====*/
 .cube-yellow, .cube-yellow-big, .cube-yellow-small, .cube-yellow-border, .cube-yellow-border-big, .cube-yellow-border-small {
   font-family: 'Open Sans';
-  background-color: #ffc700;
+  background-color: var(--yellow);
   color: #ffffff;
   display: inline-block;
   font-size:16px;
@@ -404,18 +405,18 @@ a:hover{
   cursor: pointer;
   opacity: .8;
 }
-.cube-yellow-big, .cube-yellow-border-big{
-  font-size: 32px;
+.cube-yellow-big, .cube-yellow-border-big {
+  font-size: 35px;
 }
-.cube-yellow-small, .cube-yellow-border-small{
+.cube-yellow-small, .cube-yellow-border-small {
   font-size: 12px;
   padding: 10px 10px;
 }
-.cube-yellow-border, .cube-yellow-border-big, .cube-yellow-border-small{
+.cube-yellow-border, .cube-yellow-border-big, .cube-yellow-border-small {
   border: 2px solid #fff;
 }
 .cube-yellow:hover, .cube-yellow-big:hover, .cube-yellow-small:hover, .cube-yellow-border:hover, .cube-yellow-border-big:hover, .cube-yellow-border-small:hover {
-  background-color #d6a700;
+  background-color: #d6a700;
   opacity: 1;
 }
 
@@ -423,7 +424,7 @@ a:hover{
 /*===== CUBE-LIGHTBLUE BUTTON =====*/
 .cube-lightblue, .cube-lightblue-big, .cube-lightblue-small, .cube-lightblue-border, .cube-lightblue-border-big, .cube-lightblue-border-small {
   font-family: 'Open Sans';
-  background-color: #12cde3;
+  background-color: var(--lightblue);
   color: #ffffff;
   display: inline-block;
   font-size:16px;
@@ -431,18 +432,18 @@ a:hover{
   cursor: pointer;
   opacity: .8;
 }
-.cube-lightblue-big, .cube-lightblue-border-big{
-  font-size: 32px;
+.cube-lightblue-big, .cube-lightblue-border-big {
+  font-size: 35px;
 }
-.cube-lightblue-small, .cube-lightblue-border-small{
+.cube-lightblue-small, .cube-lightblue-border-small {
   font-size: 12px;
   padding: 10px 10px;
 }
-.cube-lightblue-border, .cube-lightblue-border-big, .cube-lightblue-border-small{
+.cube-lightblue-border, .cube-lightblue-border-big, .cube-lightblue-border-small {
   border: 2px solid #fff;
 }
 .cube-lightblue:hover, .cube-lightblue-big:hover, .cube-lightblue-small:hover, .cube-lightblue-border:hover, .cube-lightblue-border-big:hover, .cube-lightblue-border-small:hover {
-  background-color #10b3c6;
+  background-color:  var(--lightblue_hover);
   opacity: 1;
 }
 
@@ -450,7 +451,7 @@ a:hover{
 /*===== CUBE-BAIGE BUTTON =====*/
 .cube-baige, .cube-baige-big, .cube-baige-small, .cube-baige-border, .cube-baige-border-big, .cube-baige-border-small {
   font-family: 'Open Sans';
-  background-color: #19bc9b;
+  background-color: var(--baige);
   color: #ffffff;
   display: inline-block;
   font-size:16px;
@@ -458,18 +459,18 @@ a:hover{
   cursor: pointer;
   opacity: .8;
 }
-.cube-baige-big, .cube-baige-border-big{
-  font-size: 32px;
+.cube-baige-big, .cube-baige-border-big {
+  font-size: 35px;
 }
-.cube-baige-small, .cube-baige-border-small{
+.cube-baige-small, .cube-baige-border-small {
   font-size: 12px;
   padding: 10px 10px;
 }
-.cube-baige-border, .cube-baige-border-big, .cube-baige-border-small{
+.cube-baige-border, .cube-baige-border-big, .cube-baige-border-small {
   border: 2px solid #fff;
 }
 .cube-baige:hover, .cube-baige-big:hover, .cube-baige-small:hover, .cube-baige-border:hover, .cube-baige-border-big:hover, .cube-baige-border-small:hover {
-  background-color #16a387;
+  background-color:  var(--baige_hover);
   opacity: 1;
 }
 
@@ -477,7 +478,7 @@ a:hover{
 /*===== CUBE-PO BUTTON =====*/
 .cube-po, .cube-po-big, .cube-po-small, .cube-po-border, .cube-po-border-big, .cube-po-border-small {
   font-family: 'Open Sans';
-  background-color: #854a5c;
+  background-color: var(--po);
   color: #ffffff;
   display: inline-block;
   font-size:16px;
@@ -485,25 +486,25 @@ a:hover{
   cursor: pointer;
   opacity: .8;
 }
-.cube-po-big, .cube-po-border-big{
-  font-size: 32px;
+.cube-po-big, .cube-po-border-big {
+  font-size: 35px;
 }
-.cube-po-small, .cube-po-border-small{
+.cube-po-small, .cube-po-border-small {
   font-size: 12px;
   padding: 10px 10px;
 }
-.cube-po-border, .cube-po-border-big, .cube-po-border-small{
+.cube-po-border, .cube-po-border-big, .cube-po-border-small {
   border: 2px solid #fff;
 }
 .cube-po:hover, .cube-po-big:hover, .cube-po-small:hover, .cube-po-border:hover, .cube-po-border-big:hover, .cube-po-border-small:hover {
-  background-color #663947;
+  background-color: #663947;
   opacity: 1;
 }
 
 /*===== CUBE-BROWN BUTTON =====*/
 .cube-brown, .cube-brown-big, .cube-brown-small, .cube-brown-border, .cube-brown-border-big, .cube-brown-border-small {
   font-family: 'Open Sans';
-  background-color: #86653d;
+  background-color: var(--brown);
   color: #ffffff;
   display: inline-block;
   font-size:16px;
@@ -511,311 +512,302 @@ a:hover{
   cursor: pointer;
   opacity: .8;
 }
-.cube-brown-big, .cube-brown-border-big{
-  font-size: 32px;
+.cube-brown-big, .cube-brown-border-big {
+  font-size: 35px;
 }
-.cube-brown-small, .cube-brown-border-small{
+.cube-brown-small, .cube-brown-border-small {
   font-size: 12px;
   padding: 10px 10px;
 }
-.cube-brown-border, .cube-brown-border-big, .cube-brown-border-small{
+.cube-brown-border, .cube-brown-border-big, .cube-brown-border-small {
   border: 2px solid #fff;
 }
 .cube-brown:hover, .cube-brown-big:hover, .cube-brown-small:hover, .cube-brown-border:hover, .cube-brown-border-big:hover, .cube-brown-border-small:hover {
-  background-color #6c5232;
+  background-color:  var(--brown_hover);
   opacity: 1;
 }
 
 /*===== ROUND-RED BUTTON =====*/
 .round-red, .round-red-big, .round-red-small, .round-red-border, .round-red-border-big, .round-red-border-small {
   font-family: 'Open Sans';
-  background-color: #f01e45;
+  background-color: var(--red);
   color: #ffffff;
   display: inline-block;
   font-size:15px;
   font-weight: bold;
   width: 100px;
   height: 100px;
-  padding 20px;
+  padding: 20px;
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
   opacity: .8;
 }
-.round-red-big, .round-red-border-big{
-  font-size: 32px;
+.round-red-big, .round-red-border-big {
+  font-size: 35px;
   width: 150px;
   height: 150px;
   text-align: center;
 }
-.round-red-small, .round-red-border-small{
+.round-red-small, .round-red-border-small {
   font-size: 12px;
   width: 50px;
   height: 50px;
 }
-.round-red-border, .round-red-border-big, .round-red-border-small{
+.round-red-border, .round-red-border-big, .round-red-border-small {
   border: 2px solid #fff;
 }
 .round-red:hover, .round-red-big:hover, .round-red-small:hover, .round-red-border:hover, .round-red-border-big:hover, .round-red-border-small:hover {
-  background-color #d7193d;
   opacity: 1;
 }
 /*===== ROUND-BLUE BUTTON =====*/
 .round-blue, .round-blue-big, .round-blue-small, .round-blue-border, .round-blue-border-big, .round-blue-border-small {
   font-family: 'Open Sans';
-  background-color: #4d98dc;
+  background-color: var(--blue);
   color: #ffffff;
   display: inline-block;
   font-size:15px;
   font-weight: bold;
   width: 100px;
   height: 100px;
-  padding 20px;
+  padding: 20px;
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
   opacity: .8;
 }
-.round-blue-big, .round-blue-border-big{
-  font-size: 32px;
+.round-blue-big, .round-blue-border-big {
+  font-size: 35px;
   width: 150px;
   height: 150px;
 }
-.round-blue-small, .round-blue-border-small{
+.round-blue-small, .round-blue-border-small {
   font-size: 12px;
   width: 50px;
   height: 50px;
 }
-.round-blue-border, .round-blue-border-big, .round-blue-border-small{
+.round-blue-border, .round-blue-border-big, .round-blue-border-small {
   border: 2px solid #fff;
 }
 .round-blue:hover, .round-blue-big:hover, .round-blue-small:hover, .round-blue-border:hover, .round-blue-border-big:hover, .round-blue-border-small:hover {
-  background-color #3f7bb2;
   opacity: 1;
 }
 /*===== ROUND-GREEN BUTTON =====*/
 .round-green, .round-green-big, .round-green-small, .round-green-border, .round-green-border-big, .round-green-border-small {
   font-family: 'Open Sans';
-  background-color: #6fd43f;
+  background-color: var(--green);
   color: #ffffff;
   display: inline-block;
   font-size:15px;
   font-weight: bold;
   width: 100px;
   height: 100px;
-  padding 20px;
+  padding: 20px;
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
   opacity: .8;
 }
-.round-green-big, .round-green-border-big{
-  font-size: 32px;
+.round-green-big, .round-green-border-big {
+  font-size: 35px;
   width: 150px;
   height: 150px;
 }
-.round-green-small, .round-green-border-small{
+.round-green-small, .round-green-border-small {
   font-size: 12px;
   width: 50px;
   height: 50px;
 }
-.round-green-border, .round-green-border-big, .round-green-border-small{
+.round-green-border, .round-green-border-big, .round-green-border-small {
   border: 2px solid #fff;
 }
 .round-green:hover, .round-green-big:hover, .round-green-small:hover, .round-green-border:hover, .round-green-border-big:hover, .round-green-border-small {
-  background-color #59a934;
   opacity: 1;
 }
 /*===== ROUND-YELLOW BUTTON =====*/
 .round-yellow, .round-yellow-big, .round-yellow-small, .round-yellow-border, .round-yellow-border-big, .round-yellow-border-small {
   font-family: 'Open Sans';
-  background-color: #ffc700;
+  background-color: var(--yellow);
   color: #ffffff;
   display: inline-block;
   font-size:15px;
   font-weight: bold;
   width: 100px;
   height: 100px;
-  padding 20px;
+  padding: 20px;
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
   opacity: .8;
 }
-.round-yellow-big, .round-yellow-border-big{
-  font-size: 32px;
+.round-yellow-big, .round-yellow-border-big {
+  font-size: 35px;
   width: 150px;
   height: 150px;
 }
-.round-yellow-small, .round-yellow-border-small{
+.round-yellow-small, .round-yellow-border-small {
   font-size: 12px;
   width: 50px;
   height: 50px;
 }
-.round-yellow-border, .round-yellow-border-big, .round-yellow-border-small{
+.round-yellow-border, .round-yellow-border-big, .round-yellow-border-small {
   border: 2px solid #fff;
 }
 .round-yellow:hover, .round-yellow-big:hover, .round-yellow-small:hover, .round-yellow-border:hover, .round-yellow-border-big:hover, .round-yellow-border-small:hover {
-  background-color #d6a700;
   opacity: 1;
 }
 /*===== ROUND-LIGHTBLUE BUTTON =====*/
 .round-lightblue, .round-lightblue-big, .round-lightblue-small, .round-lightblue-border, .round-lightblue-border-big, .round-lightblue-border-small {
   font-family: 'Open Sans';
-  background-color: #12cde3;
+  background-color: var(--lightblue);
   color: #ffffff;
   display: inline-block;
   font-size:15px;
   font-weight: bold;
   width: 100px;
   height: 100px;
-  padding 20px;
+  padding: 20px;
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
   opacity: .8;
 }
-.round-lightblue-big, .round-lightblue-border-big{
-  font-size: 32px;
+.round-lightblue-big, .round-lightblue-border-big {
+  font-size: 35px;
   width: 150px;
   height: 150px;
 }
-.round-lightblue-small, .round-lightblue-border-small{
+.round-lightblue-small, .round-lightblue-border-small {
   font-size: 12px;
   width: 50px;
   height: 50px;
 }
-.round-lightblue-border, .round-lightblue-border-big, .round-lightblue-border-small{
+.round-lightblue-border, .round-lightblue-border-big, .round-lightblue-border-small {
   border: 2px solid #fff;
 }
 .round-lightblue:hover, .round-lightblue-big:hover, .round-lightblue-small:hover, .round-lightblue-border:hover, .round-lightblue-border-big:hover, .round-lightblue-border-small:hover {
-  background-color #10b3c6;
   opacity: 1;
 }
 
 /*===== ROUND-BAIGE BUTTON =====*/
 .round-baige, .round-baige-big, .round-baige-small, .round-baige-border, .round-baige-border-big, .round-baige-border-small {
   font-family: 'Open Sans';
-  background-color: #19bc9b;
+  background-color: var(--baige);
   color: #ffffff;
   display: inline-block;
   font-size:15px;
   font-weight: bold;
   width: 100px;
   height: 100px;
-  padding 20px;
+  padding: 20px;
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
   opacity: .8;
 }
-.round-baige-big, .round-baige-border-big{
-  font-size: 32px;
+.round-baige-big, .round-baige-border-big {
+  font-size: 35px;
   width: 150px;
   height: 150px;
 }
-.round-baige-small, .round-baige-border-small{
+.round-baige-small, .round-baige-border-small {
   font-size: 12px;
   width: 50px;
   height: 50px;
 }
-.round-baige-border, .round-baige-border-big, .round-baige-border-small{
+.round-baige-border, .round-baige-border-big, .round-baige-border-small {
   border: 2px solid #fff;
 }
 .round-baige:hover, .round-baige-big:hover, .round-baige-small:hover, .round-baige-border:hover, .round-baige-border-big:hover, .round-baige-border-small:hover {
-  background-color #16a387;
   opacity: 1;
 }
 
 /*===== ROUND-PO BUTTON =====*/
 .round-po, .round-po-big, .round-po-small,.round-po-border, .round-po-border-big, .round-po-border-small {
   font-family: 'Open Sans';
-  background-color: #854a5c;
+  background-color: var(--po);
   color: #ffffff;
   display: inline-block;
   font-size:15px;
   font-weight: bold;
   width: 100px;
   height: 100px;
-  padding 20px;
+  padding: 20px;
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
   opacity: .8;
 }
-.round-po-big, .round-po-border-big{
-  font-size: 32px;
+.round-po-big, .round-po-border-big {
+  font-size: 35px;
   width: 150px;
   height: 150px;
 }
-.round-po-small, .round-po-border-small{
+.round-po-small, .round-po-border-small {
   font-size: 12px;
   width: 50px;
   height: 50px;
 }
-.round-po-border, .round-po-border-big, .round-po-border-small{
+.round-po-border, .round-po-border-big, .round-po-border-small {
   border: 2px solid #fff;
 }
 .round-po:hover, .round-po-big:hover, .round-po-small:hover, .round-po-border:hover, .round-po-border-big:hover, .round-po-border-small:hover {
-  background-color #663947;
   opacity: 1;
 }
 
 /*===== ROUND-BROWN BUTTON =====*/
 .round-brown, .round-brown-big, .round-brown-small, .round-brown-border, .round-brown-border-big, .round-brown-border-small {
   font-family: 'Open Sans';
-  background-color: #86653d;
+  background-color: var(--brown);
   color: #ffffff;
   display: inline-block;
   font-size:15px;
   font-weight: bold;
   width: 100px;
   height: 100px;
-  padding 20px;
+  padding: 20px;
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
   opacity: .8;
 }
-.round-brown-big, .round-brown-border-big{
-  font-size: 32px;
+.round-brown-big, .round-brown-border-big {
+  font-size: 35px;
   width: 150px;
   height: 150px;
 }
-.round-brown-small, .round-brown-border-small{
+.round-brown-small, .round-brown-border-small {
   font-size: 12px;
   width: 50px;
   height: 50px;
 }
-.round-brown-border, .round-brown-border-big, .round-brown-border-small{
+.round-brown-border, .round-brown-border-big, .round-brown-border-small {
   border: 2px solid #fff;
 }
 .round-brown:hover, .round-brown-big:hover, .round-brown-small:hover, .round-brown-border:hover, .round-brown-border-big:hover, .round-brown-border-small:hover {
-  background-color #6c5232;
   opacity: 1;
 }
 
 /*===== ROUND-IMAGE-RED BUTTON =====*/
-.round-img-red, .round-img-red-big, .round-img-red-small{
-  background-color: #f01e45;
+.round-img-red, .round-img-red-big, .round-img-red-small {
+  background-color: var(--red);
   width:100px;
   height:100px;
   border-radius: 50%;
-  border: 5px solid #f01e45;
+  border: 5px solid var(--red);
   display: inline-block;
   opacity: .8;
 }
-.round-img-red:hover, .imground-red:hover, .round-img-red-big:hover, .imground-red-big:hover, .round-img-red-small:hover, .imground-red-small:hover{
-  background-color #d7193d;
+.round-img-red:hover, .imground-red:hover, .round-img-red-big:hover, .imground-red-big:hover, .round-img-red-small:hover, .imground-red-small:hover {
   opacity: 1;
 }
-.imground-red, .imground-red-big, .imground-red-small{
+.imground-red, .imground-red-big, .imground-red-small {
   border-radius: 50%;
   width:100px;
   height:100px;
   opacity: .8;
 }
-.round-img-red-big{
+.round-img-red-big {
   width:200px;
   height:200px;
 }
@@ -823,39 +815,38 @@ a:hover{
   width:200px;
   height:200px;
 }
-.round-img-red-small{
+.round-img-red-small {
   width: 50px;
   height: 50px;
-  border: 2px solid #f01e45;
+  border: 2px solid var(--red);
 }
-.imground-red-small{
+.imground-red-small {
   width: 50px;
   height: 50px;
 }
 
 /*===== ROUND-IMAGE-BLUE BUTTON =====*/
-.round-img-blue, .round-img-blue-big, .round-img-blue-small{
-  background-color: #4d98dc;
+.round-img-blue, .round-img-blue-big, .round-img-blue-small {
+  background-color: var(--blue);
   width:100px;
   height:100px;
   border-radius: 50%;
-  border: 5px solid #4d98dc;
+  border: 5px solid var(--blue);
   display: inline-block;
   opacity: .8;
 }
 
-.round-img-blue:hover, .imground-blue:hover, .round-img-blue-big:hover, .imground-blue-big:hover, .round-img-blue-small:hover, .imground-blue-small:hover{
-  background-color #3f7bb2;
+.round-img-blue:hover, .imground-blue:hover, .round-img-blue-big:hover, .imground-blue-big:hover, .round-img-blue-small:hover, .imground-blue-small:hover {
   opacity: 1;
 }
 
-.imground-blue, .imground-blue-big, .imground-blue-small{
+.imground-blue, .imground-blue-big, .imground-blue-small {
   border-radius: 50%;
   width:100px;
   height:100px;
   opacity: .8;
 }
-.round-img-blue-big{
+.round-img-blue-big {
   width:200px;
   height:200px;
 }
@@ -863,12 +854,12 @@ a:hover{
   width:200px;
   height:200px;
 }
-.round-img-blue-small{
+.round-img-blue-small {
   width: 50px;
   height: 50px;
-  border: 2px solid #4d98dc;
+  border: 2px solid var(--blue);
 }
-.imground-blue-small{
+.imground-blue-small {
   width: 50px;
   height: 50px;
 }
@@ -876,54 +867,52 @@ a:hover{
 
 /*===== ROUND-IMAGE-GREEN BUTTON =====*/
 .round-img-green, .round-img-green-big, .round-img-green-small {
-  background-color: #6fd43f;
+  background-color: var(--green);
   width:100px;
   height:100px;
   border-radius: 50%;
-  border: 5px solid #6fd43f;
+  border: 5px solid var(--green);
   display: inline-block;
   opacity: .8;
 }
-.round-img-green:hover, .imground-green:hover, .round-img-green-big:hover, .imground-green-big:hover, .round-img-green-small:hover, .imground-green-small:hover{
-  background-color #59a934;
+.round-img-green:hover, .imground-green:hover, .round-img-green-big:hover, .imground-green-big:hover, .round-img-green-small:hover, .imground-green-small:hover {
   opacity: 1;
 }
-.imground-green, .imground-green-big, .imground-green-small{
+.imground-green, .imground-green-big, .imground-green-small {
   border-radius: 50%;
   width:100px;
   height:100px;
   opacity: .8;
 }
-.round-img-green-big{
+.round-img-green-big {
   width:200px;
   height:200px;
 }
-.imground-green-big{
+.imground-green-big {
   width:200px;
   height:200px;
 }
-.round-img-green-small{
+.round-img-green-small {
   width: 50px;
   height: 50px;
-  border: 2px solid #6fd43f;
+  border: 2px solid var(--green);
 }
-.imground-green-small{
+.imground-green-small {
   width: 50px;
   height: 50px;
 }
 
 /*===== ROUND-IMAGE-YELLOW BUTTON =====*/
 .round-img-yellow, .round-img-yellow-big, .round-img-yellow-small {
-  background-color: #ffc700;
+  background-color: var(--yellow);
   width:100px;
   height:100px;
   border-radius: 50%;
-  border: 5px solid #ffc700;
+  border: 5px solid var(--yellow);
   display: inline-block;
   opacity: .8;
 }
-.round-img-yellow:hover, .imground-yellow:hover, .round-img-yellow-big:hover, .imground-yellow-big:hover, .round-img-yellow-small:hover, .imground-yellow-small:hover{
-  background-color #d6a700;
+.round-img-yellow:hover, .imground-yellow:hover, .round-img-yellow-big:hover, .imground-yellow-big:hover, .round-img-yellow-small:hover, .imground-yellow-small:hover {
   opacity: 1;
 }
 .imground-yellow, .imground-yellow-big, .imground-yellow-small {
@@ -932,36 +921,35 @@ a:hover{
   height:100px;
   opacity: .8;
 }
-.round-img-yellow-big{
+.round-img-yellow-big {
   width:200px;
   height:200px;
 }
-.imground-yellow-big{
+.imground-yellow-big {
   width:200px;
   height:200px;
 }
-.round-img-yellow-small{
+.round-img-yellow-small {
   width: 50px;
   height: 50px;
-  border: 2px solid #ffc700;
+  border: 2px solid var(--yellow);
 }
-.imground-yellow-small{
+.imground-yellow-small {
   width: 50px;
   height: 50px;
 }
 
 /*===== ROUND-IMAGE-LIGHTBLUE BUTTON =====*/
 .round-img-lightblue, .round-img-lightblue-big, .round-img-lightblue-small {
-  background-color: #12cde3;
+  background-color: var(--lightblue);
   width:100px;
   height:100px;
   border-radius: 50%;
-  border: 5px solid #12cde3;
+  border: 5px solid var(--lightblue);
   display: inline-block;
   opacity: .8;
 }
-.round-img-lightblue:hover, .imground-lightblue:hover, .round-img-lightblue-big:hover, .imground-lightblue-big:hover, .round-img-lightblue-small:hover, .imground-lightblue-small:hover{
-  background-color #10b3c6;
+.round-img-lightblue:hover, .imground-lightblue:hover, .round-img-lightblue-big:hover, .imground-lightblue-big:hover, .round-img-lightblue-small:hover, .imground-lightblue-small:hover {
   opacity: 1;
 }
 .imground-lightblue, .imground-lightblue-big, .imground-lightblue-small {
@@ -970,20 +958,20 @@ a:hover{
   height:100px;
   opacity: .8;
 }
-.round-img-lightblue-big{
+.round-img-lightblue-big {
   width:200px;
   height:200px;
 }
-.imground-lightblue-big{
+.imground-lightblue-big {
   width:200px;
   height:200px;
 }
-.round-img-lightblue-small{
+.round-img-lightblue-small {
   width: 50px;
   height: 50px;
-  border: 2px solid #12cde3;
+  border: 2px solid var(--lightblue);
 }
-.imground-lightblue-small{
+.imground-lightblue-small {
   width: 50px;
   height: 50px;
 }
@@ -992,16 +980,15 @@ a:hover{
 /*===== ROUND-IMAGE-BAIGE BUTTON =====*/
 
 .round-img-baige, .round-img-baige-big, .round-img-baige-small {
-  background-color: #19bc9b;
+  background-color: var(--baige);
   width:100px;
   height:100px;
   border-radius: 50%;
-  border: 5px solid #19bc9b;
+  border: 5px solid var(--baige);
   display: inline-block;
   opacity: .8;
 }
-.round-img-baige:hover, .imground-baige:hover, .round-img-baige-big:hover, .imground-baige-big:hover, .round-img-baige-small:hover, .imground-baige-small:hover{
-  background-color #16a387;
+.round-img-baige:hover, .imground-baige:hover, .round-img-baige-big:hover, .imground-baige-big:hover, .round-img-baige-small:hover, .imground-baige-small:hover {
   opacity: 1;
 }
 .imground-baige, .imground-baige-big, .imground-baige-small {
@@ -1010,36 +997,35 @@ a:hover{
   height:100px;
   opacity: .8;
 }
-.round-img-baige-big{
+.round-img-baige-big {
   width:200px;
   height:200px;
 }
-.imground-baige-big{
+.imground-baige-big {
   width:200px;
   height:200px;
 }
-.round-img-baige-small{
+.round-img-baige-small {
   width: 50px;
   height: 50px;
-  border: 2px solid #19bc9b;
+  border: 2px solid var(--baige);
 }
-.imground-baige-small{
+.imground-baige-small {
   width: 50px;
   height: 50px;
 }
 
 /*===== ROUND-IMAGE-PO BUTTON =====*/
 .round-img-po, .round-img-po-big, .round-img-po-small {
-  background-color: #854a5c;
+  background-color: var(--po);
   width:100px;
   height:100px;
   border-radius: 50%;
-  border: 5px solid #854a5c;
+  border: 5px solid var(--po);
   display: inline-block;
   opacity: .8;
 }
-.round-img-po:hover, .imground-po:hover, .round-img-po-big:hover, .imground-po-big:hover, .round-img-po-small:hover, .imground-po-small:hover{
-  background-color #663947;
+.round-img-po:hover, .imground-po:hover, .round-img-po-big:hover, .imground-po-big:hover, .round-img-po-small:hover, .imground-po-small:hover {
   opacity: 1;
 }
 .imground-po, .imground-po-big, .imground-po-small {
@@ -1048,37 +1034,35 @@ a:hover{
   height:100px;
   opacity: .8;
 }
-.round-img-po-big{
+.round-img-po-big {
   width:200px;
   height:200px;
 }
-.imground-po-big{
+.imground-po-big {
   width:200px;
   height:200px;
 }
-.round-img-po-small{
+.round-img-po-small {
   width: 50px;
   height: 50px;
-  border: 2px solid #854a5c;
+  border: 2px solid var(--po);
 }
-.imground-po-small{
+.imground-po-small {
   width: 50px;
   height: 50px;
 }
-
 
 /*===== ROUND-IMAGE-BROWN BUTTON =====*/
 .round-img-brown, .round-img-brown-big, .round-img-brown-small {
-  background-color: #86653d;
+  background-color: var(--brown);
   width:100px;
   height:100px;
   border-radius: 50%;
-  border: 5px solid #86653d;
+  border: 5px solid var(--brown);
   display: inline-block;
   opacity: .8;
 }
-.round-img-brown:hover, .imground-brown:hover, .round-img-brown-big:hover, .imground-brown-big:hover, .round-img-brown-small:hover, .imground-brown-small:hover{
-  background-color #6c5232;
+.round-img-brown:hover, .imground-brown:hover, .round-img-brown-big:hover, .imground-brown-big:hover, .round-img-brown-small:hover, .imground-brown-small:hover {
   opacity: 1;
 }
 .imground-brown, .imground-brown-big, .imground-brown-small {
@@ -1087,20 +1071,20 @@ a:hover{
   height:100px;
   opacity: .8;
 }
-.round-img-brown-big{
+.round-img-brown-big {
   width:200px;
   height:200px;
 }
-.imground-brown-big{
+.imground-brown-big {
   width:200px;
   height:200px;
 }
-.round-img-brown-small{
+.round-img-brown-small {
   width: 50px;
   height: 50px;
-  border: 2px solid #86653d;
+  border: 2px solid var(--brown);
 }
-.imground-brown-small{
+.imground-brown-small {
   width: 50px;
   height: 50px;
 }
@@ -1110,7 +1094,7 @@ a:hover{
   font-family: 'Open Sans';
   width: 120px;
   height: 80px;
-  background: #f01e45;
+  background: var(--red);
   border-radius: 10px;
   display: inline-block;
   opacity: .8;
@@ -1122,12 +1106,11 @@ a:hover{
   width: 0;
   height: 0;
   border-top: 13px solid transparent;
-  border-right: 26px solid #f01e45;
+  border-right: 26px solid var(--red);
   border-bottom: 13px solid transparent;
   margin: 13px 0 0 -25px;
 }
-.bubble-red:hover{
-  background-color #d7193d;
+.bubble-red:hover {
   opacity: 1;
 }
 
@@ -1137,7 +1120,7 @@ a:hover{
   font-family: 'Open Sans';
   width: 120px;
   height: 80px;
-  background: #4d98dc;
+  background: var(--blue);
   border-radius: 10px;
   display: inline-block;
   opacity: .8;
@@ -1149,12 +1132,11 @@ a:hover{
   width: 0;
   height: 0;
   border-top: 13px solid transparent;
-  border-right: 26px solid #4d98dc;
+  border-right: 26px solid var(--blue);
   border-bottom: 13px solid transparent;
   margin: 13px 0 0 -25px;
 }
-.bubble-blue:hover{
-  background-color #3f7bb2;
+.bubble-blue:hover {
   opacity: 1;
 }
 
@@ -1164,7 +1146,7 @@ a:hover{
   font-family: 'Open Sans';
   width: 120px;
   height: 80px;
-  background: #6fd43f;
+  background: var(--green);
   border-radius: 10px;
   display: inline-block;
   opacity: .8;
@@ -1176,12 +1158,11 @@ a:hover{
   width: 0;
   height: 0;
   border-top: 13px solid transparent;
-  border-right: 26px solid #6fd43f;
+  border-right: 26px solid var(--green);
   border-bottom: 13px solid transparent;
   margin: 13px 0 0 -25px;
 }
-.bubble-green:hover{
-  background-color #59a934;
+.bubble-green:hover {
   opacity: 1;
 }
 
@@ -1190,7 +1171,7 @@ a:hover{
   font-family: 'Open Sans';
   width: 120px;
   height: 80px;
-  background: #ffc700;
+  background: var(--yellow);
   border-radius: 10px;
   display: inline-block;
   opacity: .8;
@@ -1202,20 +1183,20 @@ a:hover{
   width: 0;
   height: 0;
   border-top: 13px solid transparent;
-  border-right: 26px solid #ffc700;
+  border-right: 26px solid var(--yellow);
   border-bottom: 13px solid transparent;
   margin: 13px 0 0 -25px;
 }
-.bubble-yellow:hover{
-  background-color #d6a700;
+.bubble-yellow:hover {
   opacity: 1;
 }
+
 /*===== BUBBLE-LIGHTBLUE BUTTON =====*/
 .bubble-lightblue {
   font-family: 'Open Sans';
   width: 120px;
   height: 80px;
-  background: #12cde3;
+  background: var(--lightblue);
   border-radius: 10px;
   display: inline-block;
   opacity: .8;
@@ -1227,12 +1208,11 @@ a:hover{
   width: 0;
   height: 0;
   border-top: 13px solid transparent;
-  border-right: 26px solid #12cde3;
+  border-right: 26px solid var(--lightblue);
   border-bottom: 13px solid transparent;
   margin: 13px 0 0 -25px;
 }
-.bubble-lightblue:hover{
-  background-color #10b3c6;
+.bubble-lightblue:hover {
   opacity: 1;
 }
 
@@ -1243,7 +1223,7 @@ a:hover{
   font-family: 'Open Sans';
   width: 120px;
   height: 80px;
-  background: #19bc9b;
+  background: var(--baige);
   border-radius: 10px;
   display: inline-block;
   opacity: .8;
@@ -1255,12 +1235,11 @@ a:hover{
   width: 0;
   height: 0;
   border-top: 13px solid transparent;
-  border-right: 26px solid #19bc9b;
+  border-right: 26px solid var(--baige);
   border-bottom: 13px solid transparent;
   margin: 13px 0 0 -25px;
 }
-.bubble-baige:hover{
-  background-color #16a387;
+.bubble-baige:hover {
   opacity: 1;
 }
 
@@ -1269,7 +1248,7 @@ a:hover{
   font-family: 'Open Sans';
   width: 120px;
   height: 80px;
-  background: #854a5c;
+  background: var(--po);
   border-radius: 10px;
   display: inline-block;
   opacity: .8;
@@ -1281,12 +1260,11 @@ a:hover{
   width: 0;
   height: 0;
   border-top: 13px solid transparent;
-  border-right: 26px solid #854a5c;
+  border-right: 26px solid var(--po);
   border-bottom: 13px solid transparent;
   margin: 13px 0 0 -25px;
 }
-.bubble-po:hover{
-  background-color #663947;
+.bubble-po:hover {
   opacity: 1;
 }
 
@@ -1295,7 +1273,7 @@ a:hover{
   font-family: 'Open Sans';
   width: 120px;
   height: 80px;
-  background: #86653d;
+  background: var(--brown);
   border-radius: 10px;
   display: inline-block;
   opacity: .8;
@@ -1307,12 +1285,10 @@ a:hover{
   width: 0;
   height: 0;
   border-top: 13px solid transparent;
-  border-right: 26px solid #86653d;
+  border-right: 26px solid var(--brown);
   border-bottom: 13px solid transparent;
   margin: 13px 0 0 -25px;
 }
-.bubble-brown:hover{
-  background-color #6c5232;
+.bubble-brown:hover {
   opacity: 1;
 }
-

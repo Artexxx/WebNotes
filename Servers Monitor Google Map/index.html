@@ -1,0 +1,440 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" content="width=device-width, initial-scale=1">
+  <title> Ваши сервера </title>
+  <style>
+  /*===== Scrollbar =====*/
+  ::-webkit-scrollbar {width: 8px;height: 5px;}
+  ::-webkit-scrollbar-track-piece {background:#EAF3F3;}
+  ::-webkit-scrollbar-thumb:vertical {height:6px;background:#167F92;}
+  ::-webkit-scrollbar-thumb:vertical:hover {background: #126675;}
+  ::-webkit-scrollbar-thumb:horizontal {position: absolute; height:0px; width:0px;background:transparent;}
+  ::-webkit-scrollbar-thumb:horizontal:hover {position: absolute;height:8px; width:4px; background: #167F92;}
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    font-size: 14px;
+    background: url(../images/paper_fibers.png) repeat;
+  }
+  #panel {
+    position:absolute;
+    height: 550px;
+    width: 300px;
+    min-width: 230px;
+    overflow:hidden;
+  }
+  @media (max-width: 777px) {
+    main {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    #panel {
+      position: initial;
+    }
+  }
+  /* --- Resize map library ---*/
+  #resize-horizontal {
+    background-color: rgb(35, 136, 194);
+    border-radius: 12px;
+    float: right;
+    margin-right: 0;
+    width: 5px;
+    height: 100%;
+    cursor: e-resize;
+  }
+
+  #resize-vertical {
+    background-color: rgb(35, 136, 194);
+    border-radius: 12px;
+    float: bottom;
+    margin-bottom: 0;
+    height: 5px;
+    width: 100%;
+    cursor: ns-resize;
+  }
+  @media (max-width: 777px) {
+    #resize-vertical {display: none;}
+    #resize-horizontal {display: none;}
+  }
+  /* --- End resize map library ---*/
+
+  #map-container {
+    margin-left: 300px;
+    width: auto;
+    height: 550px;
+  }
+
+  #map {
+    width: auto;
+    height: 550px;
+  }
+
+  /* Remove Google Logo, terms of use, and Report a problem div. */
+  a[href^="http://maps.google.com/maps"] {display:none !important}
+  a[href^="https://maps.google.com/maps"] {display:none !important}
+  .gm-style-cc { display:none!important;}
+  .gmnoprint div {background:none !important;}
+  .gm-style {background: url(../images/paper_fibers.png) repeat;}
+
+  @media (max-width: 777px) {
+    #map-container {margin-left: 0;}
+  }
+  /* --- Search field---*/
+  .controls {
+    margin-top: 16px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  #pac-input {
+    position: absolute;
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 400px;
+    animation-duration: 0.4s;
+    animation-name: fadeIn;
+  }
+  
+  #pac-input:focus {
+    border-color: #4d90fe;
+  }
+
+  .pac-container {
+    font-family: Roboto;
+  }
+  /* --- End Search field---*/
+  
+  /* --- Main table -- */
+  .mytable {
+    position:absolute;
+    width: 98%;
+    height: 80%;
+    display: block;
+    overflow: auto;
+    font-size:14px;
+  }
+  .mytable {
+    background: #FFF;
+    color: #024457;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.25);
+    border-collapse: collapse;
+    border-radius: 2px;
+    max-height: 500px;
+  }
+  
+  table thead th { position: sticky; top: 0; z-index: 1; }
+  table tbody th { position: sticky; left: 0; }
+  
+  .cell_1 { width: 10%;}
+  .cell_2 { width:70%; }
+  .cell_3 { width:20%; max-width: 50px;}
+  @media (max-width: 777px) {.cell_3 {display: none;}}
+
+  .mytable tr {border: 1px solid #D9E4E6;}
+  .mytable tbody tr {cursor: pointer;}
+  .mytable tr:nth-child(odd) {background-color: #EAF3F3;}
+  .mytable tr:nth-child(odd):hover {background-color: #e6eeee;}
+  .mytable th {
+    font-size:16px;
+    user-select: none;
+    border: 1px solid #FFF;
+    background-color: #167F92;
+    color: #FFF;
+    padding: 1em;
+  }
+  .mytable th:hover {background-color: #177a8b;}
+  .mytable td {
+    display: block;
+    max-height: 1em;
+  }
+  .mytable td:first-child {
+    display: table-cell;
+    text-align: center;
+    border-right: 1px solid #D9E4E6;
+  }
+  @media (min-width: 777px) {
+    .mytable td {
+      border: 1px solid #D9E4E6;
+    }
+  }
+  .mytable th, .mytable td {
+    text-align: left;
+    margin: .5em 1em;
+  }
+  @media (min-width: 777px) {
+    .mytable th, .mytable td {
+      display: table-cell;
+      padding: 1em;
+    }
+  }
+  .flag-icon {
+    position: absolute;
+    left: -5px;
+    margin-right: 3px;
+    opacity: 0.8;
+  }
+  .title {
+    padding: 5px;
+    color: #000;
+    text-overflow: ellipsis;
+    white-space  : nowrap;
+    overflow     : hidden;
+    max-width    : 100px; /* Can be any size, just small enough */
+  }
+  #timetaken {
+    color: #f00;
+  }
+  .hidden {
+    display: none !important;
+  }
+  .btn-hide-column {
+    cursor: pointer;
+    position:absolute;
+    right: 10px;
+    color: #ffffff;
+  }
+  @media (max-width: 777px) {
+    .title {max-width: 500px;}
+  }
+  /* --- End main table -- */
+
+  /* --- Info window --- */
+  .gm-style-iw-t {
+    bottom: 30px!important;
+    animation-duration: 0.3s;
+    animation-name: fadeIn;
+  }
+  .info {
+    width: 300px;
+    height: 400px;
+  }
+  .info__title_wrap {
+    margin-bottom: 10px;
+  }
+  .info__title_text {
+    margin:0;
+    font: 14px Arial, Helvetica, sans-serif;
+    font-size  : 16px;
+    font-weight: 600;
+    max-height : 100px;
+  }
+  .ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .two_line_ellipsis {
+    word-break: break-all;
+    display   : -webkit-box;
+    overflow  : hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .info__sector_wrap {
+    margin-bottom: 10px;
+  }
+  .info__sector_title {
+    font-weight: 400;
+  }
+  .info__sector_wrapside {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+  .info__sector_wrapside_hover {
+    cursor: pointer;
+    padding: 5px 0px 5px 0px;
+    margin-bottom: 0;
+  }
+  .info__sector_wrapside_hover:hover {
+    background-color: #f2fcff;
+  }
+  .info__sector_main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-left: 10px;
+  }
+  
+  .progress_bar {
+    width: 100%;
+    height: 10px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 7px 9px -7px rgba(0,0,0,.2);
+  }
+  .progress_bar_track {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    background: currentColor;
+    opacity: .2;
+  }
+  .progress_bar_model {
+    height: 100%;
+    position:absolute;
+    background: currentColor;
+    transition: width .3s linear;
+  }
+  hr.gradient_style { 
+    border: 0; 
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+  }
+  .gm-ui-hover-effect {
+    display: none !important;
+  }
+  /* --- End info window --- */
+
+  /* --- Status label --- */
+  .status {
+    padding-bottom: 10px;
+  }
+
+  .label {
+    padding: .2em .6em .3em;
+    font-size: 100%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+  }
+  /* --- end status label -- */
+
+  /*  --- Legend specific  ---*/
+  #legend {
+    display:none;
+    padding: 10px;
+    margin: 10px;
+    user-select: none; /* FIXME */
+    padding: 6px 8px;
+    font: 14px Arial, Helvetica, sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    line-height: 24px;
+    color: #555;
+  }
+  .show_legend {
+    display: unset  !important;
+    animation-duration: 1s;
+    animation-name: fadeIn;
+  }
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  #legend h4 {
+    text-align: center;
+    font-size: 16px;
+    margin: 2px 12px 8px;
+    color: #777;
+  }
+  #legend span {
+    position: relative;
+    bottom: 3px;
+  }
+  #legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin: 0 8px 0 0;
+    opacity: 0.7;
+  }
+  #legend i.icon {
+    background-size: 18px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  @media (max-width: 777px) {
+    #legend {
+      display: none !important;
+    }
+  }
+  /*  --- End legend specific  ---*/
+  </style>
+  <link rel="icon" href="../images/icon.svg">
+  <!-- <link rel="stylesheet" href="../libs/preload.css"><script> setTimeout(function() {document.body.classList.add('loaded');}, 600)</script> -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlyHzmksm8PlMbK1QnfvU9oRLliSmFXEw&callback=initAutocomplete&libraries=places&v=weekly"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <script src="data.json"></script>
+  <script type="text/javascript" src="../libs/markerclusterer.js"></script>
+  <script src="speed_test.js"></script>
+  
+  <script>
+    google.maps.event.addDomListener(window, 'load', speedTest.init);
+  </script>
+</head>
+
+<body>
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+  <main>
+  <div id="panel">
+    <div id="resize-horizontal"></div>
+    <h3>Карта активности серверов</h3>
+
+    <div>
+      <input type="checkbox" id="usegmm" />
+      <span>Использовать кластеризацию маркеров<br></span>
+      <span>Время отклика: <span id="timetaken"></span> ms</span>
+    </div>
+
+    <strong>Ваши сервера:</strong>
+    <table class="mytable" id="tblSortTest_dom">
+      <thead>
+        <tr>
+          <th class="cell_1" style="text-align: center;">Статус</th>
+          <th class="cell_2">Название  <i class="btn-hide-column fa fa-eye-slash"></th>
+          <th class="cell_3">IP:Порт <i class="btn-hide-column fa fa-eye-slash"></th>
+        </tr>
+      </thead>
+      <tbody id="markerlist">
+ 
+      </tbody>
+    </table>
+  </div>
+
+  <div id="map-container">
+    <input id="pac-input" class="controls" type="text" placeholder="Введите запрос или адрес">
+    <div id="map"></div>
+    <div id="legend" class="hidden"><h4>Состояние</h4></div>
+    <div id="resize-vertical"></div>
+  </div>
+  </main>
+  <script type="text/javascript" src="../libs/resize-map.js"></script>
+  <script type="text/javascript" src="../libs/sorted-table.js"></script>
+  <script type="text/javascript" src="../libs/hide-columns.js"></script>
+  <script type="text/javascript" src="../libs/resize-columns.js"></script>
+  
+  <canvas id="live2dcanvas" width="200" height="400"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script><script> L2Dwidget.init( {"model": {"jsonPath": "https://unpkg.com/live2d-widget-model-koharu/assets/koharu.model.json","scale": 1},"display": {"position": "right","width": 150,"height": 300,"hOffset": 0,"vOffset": -20},"mobile": {"show": true,"scale": 0.5},"react": {"opacityDefault": 1,"opacityOnHover": 0.6}});</script><style>  canvas#live2dcanvas {z-index: 1000;border: 0 !important;position: fixed;right: 0;bottom: -78px;animation-name: example;animation-duration: 1.4s;}@keyframes example {from {bottom: -400px;opacity: 0;}to {bottom: -78px;opacity: 1;}}</style>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script><script> L2Dwidget.init( {"model": {"jsonPath": "https://unpkg.com/live2d-widget-model-wanko/assets/wanko.model.json","scale": 1},"display": {"position": "right","width": 150,"height": 300,"hOffset": 0,"vOffset": -20},"mobile": {"show": true,"scale": 0.5},"react": {"opacityDefault": 1,"opacityOnHover": 0.6}});</script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script><script> L2Dwidget.init( {"model": {"jsonPath": "https://unpkg.com/live2d-widget-model-tororo/assets/tororo.model.json","scale": 1},"display": {"position": "right","width": 150,"height": 300,"hOffset": 0,"vOffset": -20},"mobile": {"show": true,"scale": 0.5},"react": {"opacityDefault": 1,"opacityOnHover": 0.6}});</script> -->
+</body>  
+</html>
