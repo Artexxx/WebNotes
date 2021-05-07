@@ -143,31 +143,3 @@ function sortIt(sorting, tblId){
   //var x = new Date();
   //console.log("finish sort: " + x.toTimeString());
 } 
-
-
-
-//Proof of concept -------------------
-function sortTest(){ 
-  var object = {
-    1: "1000",
-    2: "22",
-    3: "1",
-    4: "3"
-  }
-  var keyValues = []
-  for (var key in object) { 
-    keyValues.push([ key, object[key] ])
-  }
-
-  console.log("before");
-  console.log(object);  
-
-  keyValues.sort(function compare(kv1, kv2) {
-    //assume numeric content: use different comparison for dates and strings
-    return kv1[1] - kv2[1]
-  }) 
-
-  console.log("after");
-  console.log(keyValues); 
-  console.log(keyValues[0]); //specific record in new sort.
-} 

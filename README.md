@@ -90,7 +90,7 @@
 └── style.css
 ```
 
-### [[CSS] Drop Capital ::first-letter](https://htmlpreview.github.io/?https://github.com/Artexxx/Artexxx.github.io/blob/master/Case/%5BCSS%5D%20Drop%20Capital%20%20::first-letter/index.html)
+### [[CSS] Drop Capital ::first-letter](https://artexxx.github.io/Case/[CSS]%20Drop%20capital%20first%20letter/)
 ```text
 └── index.html
 ```
@@ -121,15 +121,22 @@
 └── style.css
 ```
 
-### [[CSS+js] Black-White-Theme](https://artexxx.github.io/Case/%5BCSS+js%5D%20Black-White-Theme/)
+### [[CSS+js] dark mode - 1](https://artexxx.github.io/Case/[CSS+js]%20dark%20mode%20-%201/)
 ```text
 ├── images
 │   └── anime.jpg
-├── js
-│   └── script.js
-└── stylesheets
-    ├── style.css
-├── index.html
+├── script.js
+├── style.css
+└── index.html
+```
+
+### [[CSS+js] dark mode - 2](https://artexxx.github.io/Case/[CSS+js]%20dark%20mode%20-%202/)
+```text
+├── images
+│   └── anime.jpg
+├── script.js
+├── style.css
+└── index.html
 ```
 
 ### [WatsApp style ScareApp](https://artexxx.github.io/WatsApp%20style%20ScareApp/)

@@ -18,12 +18,12 @@
     padding: 0;
     font-family: Arial;
     font-size: 14px;
-    background: url(../images/paper_fibers.png) repeat;
+    background: url(images/paper_fibers.png) repeat;
   }
   #panel {
     position:absolute;
     height: 550px;
-    width: 300px;
+    width: 410px;
     min-width: 230px;
     overflow:hidden;
   }
@@ -63,7 +63,7 @@
   /* --- End resize map library ---*/
 
   #map-container {
-    margin-left: 300px;
+    margin-left: 410px;
     width: auto;
     height: 550px;
   }
@@ -78,7 +78,7 @@
   a[href^="https://maps.google.com/maps"] {display:none !important}
   .gm-style-cc { display:none!important;}
   .gmnoprint div {background:none !important;}
-  .gm-style {background: url(../images/paper_fibers.png) repeat;}
+  .gm-style {background: url(images/paper_fibers.png) repeat;}
 
   @media (max-width: 777px) {
     #map-container {margin-left: 0;}
@@ -146,7 +146,6 @@
   .mytable tr {border: 1px solid #D9E4E6;}
   .mytable tbody tr {cursor: pointer;}
   .mytable tr:nth-child(odd) {background-color: #EAF3F3;}
-  .mytable tr:nth-child(odd):hover {background-color: #e6eeee;}
   .mytable th {
     font-size:16px;
     user-select: none;
@@ -217,8 +216,11 @@
     animation-duration: 0.3s;
     animation-name: fadeIn;
   }
+  .gm-style-iw-c {
+    padding-left: 0!important;
+  }
   .info {
-    width: 300px;
+    width: 250px;
     height: 400px;
   }
   .info__title_wrap {
@@ -259,9 +261,14 @@
     padding: 5px 0px 5px 0px;
     margin-bottom: 0;
   }
-  .info__sector_wrapside_hover:hover {
-    background-color: #f2fcff;
+  .info__sector_first_col{
+    margin: auto;
+    padding-left: 5px;
   }
+
+  /* .info__sector_wrapside_hover:hover {
+    background-color: #f2fcff;
+  } */
   .info__sector_main {
     width: 100%;
     display: flex;
@@ -269,7 +276,11 @@
     overflow: hidden;
     margin-left: 10px;
   }
-  
+  .info__sector_main_row1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
   .progress_bar {
     width: 100%;
     height: 10px;
@@ -295,9 +306,6 @@
     border: 0; 
     height: 1px; 
     background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
   }
   .gm-ui-hover-effect {
     display: none !important;
@@ -372,17 +380,40 @@
     }
   }
   /*  --- End legend specific  ---*/
+
+  /*  --- Ripple effect  ---*/
+  .ripple-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .ripple-effect {
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 1px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.033);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  /*  --- End ripple effect  ---*/
   </style>
-  <link rel="icon" href="../images/icon.svg">
-  <!-- <link rel="stylesheet" href="../libs/preload.css"><script> setTimeout(function() {document.body.classList.add('loaded');}, 600)</script> -->
+
+  <link rel="icon" href="images/icon.svg">
+  <!-- <link rel="stylesheet" href="libs/preload.css"><script> setTimeout(function() {document.body.classList.add('loaded');}, 600)</script> -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlyHzmksm8PlMbK1QnfvU9oRLliSmFXEw&callback=initAutocomplete&libraries=places&v=weekly"></script>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
   <script src="data.json"></script>
-  <script type="text/javascript" src="../libs/markerclusterer.js"></script>
+  <script type="text/javascript" src="libs/markerclusterer.js"></script>
   <script src="speed_test.js"></script>
-  
   <script>
     google.maps.event.addDomListener(window, 'load', speedTest.init);
   </script>
@@ -408,14 +439,14 @@
     <strong>Ваши сервера:</strong>
     <table class="mytable" id="tblSortTest_dom">
       <thead>
-        <tr>
-          <th class="cell_1" style="text-align: center;">Статус</th>
-          <th class="cell_2">Название  <i class="btn-hide-column fa fa-eye-slash"></th>
-          <th class="cell_3">IP:Порт <i class="btn-hide-column fa fa-eye-slash"></th>
+        <tr class="ripple">
+          <th class=" cell_1" style="text-align: center;">Статус</th>
+          <th class=" cell_2">Название  <i class="btn-hide-column fa fa-eye-slash"></th>
+          <th class=" cell_3">IP:Порт <i class="btn-hide-column fa fa-eye-slash"></th>
         </tr>
       </thead>
       <tbody id="markerlist">
- 
+        <!-- Content from speed_test.js -->
       </tbody>
     </table>
   </div>
@@ -427,13 +458,14 @@
     <div id="resize-vertical"></div>
   </div>
   </main>
-  <script type="text/javascript" src="../libs/resize-map.js"></script>
-  <script type="text/javascript" src="../libs/sorted-table.js"></script>
-  <script type="text/javascript" src="../libs/hide-columns.js"></script>
-  <script type="text/javascript" src="../libs/resize-columns.js"></script>
-  
-  <canvas id="live2dcanvas" width="200" height="400"></canvas>
-  <script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script><script> L2Dwidget.init( {"model": {"jsonPath": "https://unpkg.com/live2d-widget-model-koharu/assets/koharu.model.json","scale": 1},"display": {"position": "right","width": 150,"height": 300,"hOffset": 0,"vOffset": -20},"mobile": {"show": true,"scale": 0.5},"react": {"opacityDefault": 1,"opacityOnHover": 0.6}});</script><style>  canvas#live2dcanvas {z-index: 1000;border: 0 !important;position: fixed;right: 0;bottom: -78px;animation-name: example;animation-duration: 1.4s;}@keyframes example {from {bottom: -400px;opacity: 0;}to {bottom: -78px;opacity: 1;}}</style>
+  <script type="text/javascript" src="libs/resize-map.js"></script>
+  <script type="text/javascript" src="libs/sorted-table.js"></script>
+  <script type="text/javascript" src="libs/hide-columns.js"></script>
+  <script type="text/javascript" src="libs/resize-columns.js"></script> 
+  <script type="text/javascript" src="libs/ripples.js"></script>
+
+  <!-- <canvas id="live2dcanvas" width="200" height="400"></canvas> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script><script> L2Dwidget.init( {"model": {"jsonPath": "https://unpkg.com/live2d-widget-model-koharu/assets/koharu.model.json","scale": 1},"display": {"position": "right","width": 150,"height": 300,"hOffset": 0,"vOffset": -20},"mobile": {"show": true,"scale": 0.5},"react": {"opacityDefault": 1,"opacityOnHover": 0.6}});</script><???>  canvas#live2dcanvas {z-index: 1000;border: 0 !important;position: fixed;right: 0;bottom: -78px;animation-name: example;animation-duration: 1.4s;}@keyframes example {from {bottom: -400px;opacity: 0;}to {bottom: -78px;opacity: 1;}}</???> -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script><script> L2Dwidget.init( {"model": {"jsonPath": "https://unpkg.com/live2d-widget-model-wanko/assets/wanko.model.json","scale": 1},"display": {"position": "right","width": 150,"height": 300,"hOffset": 0,"vOffset": -20},"mobile": {"show": true,"scale": 0.5},"react": {"opacityDefault": 1,"opacityOnHover": 0.6}});</script> -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script><script> L2Dwidget.init( {"model": {"jsonPath": "https://unpkg.com/live2d-widget-model-tororo/assets/tororo.model.json","scale": 1},"display": {"position": "right","width": 150,"height": 300,"hOffset": 0,"vOffset": -20},"mobile": {"show": true,"scale": 0.5},"react": {"opacityDefault": 1,"opacityOnHover": 0.6}});</script> -->
 </body>  
