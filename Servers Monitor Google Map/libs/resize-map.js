@@ -41,15 +41,15 @@ function mousemove(e)
   var vchange =  vres.curr_height + (e.clientY- vres.curr_height);
 
   if( hres.unlock) {
-      if(change > 300) {
-        if (change < fullWidth-200){
+      if(change > 410) {
+        if (change < fullWidth*0.5){
           hres.p.style.width = change + 'px';
           hres.d.style.marginLeft  =  change + 'px';
         }
       }
       else {
-        hres.p.style.width = '300px';
-        hres.d.style.marginLeft  =  '300px';
+        hres.p.style.width = '410px';
+        hres.d.style.marginLeft  =  '410px';
         }
     }
   if( vres.unlock) {

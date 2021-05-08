@@ -115,7 +115,7 @@ speedTest.markerClickFunction = function (server, latlng) {
 
     var infoHtml =
       `<div class="info">
-  <div style="padding-left:10px">
+  <div style="padding-left:10px;">
       <div class="info__title_wrap">
         <h3 class="info_title_text two_line_ellipsis"> ${server.title}</h3>
       </div>
