@@ -150,11 +150,11 @@
     font-size:16px;
     user-select: none;
     border: 1px solid #FFF;
-    background-color: #167F92;
+    background: #167F92;
     color: #FFF;
     padding: 1em;
   }
-  .mytable th:hover {background-color: #177a8b;}
+  /* .mytable th:hover {background-color: #177a8b;} */
   .mytable td {
     display: block;
     max-height: 1em;
@@ -191,7 +191,7 @@
     text-overflow: ellipsis;
     white-space  : nowrap;
     overflow     : hidden;
-    max-width    : 100px; /* Can be any size, just small enough */
+    max-width    : 200px; /* Can be any size, just small enough */
   }
   #timetaken {
     color: #f00;
@@ -205,6 +205,14 @@
     right: 10px;
     color: #ffffff;
   }
+  #table-sortable .th-sort-asc::after  {content: "\25b4";}
+  #table-sortable .th-sort-desc::after {content: "\25be";}
+  #table-sortable .th-sort-asc::after,
+  #table-sortable .th-sort-desc::after {
+    margin-left: 5px;
+    position: absolute;
+  }
+
   @media (max-width: 777px) {
     .title {max-width: 500px;}
   }
@@ -265,10 +273,6 @@
     margin: auto;
     padding-left: 5px;
   }
-
-  /* .info__sector_wrapside_hover:hover {
-    background-color: #f2fcff;
-  } */
   .info__sector_main {
     width: 100%;
     display: flex;
@@ -382,27 +386,27 @@
   /*  --- End legend specific  ---*/
 
   /*  --- Ripple effect  ---*/
-  .ripple-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 0;
-    width: 0;
-    pointer-events: none;
+  .ripple {
+    position: relative;
     overflow: hidden;
   }
-
-  .ripple-effect {
-    margin-top: 0px;
-    margin-left: 0px;
-    width: 1px;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.033);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  .effect-ripple {
+    position: absolute;
     border-radius: 50%;
-    pointer-events: none;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.05);
+    animation: ripple 1.5s;
+  }
+  .effect-ripple-light {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  @keyframes ripple{
+    from{transform: scale(1);}
+    to{transform: scale(20);opacity: 0;}
   }
   /*  --- End ripple effect  ---*/
+
   </style>
 
   <link rel="icon" href="images/icon.svg">
@@ -414,6 +418,7 @@
   <script src="data.json"></script>
   <script type="text/javascript" src="libs/markerclusterer.js"></script>
   <script src="speed_test.js"></script>
+  <script src="ripples.js"></script>
   <script>
     google.maps.event.addDomListener(window, 'load', speedTest.init);
   </script>
@@ -437,12 +442,14 @@
     </div>
 
     <strong>Ваши сервера:</strong>
-    <table class="mytable" id="tblSortTest_dom">
+    <table class="mytable" id="table-sortable">
       <thead>
         <tr>
-          <th class="cell_1" style="text-align: center;">Статус</th>
-          <th class="cell_2">Название  <i class="btn-hide-column fa fa-eye-slash"></th>
-          <th class="cell_3">IP:Порт <i class="btn-hide-column fa fa-eye-slash"></th>
+          <th class="ripple light cell_1" style="text-align: center;">Статус</th>
+          <th class="ripple light cell_2">Название  <i class="btn-hide-column fa fa-eye-slash"></th>
+          <th class="ripple light cell_3">IP:Порт <i class="btn-hide-column fa fa-eye-slash"></th>
+          <th class="ripple light cell_3">IP:Порт <i class="btn-hide-column fa fa-eye-slash"></th>
+          <th class="ripple light cell_4">IP:Порт <i class="btn-hide-column fa fa-eye-slash"></th>
         </tr>
       </thead>
       <tbody id="markerlist">

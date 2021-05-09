@@ -44,6 +44,7 @@ speedTest.showMarkers = function () {
 
 
   var panel = $('markerlist'); panel.innerHTML = "";
+
   for (var i = 0; i < speedTest.servers.length; i++) {
     var titleText = speedTest.servers[i].title;
     var statusText = speedTest.servers[i].status_text;
@@ -59,9 +60,12 @@ speedTest.showMarkers = function () {
     // 3 колонка - IP:Порт
     var ipport = document.createElement('td');
 
-    // item.classList.add("ripple");
-    item.className = 'ripple';
-
+    // 4 колонка - IP:Порт
+    var ipport2 = document.createElement('td');
+    // 5 колонка - IP:Порт
+    var ipport3 = document.createElement('td');
+    
+    // item.className = "datripple
     status.className = "status";
     status.innerHTML = `<span class="label" style="background-color:${statusColor}">${statusText}</span>`
 
@@ -70,12 +74,21 @@ speedTest.showMarkers = function () {
     Array.prototype.sample = function () { return this[Math.floor(Math.random() * this.length)]; }
     title.innerHTML = `<span class="flag-icon flag-icon-${["ru", "ru", "ru", "ru", "gb", "ua"].sample()}"></span>${titleText}`;
 
-    ipport.className = "ipport"
-    ipport.innerHTML = `<div class="ipport_text"><span>62.122.215.21:</span><span>81</span></div>`
+    ipport.className = "ipport";
+    ipport.innerHTML = `<span class="ipport_text">62.122.215.21:81</span>`;
+    
+    ipport2.className = "ipport";
+    ipport2.innerHTML = `<span class="ipport_text">62.122.215.21:81</span>`;
+    ipport3.className = "ipport";
+    ipport3.innerHTML = `<span class="ipport_text">62.122.215.21:81</span>`;
 
     item.appendChild(status);
     item.appendChild(title);
     item.appendChild(ipport);
+    
+    item.appendChild(ipport2);
+    item.appendChild(ipport3);
+
     panel.appendChild(item);
 
     var latLng = new google.maps.LatLng(speedTest.servers[i].latitude, speedTest.servers[i].longitude);
