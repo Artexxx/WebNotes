@@ -7,8 +7,8 @@
   <style>
   /*===== Scrollbar =====*/
   ::-webkit-scrollbar {width: 8px;height: 5px;}
-  ::-webkit-scrollbar-track-piece {background:#EAF3F3;}
-  ::-webkit-scrollbar-thumb:vertical {height:6px;background:#167F92;}
+  ::-webkit-scrollbar-track-piece {background: #EAF3F3;}
+  ::-webkit-scrollbar-thumb:vertical {height:6px;background: #167F92;}
   ::-webkit-scrollbar-thumb:vertical:hover {background: #126675;}
   ::-webkit-scrollbar-thumb:horizontal {position: absolute; height:0px; width:0px;background:transparent;}
   ::-webkit-scrollbar-thumb:horizontal:hover {position: absolute;height:8px; width:4px; background: #167F92;}
@@ -67,7 +67,6 @@
     width: auto;
     height: 550px;
   }
-
   #map {
     width: auto;
     height: 550px;
@@ -81,7 +80,10 @@
   .gm-style {background: url(images/paper_fibers.png) repeat;}
 
   @media (max-width: 777px) {
-    #map-container {margin-left: 0;}
+    #map,#map-container {margin-left: 0!important;
+      height: 550px!important;
+      width: 100%!important;
+    }
   }
   /* --- Search field---*/
   .controls {
@@ -135,12 +137,11 @@
     max-height: 500px;
   }
   
-  table thead th { position: sticky; top: 0; z-index: 1; }
-  table tbody th { position: sticky; left: 0; }
+  table thead th {position: sticky; top: 0; z-index: 1; }
   
   .cell_1 { width: 10%;}
-  .cell_2 { width:70%; }
-  .cell_3 { width:20%; max-width: 50px;}
+  .cell_2 { width:70%;}
+  .cell_3 { width:20%;}
   @media (max-width: 777px) {.cell_3 {display: none;}}
 
   .mytable tr {border: 1px solid #D9E4E6;}
@@ -226,6 +227,7 @@
   }
   .gm-style-iw-c {
     padding-left: 0!important;
+    padding-bottom: 0!important;
   }
   .info {
     width: 250px;
@@ -306,6 +308,18 @@
     background: currentColor;
     transition: width .3s linear;
   }
+  .progress_bar_model::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: white;
+    animation: progress-active 2s ease infinite;
+  }
+  @keyframes progress-active {
+    0% {opacity: 0.4;width: 0;}
+    100% {opacity: 0;width: 100%;}
+  }
+
   hr.gradient_style { 
     border: 0; 
     height: 1px; 
@@ -386,7 +400,38 @@
   /*  --- End legend specific  ---*/
 
   /*  --- Ripple effect  ---*/
-  .ripple {
+.ripple {
+  position: relative;
+  overflow: hidden!important;
+}
+.ripple:before {
+  opacity: 0.1;
+  content: "";
+  position: absolute;
+  display: block;
+  background: var(--ripple-background, red);
+  /* background: var(--ripple-background, white); */
+  border-radius: 50%;
+  pointer-events: none;
+  top: calc(var(--y) * 1px);
+  left: calc(var(--x) * 1px);
+  width: calc(var(--d) * 1px);
+  height: calc(var(--d) * 1px);
+  opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.3));
+  transition: calc(var(--t, 0) * var(--ripple-duration, 600ms)) var(--ripple-easing, linear);
+  transform: translate(-50%, -50%) scale(var(--s, 1));
+  transform-origin: center;
+}
+
+.rainbow {
+  --ripple-opacity: 1;
+  --ripple-background: radial-gradient(circle at center, rebeccapurple, dodgerblue, olive, gold, orange, tomato);
+  --ripple-duration: 2000ms;
+  --ripple-easing: cubic-bezier(0, .5, .5, 1);
+  transition: background-color 300ms, color 300ms;
+}
+
+  /* .ripple {
     position: relative;
     overflow: hidden;
   }
@@ -404,9 +449,8 @@
   @keyframes ripple{
     from{transform: scale(1);}
     to{transform: scale(20);opacity: 0;}
-  }
+  } */
   /*  --- End ripple effect  ---*/
-
   </style>
 
   <link rel="icon" href="images/icon.svg">
@@ -418,7 +462,6 @@
   <script src="data.json"></script>
   <script type="text/javascript" src="libs/markerclusterer.js"></script>
   <script src="speed_test.js"></script>
-  <script src="ripples.js"></script>
   <script>
     google.maps.event.addDomListener(window, 'load', speedTest.init);
   </script>
@@ -441,15 +484,13 @@
       <span>Время отклика: <span id="timetaken"></span> ms</span>
     </div>
 
-    <strong>Ваши сервера:</strong>
+    <strong>Company Servers Status</strong>
     <table class="mytable" id="table-sortable">
       <thead>
         <tr>
-          <th class="ripple light cell_1" style="text-align: center;">Статус</th>
-          <th class="ripple light cell_2">Название  <i class="btn-hide-column fa fa-eye-slash"></th>
-          <th class="ripple light cell_3">IP:Порт <i class="btn-hide-column fa fa-eye-slash"></th>
-          <th class="ripple light cell_3">IP:Порт <i class="btn-hide-column fa fa-eye-slash"></th>
-          <th class="ripple light cell_4">IP:Порт <i class="btn-hide-column fa fa-eye-slash"></th>
+          <th anim="ripple" class="ripple light cell_1" style="text-align: center;">Status</th>
+          <th anim="ripple" class="ripple light cell_2">Name  <i class="btn-hide-column fa fa-eye-slash"></th>
+          <th class="ripple light cell_3">IP:Port <i class="btn-hide-column fa fa-eye-slash"></th>
         </tr>
       </thead>
       <tbody id="markerlist">

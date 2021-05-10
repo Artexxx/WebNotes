@@ -60,12 +60,6 @@ speedTest.showMarkers = function () {
     // 3 колонка - IP:Порт
     var ipport = document.createElement('td');
 
-    // 4 колонка - IP:Порт
-    var ipport2 = document.createElement('td');
-    // 5 колонка - IP:Порт
-    var ipport3 = document.createElement('td');
-    
-    // item.className = "datripple
     status.className = "status";
     status.innerHTML = `<span class="label" style="background-color:${statusColor}">${statusText}</span>`
 
@@ -77,18 +71,9 @@ speedTest.showMarkers = function () {
     ipport.className = "ipport";
     ipport.innerHTML = `<span class="ipport_text">62.122.215.21:81</span>`;
     
-    ipport2.className = "ipport";
-    ipport2.innerHTML = `<span class="ipport_text">62.122.215.21:81</span>`;
-    ipport3.className = "ipport";
-    ipport3.innerHTML = `<span class="ipport_text">62.122.215.21:81</span>`;
-
     item.appendChild(status);
     item.appendChild(title);
     item.appendChild(ipport);
-    
-    item.appendChild(ipport2);
-    item.appendChild(ipport3);
-
     panel.appendChild(item);
 
     var latLng = new google.maps.LatLng(speedTest.servers[i].latitude, speedTest.servers[i].longitude);
@@ -134,7 +119,7 @@ speedTest.markerClickFunction = function (server, latlng) {
       </div>
       <div class="info__sector_wrap">
         <span class="info__sector_title">
-        Статус сервера
+        Server Status
         </span>
         <span class="label" style="background-color:${server.status_color}; float: right;">
         ${server.status_text}
@@ -142,7 +127,7 @@ speedTest.markerClickFunction = function (server, latlng) {
       </div>
       <div class="info__sector_wrap">
         <span class="info__sector_title">
-        IP-адрес
+        Pooling IP Adress
         </span>
         <span style="float:right;">
         62.122.215.70
@@ -153,7 +138,7 @@ speedTest.markerClickFunction = function (server, latlng) {
       <i class="fa fa-windows info__sector_first_col" style="color:gray;font-size:20px;"></i>
       <div class="info__sector_main">
         <span class="info__sector_main_row1 info__sector_title">
-        Тип машины
+        Machine Type
         </span>
         <div class="info__sector_main_row2 ellipsis">
         Windows 2017 R4 Server
@@ -162,7 +147,7 @@ speedTest.markerClickFunction = function (server, latlng) {
       </div>
   </div>   
 <hr class="gradient_style">
-      <div class="ripple info__sector_wrapside info__sector_wrapside_hover">
+      <div class="ripple rainbow info__sector_wrapside info__sector_wrapside_hover">
         <i class="fa material-icons info__sector_first_col" style="color:gray;">select_all</i>
       <div class="info__sector_main">
         <div class="info__sector_main_row1 info__sector_title">
@@ -240,10 +225,9 @@ speedTest.markerClickFunction = function (server, latlng) {
         </div>
       </div>
       </div>
-    
 <hr class="gradient_style">
-      Ссылка: <a href="#" target="_blank">TODO</a>
-    </div>`;
+  Ссылка: <a href="#" target="_blank">TODO</a>
+</div>`;
 
     speedTest.infoWindow.setContent(infoHtml);
     speedTest.infoWindow.setPosition(latlng);
