@@ -409,7 +409,7 @@
   content: "";
   position: absolute;
   display: block;
-  background: var(--ripple-background, red);
+  background: var(--ripple-background, currentColor);
   /* background: var(--ripple-background, white); */
   border-radius: 50%;
   pointer-events: none;
@@ -417,7 +417,7 @@
   left: calc(var(--x) * 1px);
   width: calc(var(--d) * 1px);
   height: calc(var(--d) * 1px);
-  opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.3));
+  opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.1));
   transition: calc(var(--t, 0) * var(--ripple-duration, 600ms)) var(--ripple-easing, linear);
   transform: translate(-50%, -50%) scale(var(--s, 1));
   transform-origin: center;
