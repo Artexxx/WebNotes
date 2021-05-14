@@ -89,9 +89,9 @@
     border-radius: 2px;
     max-height: 500px;
   }
-  
+
   table thead th {position: sticky; top: 0; z-index: 1; }
-  
+
   .cell_1 { width: 10%;position: sticky}
   .cell_2 { width:70%;position: sticky}
   .cell_3 { width:20%;position: sticky;}
@@ -142,7 +142,7 @@
   .title {
     padding: 5px;
     color: #000;
-    box-sizing:border-box; 
+    box-sizing:border-box;
     text-overflow: ellipsis;
     white-space  : nowrap;
     overflow     : hidden;
@@ -274,9 +274,9 @@
     100% {opacity: 0;width: 100%;}
   }
 
-  hr.gradient_style { 
-    border: 0; 
-    height: 1px; 
+  hr.gradient_style {
+    border: 0;
+    height: 1px;
     background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   }
   .gm-ui-hover-effect {
@@ -299,7 +299,7 @@
   }
   .modal {
     /* display: none;  */
-    display: block; 
+    display: block;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -334,16 +334,17 @@
     padding: 30px;
   }
 
-  .modal__body dl {  
+  .modal__body dl {
     width: 100%;
   }
   .modal__body dt {
     display: block;
     padding-top: 10px;
-    padding-bottom: 10px; 
-    padding-left: 30px; 
+    padding-bottom: 10px;
+    padding-left: 30px;
     margin: 15px;
-    background-color: rgb(224, 218, 218);
+background-image: linear-gradient(160deg, #91d4ff 0%, #546e7a 100%);
+
   }
   .modal__body dt span {
     font-size: 1.2em;
@@ -382,11 +383,11 @@
   /* Animation */
   @keyframes modalbox {
     0% {
-      top: -250px; 
+      top: -250px;
       opacity: 0;
     }
     100% {
-      top: 0; 
+      top: 0;
       opacity: 1;
     }
   }
