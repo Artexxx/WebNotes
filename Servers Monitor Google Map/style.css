@@ -1,0 +1,410 @@
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    font-size: 14px;
+    background: url(images/paper_fibers.png) repeat;
+  }
+  #panel {
+    position:absolute;
+    height: 550px;
+    width: 410px;
+    min-width: 230px;
+    overflow:hidden;
+  }
+  @media (max-width: 777px) {
+    main {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    #panel {
+      position: initial;
+    }
+  }
+  /* --- Resize map library ---*/
+  #resize-horizontal {
+    background-color: rgb(35, 136, 194);
+    border-radius: 12px;
+    float: right;
+    margin-right: 0;
+    width: 5px;
+    height: 100%;
+    cursor: e-resize;
+  }
+
+  #resize-vertical {
+    background-color: rgb(35, 136, 194);
+    border-radius: 12px;
+    float: bottom;
+    margin-bottom: 0;
+    height: 5px;
+    width: 100%;
+    cursor: ns-resize;
+  }
+  @media (max-width: 777px) {
+    #resize-vertical {display: none;}
+    #resize-horizontal {display: none;}
+  }
+  /* --- End resize map library ---*/
+
+  #map-container {
+    margin-left: 410px;
+    width: auto;
+    height: 550px;
+  }
+  #map {
+    width: auto;
+    height: 550px;
+  }
+
+  /* Remove Google Logo, terms of use, and Report a problem div. */
+  a[href^="http://maps.google.com/maps"] {display:none !important}
+  a[href^="https://maps.google.com/maps"] {display:none !important}
+  .gm-style-cc { display:none!important;}
+  .gmnoprint div {background:none !important;}
+  .gm-style {background: url(images/paper_fibers.png) repeat;}
+
+  @media (max-width: 777px) {
+    #map,#map-container {margin-left: 0!important;
+      height: 550px!important;
+      width: 100%!important;
+    }
+  }
+
+/* --- Main table -- */
+ .mytable {
+    position:absolute;
+    width: 98%;
+    height: 80%;
+    display: block;
+    overflow: auto;
+    font-size:14px;
+  }
+  .mytable {
+    background: #FFF;
+    color: #024457;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.25);
+    border-collapse: collapse;
+    border-radius: 2px;
+    max-height: 500px;
+  }
+  
+  table thead th {position: sticky; top: 0; z-index: 1; }
+  
+  .cell_1 { width: 10%;position: sticky}
+  .cell_2 { width:70%;position: sticky}
+  .cell_3 { width:20%;position: sticky;}
+  @media (max-width: 777px) {.cell_3 {display: none;}}
+
+  .mytable tr {border: 1px solid #D9E4E6;}
+  .mytable tbody tr {cursor: pointer;}
+  .mytable tr:nth-child(odd) {background-color: #EAF3F3;}
+  .mytable th {
+    font-size:16px;
+    user-select: none;
+    border: 1px solid #FFF;
+    background: #167F92;
+    color: #FFF;
+    padding: 1em;
+  }
+  /* .mytable th:hover {background-color: #177a8b;} */
+  .mytable td {
+    display: block;
+    max-height: 1em;
+  }
+  .mytable td:first-child {
+    display: table-cell;
+    text-align: center;
+    border-right: 1px solid #D9E4E6;
+  }
+  @media (min-width: 777px) {
+    .mytable td {
+      border: 1px solid #D9E4E6;
+    }
+  }
+  .mytable th, .mytable td {
+    text-align: left;
+    margin: .5em 1em;
+  }
+  @media (min-width: 777px) {
+    .mytable th, .mytable td {
+      display: table-cell;
+      padding: 1em;
+    }
+  }
+  .flag-icon {
+    position: absolute;
+    left: -5px;
+    margin-right: 3px;
+    opacity: 0.8;
+  }
+  .title {
+    padding: 5px;
+    color: #000;
+    box-sizing:border-box; 
+    text-overflow: ellipsis;
+    white-space  : nowrap;
+    overflow     : hidden;
+    max-width    : 200px; /* Can be any size, just small enough */
+  }
+  #timetaken {
+    color: #f00;
+  }
+  .hidden {
+    display: none !important;
+  }
+  .btn-hide-column {
+    cursor: pointer;
+    position:absolute;
+    right: 10px;
+    color: #ffffff;
+  }
+  #table-sortable .th-sort-asc::after  {content: "\25b4";}
+  #table-sortable .th-sort-desc::after {content: "\25be";}
+  #table-sortable .th-sort-asc::after,
+  #table-sortable .th-sort-desc::after {
+    margin-left: 5px;
+    position: absolute;
+  }
+
+  @media (max-width: 777px) {
+    .title {position:relative;max-width: 100%;}
+  }
+  /* --- End main table -- */
+
+  /* --- Info window --- */
+  .gm-style-iw-t {
+    bottom: 30px!important;
+    animation-duration: 0.3s;
+    animation-name: fadeIn;
+  }
+  .gm-style-iw-c {
+    padding-left: 0!important;
+    padding-bottom: 0!important;
+  }
+  .info {
+    width: 250px;
+    height: 400px;
+  }
+  .info__title_wrap {
+    margin-bottom: 10px;
+  }
+  .info__title_text {
+    margin:0;
+    font: 14px Arial, Helvetica, sans-serif;
+    font-size  : 16px;
+    font-weight: 600;
+    max-height : 100px;
+  }
+  .ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .two_line_ellipsis {
+    word-break: break-all;
+    display   : -webkit-box;
+    overflow  : hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .info__sector_wrap {
+    margin-bottom: 10px;
+  }
+  .info__sector_title {
+    font-weight: 400;
+  }
+  .info__sector_wrapside {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+  .info__sector_wrapside_hover {
+    cursor: pointer;
+    padding: 5px 0px 5px 0px;
+    margin-bottom: 0;
+  }
+  .info__sector_first_col{
+    margin: auto;
+    padding-left: 5px;
+  }
+  .info__sector_main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-left: 10px;
+  }
+  .info__sector_main_row1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .progress_bar {
+    width: 100%;
+    height: 10px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 7px 9px -7px rgba(0,0,0,.2);
+  }
+  .progress_bar_track {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    background: currentColor;
+    opacity: .2;
+  }
+  .progress_bar_model {
+    height: 100%;
+    position:absolute;
+    background: currentColor;
+    transition: width .3s linear;
+  }
+  .progress_bar_model::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: white;
+    animation: progress-active 2s ease infinite;
+  }
+  @keyframes progress-active {
+    0% {opacity: 0.4;width: 0;}
+    100% {opacity: 0;width: 100%;}
+  }
+
+  hr.gradient_style { 
+    border: 0; 
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  }
+  .gm-ui-hover-effect {
+    display: none !important;
+  }
+  /* --- End info window --- */
+
+  /* --- Modal Window --- */
+  .modal,
+  .modal__box {
+    z-index: 900;
+  }
+  .modal__sandbox {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+  }
+  .modal {
+    /* display: none;  */
+    display: block; 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.8);
+    overflow: auto;
+  }
+
+  .modal__box {
+    position: relative;
+    background: white;
+    width: 90%;
+    max-width: 920px;
+    margin: 100px auto;
+    animation-name: modalbox;
+    animation-duration: .4s;
+    animation-timing-function: cubic-bezier(0,0,.3,1.6);
+  }
+
+  .modal__header {
+    padding: 10px 20px;
+    background: #546E7A;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content:space-between;
+  }
+  .modal__body {
+    background: #ECEFF1;
+    padding: 30px;
+  }
+
+  .modal__body dl {  
+    width: 100%;
+  }
+  .modal__body dt {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    padding-left: 30px; 
+    margin: 15px;
+    background-color: rgb(224, 218, 218);
+  }
+  .modal__body dt span {
+    font-size: 1.2em;
+    font-weight: 800;
+    color: rgb(74, 74, 75);
+  }
+  .modal__body dd {
+    overflow: auto;
+    line-height: 1.4;
+    margin-right: 15px;
+  }
+  .dd__item_wrap {
+  }
+  .dd__item_title {
+    min-width: 160px;
+    display: inline-block;
+    font-weight: 600;
+    color: rgb(74, 74, 75);
+  }
+
+  /* Close Button */
+  .modal__close {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    top: 50%;
+    left: 50%;
+    padding: 10px 25px;
+    background: transparent;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .modal__close:hover {
+    background: rgba(147, 149, 165, 0.404);
+  }
+  /* Animation */
+  @keyframes modalbox {
+    0% {
+      top: -250px; 
+      opacity: 0;
+    }
+    100% {
+      top: 0; 
+      opacity: 1;
+    }
+  }
+
+  /* --- Status label --- */
+  .status {
+    padding-bottom: 10px;
+  }
+
+  .label {
+    padding: .2em .6em .3em;
+    font-size: 100%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+  }
+  /* --- end status label -- */

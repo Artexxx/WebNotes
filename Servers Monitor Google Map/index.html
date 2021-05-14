@@ -13,78 +13,6 @@
   ::-webkit-scrollbar-thumb:horizontal {position: absolute; height:0px; width:0px;background:transparent;}
   ::-webkit-scrollbar-thumb:horizontal:hover {position: absolute;height:8px; width:4px; background: #167F92;}
 
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial;
-    font-size: 14px;
-    background: url(images/paper_fibers.png) repeat;
-  }
-  #panel {
-    position:absolute;
-    height: 550px;
-    width: 410px;
-    min-width: 230px;
-    overflow:hidden;
-  }
-  @media (max-width: 777px) {
-    main {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-    #panel {
-      position: initial;
-    }
-  }
-  /* --- Resize map library ---*/
-  #resize-horizontal {
-    background-color: rgb(35, 136, 194);
-    border-radius: 12px;
-    float: right;
-    margin-right: 0;
-    width: 5px;
-    height: 100%;
-    cursor: e-resize;
-  }
-
-  #resize-vertical {
-    background-color: rgb(35, 136, 194);
-    border-radius: 12px;
-    float: bottom;
-    margin-bottom: 0;
-    height: 5px;
-    width: 100%;
-    cursor: ns-resize;
-  }
-  @media (max-width: 777px) {
-    #resize-vertical {display: none;}
-    #resize-horizontal {display: none;}
-  }
-  /* --- End resize map library ---*/
-
-  #map-container {
-    margin-left: 410px;
-    width: auto;
-    height: 550px;
-  }
-  #map {
-    width: auto;
-    height: 550px;
-  }
-
-  /* Remove Google Logo, terms of use, and Report a problem div. */
-  a[href^="http://maps.google.com/maps"] {display:none !important}
-  a[href^="https://maps.google.com/maps"] {display:none !important}
-  .gm-style-cc { display:none!important;}
-  .gmnoprint div {background:none !important;}
-  .gm-style {background: url(images/paper_fibers.png) repeat;}
-
-  @media (max-width: 777px) {
-    #map,#map-container {margin-left: 0!important;
-      height: 550px!important;
-      width: 100%!important;
-    }
-  }
   /* --- Search field---*/
   .controls {
     margin-top: 16px;
@@ -119,235 +47,6 @@
   }
   /* --- End Search field---*/
   
-  /* --- Main table -- */
-  .mytable {
-    position:absolute;
-    width: 98%;
-    height: 80%;
-    display: block;
-    overflow: auto;
-    font-size:14px;
-  }
-  .mytable {
-    background: #FFF;
-    color: #024457;
-    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.25);
-    border-collapse: collapse;
-    border-radius: 2px;
-    max-height: 500px;
-  }
-  
-  table thead th {position: sticky; top: 0; z-index: 1; }
-  
-  .cell_1 { width: 10%;}
-  .cell_2 { width:70%;}
-  .cell_3 { width:20%;}
-  @media (max-width: 777px) {.cell_3 {display: none;}}
-
-  .mytable tr {border: 1px solid #D9E4E6;}
-  .mytable tbody tr {cursor: pointer;}
-  .mytable tr:nth-child(odd) {background-color: #EAF3F3;}
-  .mytable th {
-    font-size:16px;
-    user-select: none;
-    border: 1px solid #FFF;
-    background: #167F92;
-    color: #FFF;
-    padding: 1em;
-  }
-  /* .mytable th:hover {background-color: #177a8b;} */
-  .mytable td {
-    display: block;
-    max-height: 1em;
-  }
-  .mytable td:first-child {
-    display: table-cell;
-    text-align: center;
-    border-right: 1px solid #D9E4E6;
-  }
-  @media (min-width: 777px) {
-    .mytable td {
-      border: 1px solid #D9E4E6;
-    }
-  }
-  .mytable th, .mytable td {
-    text-align: left;
-    margin: .5em 1em;
-  }
-  @media (min-width: 777px) {
-    .mytable th, .mytable td {
-      display: table-cell;
-      padding: 1em;
-    }
-  }
-  .flag-icon {
-    position: absolute;
-    left: -5px;
-    margin-right: 3px;
-    opacity: 0.8;
-  }
-  .title {
-    padding: 5px;
-    color: #000;
-    text-overflow: ellipsis;
-    white-space  : nowrap;
-    overflow     : hidden;
-    max-width    : 200px; /* Can be any size, just small enough */
-  }
-  #timetaken {
-    color: #f00;
-  }
-  .hidden {
-    display: none !important;
-  }
-  .btn-hide-column {
-    cursor: pointer;
-    position:absolute;
-    right: 10px;
-    color: #ffffff;
-  }
-  #table-sortable .th-sort-asc::after  {content: "\25b4";}
-  #table-sortable .th-sort-desc::after {content: "\25be";}
-  #table-sortable .th-sort-asc::after,
-  #table-sortable .th-sort-desc::after {
-    margin-left: 5px;
-    position: absolute;
-  }
-
-  @media (max-width: 777px) {
-    .title {max-width: 500px;}
-  }
-  /* --- End main table -- */
-
-  /* --- Info window --- */
-  .gm-style-iw-t {
-    bottom: 30px!important;
-    animation-duration: 0.3s;
-    animation-name: fadeIn;
-  }
-  .gm-style-iw-c {
-    padding-left: 0!important;
-    padding-bottom: 0!important;
-  }
-  .info {
-    width: 250px;
-    height: 400px;
-  }
-  .info__title_wrap {
-    margin-bottom: 10px;
-  }
-  .info__title_text {
-    margin:0;
-    font: 14px Arial, Helvetica, sans-serif;
-    font-size  : 16px;
-    font-weight: 600;
-    max-height : 100px;
-  }
-  .ellipsis {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  .two_line_ellipsis {
-    word-break: break-all;
-    display   : -webkit-box;
-    overflow  : hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-  }
-  .info__sector_wrap {
-    margin-bottom: 10px;
-  }
-  .info__sector_title {
-    font-weight: 400;
-  }
-  .info__sector_wrapside {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-  }
-  .info__sector_wrapside_hover {
-    cursor: pointer;
-    padding: 5px 0px 5px 0px;
-    margin-bottom: 0;
-  }
-  .info__sector_first_col{
-    margin: auto;
-    padding-left: 5px;
-  }
-  .info__sector_main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    margin-left: 10px;
-  }
-  .info__sector_main_row1 {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-  }
-  .progress_bar {
-    width: 100%;
-    height: 10px;
-    border-radius: 2px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: inset 0 7px 9px -7px rgba(0,0,0,.2);
-  }
-  .progress_bar_track {
-    width: 100%;
-    height: 100%;
-    position:absolute;
-    background: currentColor;
-    opacity: .2;
-  }
-  .progress_bar_model {
-    height: 100%;
-    position:absolute;
-    background: currentColor;
-    transition: width .3s linear;
-  }
-  .progress_bar_model::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    background: white;
-    animation: progress-active 2s ease infinite;
-  }
-  @keyframes progress-active {
-    0% {opacity: 0.4;width: 0;}
-    100% {opacity: 0;width: 100%;}
-  }
-
-  hr.gradient_style { 
-    border: 0; 
-    height: 1px; 
-    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-  }
-  .gm-ui-hover-effect {
-    display: none !important;
-  }
-  /* --- End info window --- */
-
-  /* --- Status label --- */
-  .status {
-    padding-bottom: 10px;
-  }
-
-  .label {
-    padding: .2em .6em .3em;
-    font-size: 100%;
-    font-weight: 700;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25em;
-  }
-  /* --- end status label -- */
-
   /*  --- Legend specific  ---*/
   #legend {
     display:none;
@@ -400,60 +99,33 @@
   /*  --- End legend specific  ---*/
 
   /*  --- Ripple effect  ---*/
-.ripple {
-  position: relative;
-  overflow: hidden!important;
-}
-.ripple:before {
-  opacity: 0.1;
-  content: "";
-  position: absolute;
-  display: block;
-  background: var(--ripple-background, currentColor);
-  /* background: var(--ripple-background, white); */
-  border-radius: 50%;
-  pointer-events: none;
-  top: calc(var(--y) * 1px);
-  left: calc(var(--x) * 1px);
-  width: calc(var(--d) * 1px);
-  height: calc(var(--d) * 1px);
-  opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.1));
-  transition: calc(var(--t, 0) * var(--ripple-duration, 600ms)) var(--ripple-easing, linear);
-  transform: translate(-50%, -50%) scale(var(--s, 1));
-  transform-origin: center;
-}
-
-.rainbow {
-  --ripple-opacity: 1;
-  --ripple-background: radial-gradient(circle at center, rebeccapurple, dodgerblue, olive, gold, orange, tomato);
-  --ripple-duration: 2000ms;
-  --ripple-easing: cubic-bezier(0, .5, .5, 1);
-  transition: background-color 300ms, color 300ms;
-}
-
-  /* .ripple {
+  .ripple {
     position: relative;
-    overflow: hidden;
+    overflow: hidden!important;
   }
-  .effect-ripple {
+  .ripple:before {
+    opacity: 0.1;
+    content: "";
     position: absolute;
+    display: block;
+    background: var(--ripple-background, currentColor);
+    /* background: var(--ripple-background, white); */
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    background-color: rgba(0, 0, 0, 0.05);
-    animation: ripple 1.5s;
+    pointer-events: none;
+    top: calc(var(--y) * 1px);
+    left: calc(var(--x) * 1px);
+    width: calc(var(--d) * 1px);
+    height: calc(var(--d) * 1px);
+    opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.1));
+    transition: calc(var(--t, 0) * var(--ripple-duration, 600ms)) var(--ripple-easing, linear);
+    transform: translate(-50%, -50%) scale(var(--s, 1));
+    transform-origin: center;
   }
-  .effect-ripple-light {
-    background-color: rgba(255, 255, 255, 0.05);
-  }
-  @keyframes ripple{
-    from{transform: scale(1);}
-    to{transform: scale(20);opacity: 0;}
-  } */
   /*  --- End ripple effect  ---*/
   </style>
 
   <link rel="icon" href="images/icon.svg">
+  <link rel="stylesheet" href="style.css">
   <!-- <link rel="stylesheet" href="libs/preload.css"><script> setTimeout(function() {document.body.classList.add('loaded');}, 600)</script> -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlyHzmksm8PlMbK1QnfvU9oRLliSmFXEw&callback=initAutocomplete&libraries=places&v=weekly"></script>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
@@ -506,6 +178,140 @@
     <div id="resize-vertical"></div>
   </div>
   </main>
+
+  
+  <a href="#" class="modal__trigger" data-modal="modal-name">Modal open!</a> <!-- Trigger Modal. -->
+
+  <!-- Modal -->
+  <div class="modal" id="modal-name">
+    <div class="modal__sandbox"></div>
+    <div class="modal__box">
+      <div class="modal__header">
+      <div> <!--Column 1-->
+        <button class="modal__close">&#10006;</button> 
+        <span>
+          【ERROR】
+           Server-1 192.168.112.101
+         </span>
+      </div>
+      <!--Column 2-->
+      <time>2021-05-09 18:47:27</time> 
+  </div><!--Header-->
+  
+  <div class="modal__body">
+    <dl>
+     <dt> <span> Exception Information </span> </dt>
+     <dd>public abstract boolean com.manage.service.account.IAdminManageService.updateAdminPassword(long,java.lang.String,java.lang.String) </dd>
+      
+     <dt> <span> User Information </span> </dt>
+     
+      <dd class="dd__item_wrap"> <div class="dd__item_title"> User ID：</div> 13123456789</dd>
+      <dd class="dd__item_wrap"> <div class="dd__item_title">Equipment UUID:</div> f64f2940-fae4-11e7 </dd>
+      <dd class="dd__item_wrap"> <div class="dd__item_title">Device Model ：</div> Android 7 </dd>
+      <dd class="dd__item_wrap"> <div class="dd__item_title">Client IP:</div> 192.168.0.1 </dd>
+      <dd class="dd__item_wrap"> <div class="dd__item_title">Client version number:</div> 1.0.0 </dd>
+      
+    <dt> <span> Exception Stack </span> </dt>
+     <dd>
+  com.exception.XingfuException: Account_AdminAccountId_NotExist
+    at com.manage.error.AccountServiceError.error(AccountServiceError.java:135)
+    at com.manage.service.account.impl.AdminManageService.checkAdminAcount(AdminManageService.java:123)
+    at com.manage.service.account.impl.AdminManageService.updateAdminPassword(AdminManageService.java:56)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:606)
+    at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:302)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+    at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:59)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+    at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+    at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+    at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+    at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+    at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+    at com.sun.proxy.$Proxy42.updateAdminPassword(Unknown Source)
+    at com.manage.rest.maintain.account.AdminManageController.updateAdminPassword(AdminManageController.java:208)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:606)
+    at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+    at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+    at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+    at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:817)
+    at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:731)
+    at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+    at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:959)
+    at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+    at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:968)
+    at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:870)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:650)
+    at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:844)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+    at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+    at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+    at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+    at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+    at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+    at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+    at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:154)
+    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+    at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+    at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:199)
+    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+    at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+    at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:50)
+    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+    at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+    at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+    at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+    at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+    at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+    at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121)
+    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+    at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+    at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+    at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+    at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+    at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+    at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:956)
+    at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+    at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:436)
+    at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1078)
+    at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:625)
+    at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:316)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+    at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+    at java.lang.Thread.run(Thread.java:745)
+      </dd>
+      
+      
+    </dl>
+      </div> <!-- Body -->
+    </div> <!-- Body -->
+  </div> <!-- Modal -->
   <script type="text/javascript" src="libs/resize-map.js"></script>
   <script type="text/javascript" src="libs/sorted-table.js"></script>
   <script type="text/javascript" src="libs/hide-columns.js"></script>

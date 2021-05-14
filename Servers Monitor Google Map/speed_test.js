@@ -147,7 +147,7 @@ speedTest.markerClickFunction = function (server, latlng) {
       </div>
   </div>   
 <hr class="gradient_style">
-      <div class="ripple rainbow info__sector_wrapside info__sector_wrapside_hover">
+      <div class="ripple info__sector_wrapside info__sector_wrapside_hover">
         <i class="fa material-icons info__sector_first_col" style="color:gray;">select_all</i>
       <div class="info__sector_main">
         <div class="info__sector_main_row1 info__sector_title">
@@ -227,7 +227,7 @@ speedTest.markerClickFunction = function (server, latlng) {
       </div>
 <hr class="gradient_style">
   Ссылка: <a href="#" target="_blank">TODO</a>
-</div>`;
+  </div>`;
 
     speedTest.infoWindow.setContent(infoHtml);
     speedTest.infoWindow.setPosition(latlng);
