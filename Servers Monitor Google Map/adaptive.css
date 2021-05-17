@@ -1,0 +1,47 @@
+/*==========  Desktop First  ========== */
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  /* */
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  /* */
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  /* */
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+}
+/*==========  Mobile First  ========== */
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  .modal .dd__item_title {
+    font-size: 2vw;
+    font-weight: 700;
+    min-width: 300px;
+  }
+  .modal .modal__header {
+    font-size: 3vw;
+    padding-top: 10px;
+  }
+  .modal .modal__close {
+    font-size: 130%;
+    padding: 20px 55px;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  /* */
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  /* */
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  /* */
+}
+
+/*# sourceMappingURL=adaptive.css.map */

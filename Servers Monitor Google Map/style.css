@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial;
-    font-size: 14px;
+    /* font-size: 14px; */
     background: url(images/paper_fibers.png) repeat;
   }
   #panel {
@@ -65,13 +65,6 @@
   .gmnoprint div {background:none !important;}
   .gm-style {background: url(images/paper_fibers.png) repeat;}
 
-  @media (max-width: 777px) {
-    #map,#map-container {margin-left: 0!important;
-      height: 550px!important;
-      width: 100%!important;
-    }
-  }
-
 /* --- Main table -- */
  .mytable {
     position:absolute;
@@ -79,7 +72,7 @@
     height: 80%;
     display: block;
     overflow: auto;
-    font-size:14px;
+    /* font-size:14px; */
   }
   .mytable {
     background: #FFF;
@@ -142,7 +135,6 @@
   .title {
     padding: 5px;
     color: #000;
-    box-sizing:border-box;
     text-overflow: ellipsis;
     white-space  : nowrap;
     overflow     : hidden;
@@ -169,7 +161,7 @@
   }
 
   @media (max-width: 777px) {
-    .title {position:relative;max-width: 100%;}
+    .title {max-width: 300%;}
   }
   /* --- End main table -- */
 
@@ -319,7 +311,10 @@
     animation-duration: .4s;
     animation-timing-function: cubic-bezier(0,0,.3,1.6);
   }
-
+  .close {
+    animation-duration: 1.3s;
+    animation-name: fadeIn;
+  }
   .modal__header {
     padding: 10px 20px;
     background: #546E7A;
@@ -333,7 +328,6 @@
     background: #ECEFF1;
     padding: 30px;
   }
-
   .modal__body dl {
     width: 100%;
   }
@@ -343,18 +337,16 @@
     padding-bottom: 10px;
     padding-left: 30px;
     margin: 15px;
-background-image: linear-gradient(160deg, #91d4ff 0%, #546e7a 100%);
-
+    background-image: linear-gradient(160deg, #c0e5fc 0%, #91d4ff 100%);
   }
   .modal__body dt span {
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
     font-weight: 800;
     color: rgb(74, 74, 75);
   }
   .modal__body dd {
     overflow: auto;
     line-height: 1.4;
-    margin-right: 15px;
   }
   .dd__item_wrap {
   }
