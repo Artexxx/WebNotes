@@ -243,26 +243,28 @@ speedTest.markerClickFunction = function (server, latlng) {
 
 
 speedTest.showModalWindow = function() {
-  var title = "Server-1";
-  var ip = "192.168.112.101";
+  var title = "Server-1",
+    ip = "192.168.112.101"
+    time = "2021-05-09 18:47:27";
+    
   console.log("ASS");
   // var exception_info =
   var modalWindow = 
   `<!-- Modal -->
   <div class="modal" id="modal-name">
-    <div class="modal__sandbox"></div>
+    <div class="modal__sandbox" onclick="speedTest.closeModalWindow()"></div>
     <div class="modal__box">
       <div class="modal__header">
       <!--Column 1-->
       <div style="display:flex;flex-direction:row;"> 
-        <button class="modal__close">&#10006;</button> 
+        <button class="modal__close" onclick="speedTest.closeModalWindow()">&#10006;</button> 
         <span>
           【ERROR】
           ${title + ' ' + ip}
          </span>
       </div>
       <!--Column 2-->
-      <time>2021-05-09 18:47:27</time> 
+      <time> ${time} </time> 
   </div><!--Header-->
   
   <div class="modal__body">
@@ -385,10 +387,11 @@ speedTest.showModalWindow = function() {
 
 speedTest.closeModalWindow = function() {
   var modal = $('modal-name');
-  var mbox = modal.getElementsByClassName('modal__box')[0];
-  if (!mbox.classList.contains('close')) {
-    mbox.classList.add('close');
-    
+  if (!modal.classList.contains('close')) {
+    modal.classList.add('close');
+    setTimeout(function close() {
+      modal.parentNode.removeChild(modal);
+    }, 1000);
     // delete modal.getElementsByClassName('modal__sandbox')[0];
   }
 

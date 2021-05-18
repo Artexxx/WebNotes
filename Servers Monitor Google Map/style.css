@@ -57,7 +57,6 @@
     width: auto;
     height: 550px;
   }
-
   /* Remove Google Logo, terms of use, and Report a problem div. */
   a[href^="http://maps.google.com/maps"] {display:none !important}
   a[href^="https://maps.google.com/maps"] {display:none !important}
@@ -65,6 +64,13 @@
   .gmnoprint div {background:none !important;}
   .gm-style {background: url(images/paper_fibers.png) repeat;}
 
+  
+  @media (max-width: 777px) {
+    #map,#map-container {margin-left: 0!important;
+      height: 550px!important;
+      width: 100%!important;
+    }
+  }
 /* --- Main table -- */
  .mytable {
     position:absolute;
@@ -312,8 +318,8 @@
     animation-timing-function: cubic-bezier(0,0,.3,1.6);
   }
   .close {
-    animation-duration: 1.3s;
-    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-name: fadeOut;
   }
   .modal__header {
     padding: 10px 20px;

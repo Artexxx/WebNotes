@@ -13,10 +13,6 @@
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-}
-/*==========  Mobile First  ========== */
-/* Extra Small Devices, Phones */
-@media only screen and (min-width: 480px) {
   .modal .dd__item_title {
     font-size: 2vw;
     font-weight: 700;
@@ -31,6 +27,11 @@
     padding: 20px 55px;
   }
 }
+/*==========  Mobile First  ========== */
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+
+}
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
   /* */
@@ -41,7 +42,7 @@
 }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
-  /* */
+
 }
 
 /*# sourceMappingURL=adaptive.css.map */
