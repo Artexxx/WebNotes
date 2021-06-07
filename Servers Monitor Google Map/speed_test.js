@@ -147,7 +147,7 @@ speedTest.markerClickFunction = function (server, latlng) {
       </div>
   </div>   
 <hr class="gradient_style">
-      <div class="ripple info__sector_wrapside info__sector_wrapside_hover">
+      <div class="ripple info__sector_wrapside info__sector_wrapside_hover" onclick="speedTest.showModalWindow()">
         <i class="fa material-icons info__sector_first_col" style="color:gray;">select_all</i>
       <div class="info__sector_main">
         <div class="info__sector_main_row1 info__sector_title">
@@ -161,7 +161,7 @@ speedTest.markerClickFunction = function (server, latlng) {
       </div>
       </div>
 
-      <div class="ripple info__sector_wrapside info__sector_wrapside_hover">
+      <div class="ripple info__sector_wrapside info__sector_wrapside_hover" onclick="speedTest.showModalWindow()">
         <i class="fa material-icons info__sector_first_col" style="color:gray;">memory</i>
       <div class="info__sector_main">
         <div class="info__sector_main_row1 info__sector_title">
@@ -175,7 +175,7 @@ speedTest.markerClickFunction = function (server, latlng) {
       </div>
       </div>
       
-      <div class="ripple info__sector_wrapside info__sector_wrapside_hover">
+      <div class="ripple info__sector_wrapside info__sector_wrapside_hover" onclick="speedTest.showModalWindow()">
         <i class="fa material-icons info__sector_first_col" style="color:gray;">slow_motion_video</i>
        <div class="info__sector_main" style="justify-content: center;">
         <div class="info__sector_main_row1">
@@ -187,7 +187,7 @@ speedTest.markerClickFunction = function (server, latlng) {
       
 <hr class="gradient_style">
 
-      <div class="ripple info__sector_wrapside info__sector_wrapside_hover">
+      <div class="ripple info__sector_wrapside info__sector_wrapside_hover" onclick="speedTest.showModalWindow()">
         <i class="fa material-icons info__sector_first_col" style="color:${color_warning};">warning</i>
       <div class="info__sector_main" style="justify-content: center;">
         <div class="info__sector_main_row1">
@@ -200,7 +200,7 @@ speedTest.markerClickFunction = function (server, latlng) {
       </div>
       </div>
 
-      <div class="ripple info__sector_wrapside info__sector_wrapside_hover">
+      <div class="ripple info__sector_wrapside info__sector_wrapside_hover" onclick="speedTest.showModalWindow()">
         <i class="fa material-icons info__sector_first_col" style="color:${color_error};">error</i>
       <div class="info__sector_main" style="justify-content: center;">
         <div class="info__sector_main_row1">
@@ -246,43 +246,7 @@ speedTest.showModalWindow = function() {
   var title = "Server-1",
     ip = "192.168.112.101"
     time = "2021-05-09 18:47:27";
-    
-  console.log("ASS");
-  // var exception_info =
-  var modalWindow = 
-  `<!-- Modal -->
-  <div class="modal" id="modal-name">
-    <div class="modal__sandbox" onclick="speedTest.closeModalWindow()"></div>
-    <div class="modal__box">
-      <div class="modal__header">
-      <!--Column 1-->
-      <div style="display:flex;flex-direction:row;"> 
-        <button class="modal__close" onclick="speedTest.closeModalWindow()">&#10006;</button> 
-        <span>
-          【ERROR】
-          ${title + ' ' + ip}
-         </span>
-      </div>
-      <!--Column 2-->
-      <time> ${time} </time> 
-  </div><!--Header-->
-  
-  <div class="modal__body">
-    <dl>
-     <dt> <span> Exception Information </span> </dt>
-     <dd>public abstract boolean com.manage.service.account.IAdminManageService.updateAdminPassword(long,java.lang.String,java.lang.String) </dd>
-      
-     <dt> <span> User Information </span> </dt>
-     
-      <dd class="dd__item_wrap"> <div class="dd__item_title"> User ID：</div> 13123456789</dd>
-      <dd class="dd__item_wrap"> <div class="dd__item_title">Equipment UUID:</div> f64f2940-fae4-11e7 </dd>
-      <dd class="dd__item_wrap"> <div class="dd__item_title">Device Model ：</div> Android 7 </dd>
-      <dd class="dd__item_wrap"> <div class="dd__item_title">Client IP:</div> 192.168.0.1 </dd>
-      <dd class="dd__item_wrap"> <div class="dd__item_title">Client version number:</div> 1.0.0 </dd>
-      
-    <dt> <span> Exception Stack </span> </dt>
-     <dd>
-  com.exception.XingfuException: Account_AdminAccountId_NotExist
+    error = `com.exception.XingfuException: Account_AdminAccountId_NotExist
     at com.manage.error.AccountServiceError.error(AccountServiceError.java:135)
     at com.manage.service.account.impl.AdminManageService.checkAdminAcount(AdminManageService.java:123)
     at com.manage.service.account.impl.AdminManageService.updateAdminPassword(AdminManageService.java:56)
@@ -373,8 +337,43 @@ speedTest.showModalWindow = function() {
     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
     at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-    at java.lang.Thread.run(Thread.java:745)
-      </dd>
+    at java.lang.Thread.run(Thread.java:745)`
+
+    var modalWindow =
+  `<!-- Modal -->
+  <div class="modal" id="modal-name">
+    <div class="modal__sandbox" onclick="speedTest.closeModalWindow()"></div>
+    <div class="modal__box">
+      <div class="modal__header">
+      <!--Column 1-->
+      <div style="display:flex;flex-direction:row;">
+        <button class="modal__close" onclick="speedTest.closeModalWindow()">&#10006;</button>
+        <span style="font-size : 1.4em;margin-top: auto;margin-bottom: auto;">
+          【ERROR】
+          ${title + ' ' + ip}
+          </span>
+      </div>
+      <!--Column 2-->
+      <time> ${time} </time>
+  </div><!--Header-->
+  
+  <div class="modal__body">
+    <dl>
+     <dt> <span> Exception Information </span> </dt>
+     <dd>public abstract boolean com.manage.service.account.IAdminManageService.updateAdminPassword(long,java.lang.String,java.lang.String) </dd>
+      
+     <dt> <span> User Information </span> </dt>
+     
+      <dd class="dd__item_wrap"> <div class="dd__item_title"> User ID：</div> 13123456789</dd>
+      <dd class="dd__item_wrap"> <div class="dd__item_title">Equipment UUID:</div> f64f2940-fae4-11e7 </dd>
+      <dd class="dd__item_wrap"> <div class="dd__item_title">Device Model ：</div> Android 7 </dd>
+      <dd class="dd__item_wrap"> <div class="dd__item_title">Client IP:</div> 192.168.0.1 </dd>
+      <dd class="dd__item_wrap"> <div class="dd__item_title">Client version number:</div> 1.0.0 </dd>
+      
+    <dt> <span> Exception Stack </span> </dt>
+    <dd>
+      ${error}
+    </dd>
     </dl>
       </div> <!-- Body -->
     </div> <!-- Body -->
@@ -388,11 +387,12 @@ speedTest.showModalWindow = function() {
 speedTest.closeModalWindow = function() {
   var modal = $('modal-name');
   if (!modal.classList.contains('close')) {
+    console.log()
     modal.classList.add('close');
     setTimeout(function close() {
+        modal.classList.add('hidden');
       modal.parentNode.removeChild(modal);
-    }, 1000);
-    // delete modal.getElementsByClassName('modal__sandbox')[0];
+    }, 400);
   }
 
 }
