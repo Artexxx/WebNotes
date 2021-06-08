@@ -89,9 +89,10 @@ speedTest.showMarkers = function () {
       "animation": google.maps.Animation.DROP,
     });
 
-    var fn = speedTest.markerClickFunction(speedTest.servers[i], latLng, statusColor, statusText);
+    var fn = speedTest.markerClickFunction(speedTest.servers[i], latLng);
     google.maps.event.addListener(marker, 'click', fn);
     google.maps.event.addDomListener(item, 'click', fn);
+
     speedTest.markers.push(marker);
   }
 
