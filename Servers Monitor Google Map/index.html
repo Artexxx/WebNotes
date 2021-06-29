@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" content="width=device-width, initial-scale=1">
-  <title> Ваши сервера </title>
+  <title> Server activity Map </title>
   <style>
   /*===== Scrollbar =====*/
   ::-webkit-scrollbar {width: 8px;height: 5px;}
@@ -153,20 +153,20 @@
   <main>
   <div id="panel">
     <div id="resize-horizontal"></div>
-    <h3>Карта активности серверов</h3>
+    <h3>Server activity Map</h3>
 
     <div>
       <input type="checkbox" id="usegmm" />
-      <span>Использовать кластеризацию маркеров<br></span>
-      <span>Время отклика: <span id="timetaken"></span> ms</span>
+      <span>Use marker clustering<br></span>
+      <span>Response time:: <span id="timetaken"></span> ms</span>
     </div>
 
     <strong>Company Servers Status</strong>
     <table class="mytable" id="table-sortable">
       <thead>
         <tr>
-          <th anim="ripple" class="ripple light cell_1" style="text-align: center;">Status</th>
-          <th anim="ripple" class="ripple light cell_2">Name  <i class="btn-hide-column fa fa-eye-slash"></th>
+          <th class="ripple light cell_1" style="text-align: center;">Status</th>
+          <th class="ripple light cell_2">Name  <i class="btn-hide-column fa fa-eye-slash"></th>
           <th class="ripple light cell_3">IP:Port <i class="btn-hide-column fa fa-eye-slash"></th>
         </tr>
       </thead>
